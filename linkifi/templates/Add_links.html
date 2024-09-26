@@ -1,0 +1,228 @@
+<html lang="en">
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linkifi</title>
+    <link rel="stylesheet" href="{% static 'css/css34.css' %}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alkatra&family=Delicious+Handrawn&display=swap" rel="stylesheet">
+
+
+</head>
+<style>
+    body {
+        width: 100%;
+        background-image: linear-gradient(to right, #eff1ff, #ffcffc);
+    }
+</style>
+
+
+<body>
+
+
+
+    <div id="temp_page">
+        <a href="{% url 'Add_profile' %}"><button>Skip</button></a>
+    </div>
+
+    <div id="temp1-page">
+        <h1>Select a template</h1>
+        <p>Pick the style that feels right - you can add your content later</p>
+        <div class="link-page">
+            <h2>Your selections</h2>
+            <div class="link1-page">
+                <form action="{% url 'Add_links' %}" method="post">
+                    {% csrf_token %}
+                    <div class="link4-page" id="link4-page">
+                        <img id="dynamic-image" src="/static/images/Platform images/default.svg">
+                        <input type="text" name="field" id="field" placeholder="Add Page URL">
+                    </div>
+                    <h2>Add your own links
+
+                    </h2>
+                    <div class="link3-page">
+                        <img src="/static/images/Platform images/webesit.svg">
+                        <input type="text" id="url" name="url" placeholder="Website URL">
+                    </div>
+                    <div class="link3-page">
+                        <img src="/static/images/Platform images/webesit.svg">
+                        <input type="text" id="urlone" name="urlone" placeholder="Website URL">
+                    </div>
+                    <div class="link3-page">
+                        <img src="/static/images/Platform images/webesit.svg">
+                        <input type="text" id="urltwo" name="urltwo" placeholder="Website URL">
+                    </div>
+
+                    <button type="submit">Continue</button>
+
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js">
+    </script>
+
+    <script>
+        // Select all elements with the toggle-icon class
+        const toggleIcons = document.querySelectorAll('.toggle-icon');
+
+        toggleIcons.forEach(icon => {
+            icon.addEventListener('click', () => {
+                // Get the parent element of the icon
+                const parent = icon.parentElement;
+
+                // Find the associated elements within the parent element
+                const content = parent.nextElementSibling;
+                const minusIcon = parent.querySelector('.fa-minus');
+                const plusIcon = parent.querySelector('.fa-plus');
+
+                // Toggle the visibility of the content and icons
+                if (content.style.display === "none" || content.style.display === "") {
+                    content.style.display = "block";
+                    minusIcon.style.display = "inline";
+                    plusIcon.style.display = "none";
+                } else {
+                    content.style.display = "none";
+                    minusIcon.style.display = "none";
+                    plusIcon.style.display = "inline";
+                }
+            });
+        });
+    </script>
+
+
+
+
+    <script>
+        // Select all the <p> elements with class 'home10'
+        const items = document.querySelectorAll("#home17-page .home10");
+        let index = 0;
+
+        // Function to hide all <p> elements and show only the current one
+        function showItem() {
+            items.forEach((item, i) => {
+                // Hide all items
+                item.style.display = "none";
+            });
+            // Show the current item
+            items[index].style.display = "block";
+
+            // Move to the next item, reset index if at the end
+            index = (index + 1) % items.length;
+        }
+
+        // Initialize the first item to be shown
+        showItem();
+
+        // Cycle through the items every 1 second (1000 milliseconds)
+        setInterval(showItem, 1000);
+    </script>
+
+    <script>
+        var elem222 = document.getElementById("eyecontact");
+        var password = document.getElementById("password");
+        elem222.onclick = function() {
+            if (password.type == "password") {
+                password.type = "text";
+                elem222.classList.remove("fa-eye");
+                elem222.classList.add("fa-eye-slash");
+            } else {
+                password.type = "password";
+                elem222.classList.remove("fa-eye-slash");
+                elem222.classList.add("fa-eye");
+            }
+        }
+    </script>
+
+    <script>
+        const inputField = document.getElementById('loginusername');
+        const form = document.getElementById('loginForm');
+        const errorMessage = document.getElementById('error-message');
+        const continueButton = document.getElementById('continue-button');
+        const crossIcon = document.getElementById('cross-icon');
+        const prefix = 'LinkTr.ee/';
+
+        // Ensure the prefix is always at the start and the user types after it
+        inputField.addEventListener('input', function(e) {
+            if (!inputField.value.startsWith(prefix)) {
+                inputField.value = prefix; // Prevent deletion of the prefix
+            }
+
+            const usernamePart = inputField.value.slice(prefix.length);
+            const validUsername = /^[a-zA-Z0-9_.]*$/;
+
+            // Check if the username part contains invalid characters
+            if (!validUsername.test(usernamePart)) {
+                inputField.style.border = '1px solid red';
+                errorMessage.style.display = 'block'; // Show error message
+                continueButton.disabled = true; // Disable button
+                continueButton.style.backgroundColor = '#f0f0f0'; // Light background
+                continueButton.style.color = '#ccc'; // Light text color
+                crossIcon.style.display = 'inline'; // Show the cross icon
+            } else {
+                inputField.style.border = '1px solid green'; // Valid input
+                errorMessage.style.display = 'none'; // Hide error message
+                continueButton.disabled = false; // Enable button
+                continueButton.style.backgroundColor = ''; // Reset to default
+                continueButton.style.color = ''; // Reset to default
+                crossIcon.style.display = 'none'; // Hide the cross icon
+            }
+        });
+
+        // Prevent form submission if the username is invalid
+        form.addEventListener('submit', function(e) {
+            const usernamePart = inputField.value.slice(prefix.length);
+            const validUsername = /^[a-zA-Z0-9_.]*$/;
+
+            if (!validUsername.test(usernamePart)) {
+                e.preventDefault(); // Stop form submission
+                errorMessage.style.display = 'block'; // Show error message
+            }
+        });
+    </script>
+
+
+
+
+    <script>
+        // Retrieve the selected image URL from localStorage
+        const selectedImageUrl = localStorage.getItem('selectedImage');
+        const selectedImageName = localStorage.getItem('selectedImageName');
+
+        // Update the image and placeholder if available
+        if (selectedImageUrl && selectedImageName) {
+            document.getElementById('dynamic-image').src = selectedImageUrl;
+        }
+    </script>
+
+
+
+
+</body>
+
+</html>

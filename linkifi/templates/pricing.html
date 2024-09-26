@@ -1,0 +1,2199 @@
+<html lang="en">
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linkifi</title>
+    <link rel="stylesheet" href="{% static 'css/css42.css' %}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alkatra&family=Delicious+Handrawn&display=swap" rel="stylesheet">
+
+
+</head>
+<style>
+    body {
+        background-color: rgb(241, 241, 241)!important;
+        width: 100%;
+    }
+    /* CSS for the active state of buttons */
+    
+    .active {
+        background-color: #070707;
+        /* Green color for active */
+        color: white;
+    }
+    
+    .uzmakhan {
+        padding-top: 210px;
+    }
+</style>
+
+
+<body>
+
+
+
+    <nav class="navbar navbar-expand-lg home bg-body-white fixed-top">
+        <div class="container-fluid" id="home2-page">
+            <a class="navbar-brand home3-page" href="/"><img src="/static/images/11.png" width="100px" height="90px"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"><i class="fa fa-navicon"></i></span>
+          </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 home4-page">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="{% url 'Feature' %}">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="{% url 'pricing' %}">Pricing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="{% url 'About' %}">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="{% url 'contact' %}">Contact Us</a>
+                    </li>
+
+                </ul>
+                <div class="text-end home5-page">
+                    <a href="{% url 'login' %}"><button type="button" class="btn home6-page">Log in</button></a>
+                    <a href="{% url 'signup' %}"><button type="button" class="btn home7-page">Sign-up</button></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div id="select1-page" class="uzmakhan">
+        <h1>Pricing</h1>
+        <h1>Find the plan for you</h1>
+        <p>You can change at anytime.</p>
+        <div class="select2-page">
+            <div class="select4-page">
+                <h4>Free</h4>
+                <h2>FREE</h2>
+                <p>Forever free for individuals<br> personal use</p>
+                <div class="select5-page">
+                    <img src="/static/images/9.PNG">
+                    <h2>Always
+                        <spam> Free</spam>
+                    </h2>
+                </div>
+                <div class="select5-page">
+                    <img src="/static/images/9.PNG">
+                    <h2>
+                        <spam> Unlimited</spam> Links</h2>
+                </div>
+                <div class="select5-page">
+                    <img src="/static/images/9.PNG">
+                    <h2>
+                        <spam> Free</spam> Themes</h2>
+                </div>
+                <div class="select5-page">
+                    <img src="/static/images/9.PNG">
+                    <h2>No
+                        <spam> Card</spam> Needed</h2>
+                </div>
+                <a href="{% url 'login' %}"><button>Start for Free<i class="	fa fa-chevron-circle-right"></i></button></a>
+            </div>
+            <div class="select6-page">
+                <h4>Pro</h4>
+                <h2>5$</h2>
+                <p>For Growing influencers & <br> Businesses</p>
+                <div class="select7-page">
+                    <img src="/static/images/9.PNG">
+                    <h2>
+                        <spam> Schedule</spam> link go live and disappear at specific dates and times.
+                    </h2>
+                </div>
+                <div class="select7-page">
+                    <img src="/static/images/9.PNG">
+                    <h2>Add
+                        <spam> Animation</spam> to link</h2>
+                </div>
+                <div class="select7-page">
+                    <img src="/static/images/9.PNG">
+                    <h2>
+                        <spam> Spotlight</spam> a link</h2>
+                </div>
+                <div class="select7-page">
+                    <img src="/static/images/9.PNG">
+                    <h2>Truck the
+                        <spam> Performance</spam> of a specific link</h2>
+                </div>
+                <div class="select7-page">
+                    <img src="/static/images/9.PNG">
+                    <h2>View
+                        <spam> Analytics</spam> of all links</h2>
+                </div>
+                <a href="{% url 'login' %}"><button>Get Professional<i class="	fa fa-chevron-circle-right"></i></button></a>
+            </div>
+            <div class="select8-page">
+                <h4>Enterprise</h4>
+                <h2>20$</h2>
+                <p>For Established brands and<br> businesses</p>
+                <div class="select9-page">
+                    <img src="/static/images/9.PNG">
+                    <h2>Pro
+                        <spam> +</spam>
+                    </h2>
+                </div>
+                <div class="select9-page">
+                    <img src="/static/images/9.PNG">
+                    <h2>Create a
+                        <spam> bespoke</spam> Link that matches your branding</h2>
+                </div>
+                <div class="select9-page">
+                    <img src="/static/images/9.PNG">
+                    <h2>Gain deeper
+                        <spam> insights</spam>
+                    </h2>
+                </div>
+                <div class="select9-page">
+                    <img src="/static/images/9.PNG">
+                    <h2>priorty
+                        <spam> Customer Sports</spam>
+                    </h2>
+                </div>
+                <a href="{% url 'login' %}"><button>Get Enterprise<i class="	fa fa-chevron-circle-right"></i></button></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- <div id="price-page">
+        <h1>Pricing</h1>
+        <h5>Save up to 30% on annual plans</h5>
+        <div class="price1-page">
+            <button class="price2-page">Month</button>
+            <button class="price3-page">Annually</button>
+        </div>
+    </div> -->
+
+    <!-- <div id="price4-page">
+        <div class="price5-page">
+            <div class="price6-page">
+                <h1>Free</h1>
+            </div>
+            <div class="price7-page">
+                <h3>For your personal Linkifi</h3>
+                <h4>Boost your digital presence and monetize your socials</h4>
+                <h3>Key features:</h3>
+                <div class="price8-page">
+                    <img src="/static/images/9.PNG">
+                    <h2>Unlimited links</h2>
+                </div>
+                <div class="price8-page">
+                    <img src="/static/images/9.PNG">
+                    <h2>
+                        <spam>Drive your offline traffic online with </spam>QR codes</h2>
+                </div>
+                <div class="price8-page">
+                    <img src="/static/images/9.PNG">
+                    <h2>
+                        <spam>Grow your </spam>cross-channel following
+                        <spam>and connect all of your social profiles with one easy link</spam>
+                    </h2>
+                </div>
+                <div class="price8-page">
+                    <img src="/static/images/9.PNG">
+                    <h2>
+                        <spam>Sell your merchandise and affiliate products with our </spam>Shop</h2>
+                </div>
+
+                <div class="price9-page">
+                    <h1>$0</h1>
+                    <h3>Free, forever</h3>
+                </div>
+                <div class="price10-page">
+                    <a href=""><button>Join for free</button></a>
+                </div>
+            </div>
+        </div>
+        <div class="price5-page">
+            <div class="price6-page">
+                <h1>Starter</h1>
+            </div>
+            <div class="price7-page">
+                <h3>For growing influencers</h3>
+                <h4>Capture attention and engage visitors effortlessly</h4>
+                <h3>Everything in Free, plus:</h3>
+                <div class="price8-page">
+                    <img src="/static/images/9.PNG">
+                    <h2>Schedule
+                        <spam>a link to go live and disappear at specific dates and times</spam>
+                    </h2>
+                </div>
+                <div class="price8-page">
+                    <img src="/static/images/9.PNG">
+                    <h2>
+                        <spam>Add </spam>animations
+                        <spam>to your most important links to highlight what's important</spam>
+                    </h2>
+                </div>
+                <div class="price8-page">
+                    <img src="/static/images/9.PNG">
+                    <h2>Customize
+                        <spam>your button colors and shapes, and choose the font that aligns with your brand or style
+                        </spam>
+                    </h2>
+                </div>
+                <div class="price8-page">
+                    <img src="/static/images/9.PNG">
+                    <h2>Spotlight
+                        <spam>a link so that the content is already on display when a visitor lands on your Linkifi</spam>
+                    </h2>
+                </div>
+                <div class="price8-page">
+                    <img src="/static/images/9.PNG">
+                    <h2>
+                        <spam>View the</spam> performance
+                        <spam>of a specific link or social icon and track your commerce value</spam>
+                    </h2>
+                </div>
+
+                <div class="price9-page waleed">
+                    <h1>$5</h1>
+                    <h3>USD/month, billed monthly</h3>
+                </div>
+                <div class="price10-page">
+                    <a href=""><button>Get Starter</button></a>
+                </div>
+            </div>
+        </div>
+        <div class="price11-page">
+            <div class="price12-page">
+                <h1>Pro</h1>
+            </div>
+            <div class="price13-page">
+                <h3>For content creators and businesses</h3>
+                <h4>Elevate your brand, unlock insights and supercharge growth</h4>
+                <h3>Everything in Starter, plus:</h3>
+
+                <div class="price14-page">
+                    <img src="/static/images/9.PNG">
+                    <h2>
+                        <spam>Create a </spam>bespoke
+                        <spam>Linkifi that matches your branding or style. Add text, images, thumbnails, and animated backgrounds
+                        </spam>
+                    </h2>
+                </div>
+                <div class="price14-page">
+                    <img src="/static/images/9.PNG">
+                    <h2>
+                        <spam>Gain deeper </spam>insights
+                        <spam>with comprehensive location/referrer based analytics and conversion tracking</spam>
+                    </h2>
+                </div>
+                <div class="price14-page">
+                    <img src="/static/images/9.PNG">
+                    <h2>
+                        <spam>Collect </spam>email addresses and phone numbers
+                        <spam>directly from your Linkifi to build your own visitor list
+                        </spam>
+                    </h2>
+                </div>
+
+                <div class="price14-page">
+                    <img src="/static/images/9.PNG">
+                    <h2>Marketing tech
+                        <spam>capabilities including SEO settings, Google Analytics, Zapier, and Mailchimp integrations</spam>
+                    </h2>
+                </div>
+
+                <div class="price15-page">
+                    <h1>Free for 30 days</h1>
+                    <h3>$9 USD per month after, billed monthly</h3>
+                </div>
+                <div class="price16-page">
+                    <a href=""><button>Pro for free</button></a>
+                </div>
+            </div>
+        </div>
+        <div class="price5-page">
+            <div class="price6-page">
+                <h1>Premium</h1>
+            </div>
+            <div class="price7-page">
+                <h3>For brands and businesses</h3>
+                <h4>Gain personalized, high touch support to build your best Linkifis</h4>
+                <h3>Everything in Pro, plus:</h3>
+                <div class="price8-page">
+                    <img src="/static/images/9.PNG">
+                    <h2>
+                        <spam>Get</spam> tailored onboarding
+                        <spam>help you get setup and optimise your Linkifi from day one</spam>
+                    </h2>
+                </div>
+                <div class="price8-page">
+                    <img src="/static/images/9.PNG">
+                    <h2>
+                        <spam>Priority </spam>customer support
+                        <spam>from one of our experts via email or video call</spam>
+                    </h2>
+                </div>
+                <div class="price8-page">
+                    <img src="/static/images/9.PNG">
+                    <h2>
+                        <spam>Access to </spam>unlimited historical insights
+                        <spam>from the lifetime of your Linkifi</spam>
+                    </h2>
+                </div>
+                <div class="price8-page">
+                    <img src="/static/images/9.PNG">
+                    <h2>Export
+                        <spam>your analytics data </spam>
+                    </h2>
+                </div>
+
+                <div class="price9-page anni">
+                    <h1>$24</h1>
+                    <h3>USD/month, billed monthly</h3>
+                </div>
+                <div class="price10-page">
+                    <a href=""><button>Get Premium</button></a>
+                </div>
+            </div>
+        </div>
+
+    </div> -->
+
+    <div id="home17-page">
+        <h1>The only link in bio trusted by 50M+</h1>
+        <p class="home10">creators</p>
+        <p class="home10">writers</p>
+        <p class="home10">influencer</p>
+        <p class="home10">small businesses</p>
+        <p class="home10">atheletes</p>
+        <p class="home10">DJS</p>
+        <p class="home10">podcasters</p>
+        <p class="home10">Fashion Designer</p>
+
+    </div>
+
+    <div id="home18-page">
+        <div class="home19-page">
+            <img src="/static/images/1.avif" class="rotate-img">
+        </div>
+        <div class="home19-page">
+            <img src="/static/images/2.avif" class="rotate-img">
+        </div>
+        <div class="home19-page">
+            <img src="/static/images/3.avif" class="rotate-img">
+        </div>
+        <div class="home19-page">
+            <img src="/static/images/4.avif" class="rotate-img">
+        </div>
+
+    </div>
+
+    <div id="price17-page">
+        <h1>All Features</h1>
+        <div class="price18-page">
+            <div class="price19-page">
+                <h2>Free</h2>
+                <h3>$0</h3>
+                <h4>forever</h4>
+                <a href="{% url 'login' %}"><button>Join for free</button></a>
+            </div>
+            <div class="price20-page">
+                <h2>Pro</h2>
+                <h3 class="anniiii">$5</h3>
+                <h4>USD/month, billed annually</h4>
+                <a href="{% url 'login' %}"><button>Pro for free</button></a>
+            </div>
+            <div class="price19-page">
+                <h2>Enterprise</h2>
+                <h3 class="anniii">$20</h3>
+                <h4>USD/month, billed annually</h4>
+                <a href="{% url 'login' %}"><button>Get Premium</button></a>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="price21-page">
+        <div class="price22-page">
+            <div class="price23-page">
+                <a href="#likes"><button>Links & Buttons</button></a>
+            </div>
+            <div class="price24-page">
+                <a href="#monetization"><button>Monetization</button></a>
+            </div>
+            <div class="price24-page">
+                <a href="#customization"><button>Customization</button></a>
+            </div>
+            <div class="price24-page">
+                <a href="#analytics"><button>Analytics</button></a>
+            </div>
+            <div class="price24-page">
+                <a href="#marketing"><button>Marketing Tech</button></a>
+            </div>
+            <div class="price24-page">
+                <a href="#management"><button>Management</button></a>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="likes">
+        <div class="price26-page">
+            <div class="price27-page">
+                <div class="price28-page">
+                    <i class="fa fa-plus toggle-icon" id="Alikhan"></i>
+                    <i class="fa fa-minus toggle-icon" id="Alikhan1" style="display: none;"></i>
+                    <h2>Email Collection
+                    </h2>
+                    <img src="/static/images/10.PNG">
+                    <img src="/static/images/10.PNG">
+                    <img src="/static/images/9.PNG">
+                    <img src="/static/images/9.PNG">
+                </div>
+            </div>
+            <div class="price29-page" id="Alikhan3" style="display: none;">
+                <p>Collect email addresses and phone <br> numbers directly from your <br> Linkifi to build and <br> own your visitor list.</p>
+            </div>
+        </div>
+        <div class="price26-page">
+            <div class="price27-page">
+                <div class="price28-page">
+                    <i class="fa fa-plus toggle-icon" id="Alikhan"></i>
+                    <i class="fa fa-minus toggle-icon" id="Alikhan1" style="display: none;"></i>
+                    <h2>Phone Number Collection
+                    </h2>
+                    <img src="/static/images/10.PNG">
+                    <img src="/static/images/10.PNG">
+                    <img src="/static/images/9.PNG">
+                    <img src="/static/images/9.PNG">
+                </div>
+            </div>
+            <div class="price29-page" id="Alikhan3" style="display: none;">
+                <p>Collect phone numbers directly<br> from your Linkifi to build and <br>own your visitor list.
+                </p>
+            </div>
+        </div>
+        <div class="price26-page">
+            <div class="price27-page">
+                <div class="price28-page">
+                    <i class="fa fa-plus toggle-icon" id="Alikhan"></i>
+                    <i class="fa fa-minus toggle-icon" id="Alikhan1" style="display: none;"></i>
+                    <h2>
+
+                        Embed Latest Tweets
+
+
+
+                    </h2>
+                    <img src="/static/images/10.PNG">
+                    <img src="/static/images/10.PNG">
+                    <img src="/static/images/9.PNG">
+                    <img src="/static/images/9.PNG">
+                </div>
+            </div>
+            <div class="price29-page" id="Alikhan3" style="display: none;">
+                <p>Automatically embed your most<br> recent Tweets.
+
+
+            </div>
+        </div>
+        <div class="price26-page">
+            <div class="price27-page">
+                <div class="price28-page">
+                    <i class="fa fa-plus toggle-icon" id="Alikhan"></i>
+                    <i class="fa fa-minus toggle-icon" id="Alikhan1" style="display: none;"></i>
+                    <h2>RSS (Syndication) Feed Link
+
+
+
+                    </h2>
+                    <img src="/static/images/10.PNG">
+                    <img src="/static/images/10.PNG">
+                    <img src="/static/images/9.PNG">
+                    <img src="/static/images/9.PNG">
+                </div>
+            </div>
+            <div class="price29-page" id="Alikhan3" style="display: none;">
+                <p>Showcase your most recent blog or<br> news content on your Linkifi <br>via an RSS (Really Simple Syndication)<br> feed link.
+
+
+            </div>
+        </div>
+        <div class="price26-page">
+            <div class="price27-page">
+                <div class="price28-page">
+                    <i class="fa fa-plus toggle-icon" id="Alikhan"></i>
+                    <i class="fa fa-minus toggle-icon" id="Alikhan1" style="display: none;"></i>
+                    <h2>Mobile App Link App
+
+
+
+                    </h2>
+                    <img src="/static/images/10.PNG">
+                    <img src="/static/images/10.PNG">
+                    <img src="/static/images/9.PNG">
+                    <img src="/static/images/9.PNG">
+                </div>
+            </div>
+            <div class="price29-page" id="Alikhan3" style="display: none;">
+                <p>Promote a mobile app & get <br> more downloads
+
+
+            </div>
+        </div>
+        <div class="price26-page">
+            <div class="price27-page">
+                <div class="price28-page">
+                    <i class="fa fa-plus toggle-icon" id="Alikhan"></i>
+                    <i class="fa fa-minus toggle-icon" id="Alikhan1" style="display: none;"></i>
+                    <h2>Animation
+
+
+
+                    </h2>
+                    <img src="/static/images/10.PNG">
+                    <img src="/static/images/10.PNG">
+                    <img src="/static/images/9.PNG">
+                    <img src="/static/images/9.PNG">
+                </div>
+            </div>
+            <div class="price29-page" id="Alikhan3" style="display: none;">
+                <p>Draw attention to your most important <br>link with animated styling, and<br> give visitors the bump they need.
+
+
+            </div>
+        </div>
+        <div class="price26-page">
+            <div class="price27-page">
+                <div class="price28-page">
+                    <i class="fa fa-plus toggle-icon" id="Alikhan"></i>
+                    <i class="fa fa-minus toggle-icon" id="Alikhan1" style="display: none;"></i>
+                    <h2>Redirect
+
+
+
+                    </h2>
+                    <img src="/static/images/10.PNG">
+                    <img src="/static/images/10.PNG">
+                    <img src="/static/images/9.PNG">
+                    <img src="/static/images/9.PNG">
+                </div>
+            </div>
+            <div class="price29-page" id="Alikhan3" style="display: none;">
+                <p>Sometimes, you don’t need your<br> whole tree. We get it.<br> With Redirects, send traffic<br> straight to a website – but still <br>capture click analytics with Linkifi.
+
+
+            </div>
+        </div>
+        <div class="price26-page">
+            <div class="price27-page">
+                <div class="price28-page">
+                    <i class="fa fa-plus toggle-icon" id="Alikhan"></i>
+                    <i class="fa fa-minus toggle-icon" id="Alikhan1" style="display: none;"></i>
+                    <h2>Spotlight
+                    </h2>
+                    <img src="/static/images/10.PNG">
+                    <img src="/static/images/10.PNG">
+                    <img src="/static/images/9.PNG">
+                    <img src="/static/images/9.PNG">
+                </div>
+            </div>
+            <div class="price29-page" id="Alikhan3" style="display: none;">
+                <p>Have an important link? Spotlight a link<br> so that the content is already<br> on display when a vistor lands<br> on your Linkifi.
+
+
+            </div>
+        </div>
+        <div class="price26-page">
+            <div class="price27-page">
+                <div class="price28-page">
+                    <i class="fa fa-plus toggle-icon" id="Alikhan"></i>
+                    <i class="fa fa-minus toggle-icon" id="Alikhan1" style="display: none;"></i>
+                    <h2>Schedule
+
+
+                    </h2>
+                    <img src="/static/images/10.PNG">
+                    <img src="/static/images/10.PNG">
+                    <img src="/static/images/9.PNG">
+                    <img src="/static/images/9.PNG">
+                </div>
+            </div>
+            <div class="price29-page" id="Alikhan3" style="display: none;">
+                <p>Schedule a link to go live and<br> disappear at specific dates and<br> times in the future.
+
+
+            </div>
+        </div>
+        <div class="price26-page">
+            <div class="price27-page">
+                <div class="price28-page">
+                    <i class="fa fa-plus toggle-icon" id="Alikhan"></i>
+                    <i class="fa fa-minus toggle-icon" id="Alikhan1" style="display: none;"></i>
+                    <h2>NFT Lock
+
+
+
+                    </h2>
+                    <img src="/static/images/10.PNG">
+                    <img src="/static/images/10.PNG">
+                    <img src="/static/images/9.PNG">
+                    <img src="/static/images/9.PNG">
+                </div>
+            </div>
+            <div class="price29-page" id="Alikhan3" style="display: none;">
+                <p>Build your Web3 community easily. Lock<br> any link using a contract address <br>and reward owners of NFTs from that<br> collection with exclusive access.
+
+
+            </div>
+        </div>
+        <div class="price26-page">
+            <div class="price27-page">
+                <div class="price28-page">
+                    <i class="fa fa-plus toggle-icon" id="Alikhan"></i>
+                    <i class="fa fa-minus toggle-icon" id="Alikhan1" style="display: none;"></i>
+                    <h2>Bandsintown Link App
+                    </h2>
+                    <img src="/static/images/10.PNG">
+                    <img src="/static/images/10.PNG">
+                    <img src="/static/images/9.PNG">
+                    <img src="/static/images/9.PNG">
+                </div>
+            </div>
+            <div class="price29-page" id="Alikhan3" style="display: none;">
+                <p>Sell more tickets with Bandsintown: <br>Automatically share upcoming tour dates<br> and events to fuel ticket sales, and<br> make sure your fans never miss a show.
+
+
+            </div>
+        </div>
+        <div class="price26-page">
+            <div class="price27-page">
+                <div class="price28-page">
+                    <i class="fa fa-plus toggle-icon" id="Alikhan"></i>
+                    <i class="fa fa-minus toggle-icon" id="Alikhan1" style="display: none;"></i>
+                    <h2>Contact Form Link App
+
+
+
+                    </h2>
+                    <img src="/static/images/10.PNG">
+                    <img src="/static/images/10.PNG">
+                    <img src="/static/images/9.PNG">
+                    <img src="/static/images/9.PNG">
+                </div>
+            </div>
+            <div class="price29-page" id="Alikhan3" style="display: none;">
+                <p>Create a contact form to collect visitor<br> names, emails, mobile numbers,<br> countries, and let them leave<br> you messages.
+
+
+            </div>
+        </div>
+        <div class="price26-page">
+            <div class="price27-page">
+                <div class="price28-page">
+                    <i class="fa fa-plus toggle-icon" id="Alikhan"></i>
+                    <i class="fa fa-minus toggle-icon" id="Alikhan1" style="display: none;"></i>
+                    <h2>Pinterest Link Embeds
+                    </h2>
+                    <img src="/static/images/10.PNG">
+                    <img src="/static/images/10.PNG">
+                    <img src="/static/images/9.PNG">
+                    <img src="/static/images/9.PNG">
+                </div>
+            </div>
+            <div class="price29-page" id="Alikhan3" style="display: none;">
+                <p>Embed your Pinterest pins and boards <br>directly in your Linkifi.
+
+
+            </div>
+        </div>
+
+        <div class="price26-page">
+            <div class="price27-page">
+                <div class="price28-page">
+                    <i class="fa fa-plus toggle-icon" id="Alikhan"></i>
+                    <i class="fa fa-minus toggle-icon" id="Alikhan1" style="display: none;"></i>
+                    <h2>Clubhouse Link App
+
+
+
+                    </h2>
+                    <img src="/static/images/10.PNG">
+                    <img src="/static/images/10.PNG">
+                    <img src="/static/images/9.PNG">
+                    <img src="/static/images/9.PNG">
+                </div>
+            </div>
+            <div class="price29-page" id="Alikhan3" style="display: none;">
+                <p>Embed your Clubhouse event, club, room <br>and profile to grow your engagement <br>and following on Clubhouse.
+
+            </div>
+        </div>
+        <div class="price26-page">
+            <div class="price27-page">
+                <div class="price28-page">
+                    <i class="fa fa-plus toggle-icon" id="Alikhan"></i>
+                    <i class="fa fa-minus toggle-icon" id="Alikhan1" style="display: none;"></i>
+                    <h2>Audiomack Link App
+
+
+
+                    </h2>
+                    <img src="/static/images/10.PNG">
+                    <img src="/static/images/10.PNG">
+                    <img src="/static/images/9.PNG">
+                    <img src="/static/images/9.PNG">
+                </div>
+            </div>
+            <div class="price29-page" id="Alikhan3" style="display: none;">
+                <p>Display a preview of an Audiomack song,<br> album, artist or playlist on your<br> Linkifi.
+
+
+            </div>
+        </div>
+        <div class="price26-page">
+            <div class="price27-page">
+                <div class="price28-page">
+                    <i class="fa fa-plus toggle-icon" id="Alikhan"></i>
+                    <i class="fa fa-minus toggle-icon" id="Alikhan1" style="display: none;"></i>
+                    <h2>SoundCloud Link App
+                    </h2>
+                    <img src="/static/images/10.PNG">
+                    <img src="/static/images/10.PNG">
+                    <img src="/static/images/9.PNG">
+                    <img src="/static/images/9.PNG">
+                </div>
+            </div>
+            <div class="price29-page" id="Alikhan3" style="display: none;">
+                <p>Get your music heard on SoundCloud<br>. Share songs, albums and <br>playlists.
+
+
+            </div>
+        </div>
+        <div class="price26-page">
+            <div class="price27-page">
+                <div class="price28-page">
+                    <i class="fa fa-plus toggle-icon" id="Alikhan"></i>
+                    <i class="fa fa-minus toggle-icon" id="Alikhan1" style="display: none;"></i>
+                    <h2>Spotify Link App
+
+
+
+                    </h2>
+                    <img src="/static/images/10.PNG">
+                    <img src="/static/images/10.PNG">
+                    <img src="/static/images/9.PNG">
+                    <img src="/static/images/9.PNG">
+                </div>
+            </div>
+            <div class="price29-page" id="Alikhan3" style="display: none;">
+                <p>Share your latest or favorite songs,<br> albums or playlists and let<br> people listen right on your <br>Linkifi.
+
+
+            </div>
+        </div>
+        <div class="price26-page">
+            <div class="price27-page">
+                <div class="price28-page">
+                    <i class="fa fa-plus toggle-icon" id="Alikhan"></i>
+                    <i class="fa fa-minus toggle-icon" id="Alikhan1" style="display: none;"></i>
+                    <h2>Podcast Link App
+                    </h2>
+                    <img src="/static/images/10.PNG">
+                    <img src="/static/images/10.PNG">
+                    <img src="/static/images/9.PNG">
+                    <img src="/static/images/9.PNG">
+                </div>
+            </div>
+            <div class="price29-page" id="Alikhan3" style="display: none;">
+                <p>Get more podcast listeners and subscribers <br> with Linkifi’s Podcast Link. Add <br> a link to a podcast on a supported platform <br> (Spotify, Stitcher, Apple or Google Podcasts) and <br> Linkifi will find and show your visitors everywhere
+                    <br> it’s available to stream as well as <br> recent episodes.
+
+
+            </div>
+        </div>
+
+        <div class="price26-page">
+            <div class="price27-page">
+                <div class="price28-page">
+                    <i class="fa fa-plus toggle-icon" id="Alikhan"></i>
+                    <i class="fa fa-minus toggle-icon" id="Alikhan1" style="display: none;"></i>
+                    <h2>X (formerly Twitter) embed
+                    </h2>
+                    <img src="/static/images/10.PNG">
+                    <img src="/static/images/10.PNG">
+                    <img src="/static/images/9.PNG">
+                    <img src="/static/images/9.PNG">
+                </div>
+            </div>
+            <div class="price29-page" id="Alikhan3" style="display: none;">
+                <p>Connect more fans with your music by<br> giving them one place to see <br>everywhere it’s available. Add Spotify, <br>SoundCloud, and Audiomack players to <br>let fans listen right on your Linkifi.
+            </div>
+        </div>
+        <div class="price26-page">
+            <div class="price27-page">
+                <div class="price28-page">
+                    <i class="fa fa-plus toggle-icon" id="Alikhan"></i>
+                    <i class="fa fa-minus toggle-icon" id="Alikhan1" style="display: none;"></i>
+                    <h2>QR Code
+                    </h2>
+                    <img src="/static/images/10.PNG">
+                    <img src="/static/images/10.PNG">
+                    <img src="/static/images/9.PNG">
+                    <img src="/static/images/9.PNG">
+                </div>
+            </div>
+            <div class="price29-page" id="Alikhan3" style="display: none;">
+                <p>Collect email addresses and phone <br> numbers directly from your <br> Linkifi to build and <br> own your visitor list.</p>
+            </div>
+        </div>
+        <div class="price26-page">
+            <div class="price27-page">
+                <div class="price28-page">
+                    <i class="fa fa-plus toggle-icon" id="Alikhan"></i>
+                    <i class="fa fa-minus toggle-icon" id="Alikhan1" style="display: none;"></i>
+                    <h2>TikTok Profile Link App
+
+
+
+                    </h2>
+                    <img src="/static/images/10.PNG">
+                    <img src="/static/images/10.PNG">
+                    <img src="/static/images/9.PNG">
+                    <img src="/static/images/9.PNG">
+                </div>
+            </div>
+            <div class="price29-page" id="Alikhan3" style="display: none;">
+                <p>Collect email addresses and phone <br> numbers directly from your <br> Linkifi to build and <br> own your visitor list.</p>
+            </div>
+        </div>
+        <div class="price26-page">
+            <div class="price27-page">
+                <div class="price28-page">
+                    <i class="fa fa-plus toggle-icon" id="Alikhan"></i>
+                    <i class="fa fa-minus toggle-icon" id="Alikhan1" style="display: none;"></i>
+                    <h2>Unlimited Links
+
+
+
+                    </h2>
+                    <img src="/static/images/10.PNG">
+                    <img src="/static/images/10.PNG">
+                    <img src="/static/images/9.PNG">
+                    <img src="/static/images/9.PNG">
+                </div>
+            </div>
+            <div class="price29-page" id="Alikhan3" style="display: none;">
+                <p>Collect email addresses and phone <br> numbers directly from your <br> Linkifi to build and <br> own your visitor list.</p>
+            </div>
+        </div>
+
+
+        <div class="price26-page">
+            <div class="price27-page">
+                <div class="price28-page">
+                    <i class="fa fa-plus toggle-icon" id="Alikhan"></i>
+                    <i class="fa fa-minus toggle-icon" id="Alikhan1" style="display: none;"></i>
+                    <h2>Email Collection
+                    </h2>
+                    <img src="/static/images/10.PNG">
+                    <img src="/static/images/10.PNG">
+                    <img src="/static/images/9.PNG">
+                    <img src="/static/images/9.PNG">
+                </div>
+            </div>
+            <div class="price29-page" id="Alikhan3" style="display: none;">
+                <p>Collect email addresses and phone <br> numbers directly from your <br> Linkifi to build and <br> own your visitor list.</p>
+            </div>
+        </div>
+
+
+
+    </div>
+
+    <div id="monetization">
+        <div class="price26-page">
+            <div class="price27-page">
+                <div class="price28-page">
+                    <i class="fa fa-plus toggle-icon" id="Alikhan"></i>
+                    <i class="fa fa-minus toggle-icon" id="Alikhan1" style="display: none;"></i>
+                    <h2>Amazon Associates Program
+                    </h2>
+                    <img src="/static/images/10.PNG">
+                    <img src="/static/images/10.PNG">
+                    <img src="/static/images/9.PNG">
+                    <img src="/static/images/9.PNG">
+                </div>
+            </div>
+            <div class="price29-page" id="Alikhan3" style="display: none;">
+                <p>Collect email addresses and phone <br> numbers directly from your <br> Linkifi to build and <br> own your visitor list.</p>
+            </div>
+        </div>
+        <div class="price26-page">
+            <div class="price27-page">
+                <div class="price28-page">
+                    <i class="fa fa-plus toggle-icon" id="Alikhan"></i>
+                    <i class="fa fa-minus toggle-icon" id="Alikhan1" style="display: none;"></i>
+                    <h2>Apple Performance Partner
+                    </h2>
+                    <img src="/static/images/10.PNG">
+                    <img src="/static/images/10.PNG">
+                    <img src="/static/images/9.PNG">
+                    <img src="/static/images/9.PNG">
+                </div>
+            </div>
+            <div class="price29-page" id="Alikhan3" style="display: none;">
+                <p>Add your Apple Affiliate Token to earn<br> commissions on qualifying Apple<br> subscriptions and purchases made <br>by your visitors.
+
+
+            </div>
+        </div>
+
+        <div class="price26-page">
+            <div class="price27-page">
+                <div class="price28-page">
+                    <i class="fa fa-plus toggle-icon" id="Alikhan"></i>
+                    <i class="fa fa-minus toggle-icon" id="Alikhan1" style="display: none;"></i>
+                    <h2>Commission Junction Affiliate
+                    </h2>
+                    <img src="/static/images/10.PNG">
+                    <img src="/static/images/10.PNG">
+                    <img src="/static/images/9.PNG">
+                    <img src="/static/images/9.PNG">
+                </div>
+            </div>
+            <div class="price29-page" id="Alikhan3" style="display: none;">
+                <p>Easily auto-generate affiliate links <br>from select Commission Junction<br> partners by providing your Promotional<br> Property ID and Ad ID.
+
+
+
+
+            </div>
+        </div>
+
+        <div class="price26-page">
+            <div class="price27-page">
+                <div class="price28-page">
+                    <i class="fa fa-plus toggle-icon" id="Alikhan"></i>
+                    <i class="fa fa-minus toggle-icon" id="Alikhan1" style="display: none;"></i>
+                    <h2>SendOwl Link App
+
+
+
+                    </h2>
+                    <img src="/static/images/10.PNG">
+                    <img src="/static/images/10.PNG">
+                    <img src="/static/images/9.PNG">
+                    <img src="/static/images/9.PNG">
+                </div>
+            </div>
+            <div class="price29-page" id="Alikhan3" style="display: none;">
+                <p>Display your digital products <br>using SendOwl.
+
+
+
+
+            </div>
+        </div>
+
+        <div class="price26-page">
+            <div class="price27-page">
+                <div class="price28-page">
+                    <i class="fa fa-plus toggle-icon" id="Alikhan"></i>
+                    <i class="fa fa-minus toggle-icon" id="Alikhan1" style="display: none;"></i>
+                    <h2>Stores Powered by Shopify
+                    </h2>
+                    <img src="/static/images/10.PNG">
+                    <img src="/static/images/10.PNG">
+                    <img src="/static/images/9.PNG">
+                    <img src="/static/images/9.PNG">
+                </div>
+            </div>
+            <div class="price29-page" id="Alikhan3" style="display: none;">
+                <p>Your visitors can shop your Shopify,<br> Spring and Bonfire store products,<br> collections and holiday promotions, <br>right in your Linkifi.
+
+
+
+
+            </div>
+        </div>
+
+    </div>
+
+    <div id="customization">
+        <div class="price26-page">
+            <div class="price27-page">
+                <div class="price28-page">
+                    <i class="fa fa-plus toggle-icon" id="Alikhan"></i>
+                    <i class="fa fa-minus toggle-icon" id="Alikhan1" style="display: none;"></i>
+                    <h2>Hide Linkifi Logo
+
+
+
+                    </h2>
+                    <img src="/static/images/10.PNG">
+                    <img src="/static/images/10.PNG">
+                    <img src="/static/images/9.PNG">
+                    <img src="/static/images/9.PNG">
+                </div>
+            </div>
+            <div class="price29-page" id="Alikhan3" style="display: none;">
+                <p>Collect email addresses and phone <br> numbers directly from your <br> Linkifi to build and <br> own your visitor list.</p>
+            </div>
+        </div>
+        <div class="price26-page">
+            <div class="price27-page">
+                <div class="price28-page">
+                    <i class="fa fa-plus toggle-icon" id="Alikhan"></i>
+                    <i class="fa fa-minus toggle-icon" id="Alikhan1" style="display: none;"></i>
+                    <h2>Button & Font Styles
+                    </h2>
+                    <img src="/static/images/10.PNG">
+                    <img src="/static/images/10.PNG">
+                    <img src="/static/images/9.PNG">
+                    <img src="/static/images/9.PNG">
+                </div>
+            </div>
+            <div class="price29-page" id="Alikhan3" style="display: none;">
+                <p>Customize your button colours and shapes,<br> and choose the font that aligns <br>with your brand/style/vibe.
+
+            </div>
+        </div>
+
+        <div class="price26-page">
+            <div class="price27-page">
+                <div class="price28-page">
+                    <i class="fa fa-plus toggle-icon" id="Alikhan"></i>
+                    <i class="fa fa-minus toggle-icon" id="Alikhan1" style="display: none;"></i>
+                    <h2>Extended Themes
+                    </h2>
+                    <img src="/static/images/10.PNG">
+                    <img src="/static/images/10.PNG">
+                    <img src="/static/images/9.PNG">
+                    <img src="/static/images/9.PNG">
+                </div>
+            </div>
+            <div class="price29-page" id="Alikhan3" style="display: none;">
+                <p>Customize your button colours and shapes,<br> and choose the font that aligns <br>with your brand/style/vibe.
+
+            </div>
+        </div>
+
+        <div class="price26-page">
+            <div class="price27-page">
+                <div class="price28-page">
+                    <i class="fa fa-plus toggle-icon" id="Alikhan"></i>
+                    <i class="fa fa-minus toggle-icon" id="Alikhan1" style="display: none;"></i>
+                    <h2>Button & Font Styles
+                    </h2>
+                    <img src="/static/images/10.PNG">
+                    <img src="/static/images/10.PNG">
+                    <img src="/static/images/9.PNG">
+                    <img src="/static/images/9.PNG">
+                </div>
+            </div>
+            <div class="price29-page" id="Alikhan3" style="display: none;">
+                <p>Access an elevated, extended selection of<br> themes, fonts and buttons and<br> fully customise the look and feel<br> of your Linkifi profile.
+            </div>
+        </div>
+
+        <div class="price26-page">
+            <div class="price27-page">
+                <div class="price28-page">
+                    <i class="fa fa-plus toggle-icon" id="Alikhan"></i>
+                    <i class="fa fa-minus toggle-icon" id="Alikhan1" style="display: none;"></i>
+                    <h2>Free Themes
+                    </h2>
+                    <img src="/static/images/10.PNG">
+                    <img src="/static/images/10.PNG">
+                    <img src="/static/images/9.PNG">
+                    <img src="/static/images/9.PNG">
+                </div>
+            </div>
+            <div class="price29-page" id="Alikhan3" style="display: none;">
+                <p>Select free themes, and make a selection <br>of colour, font and button tweaks <br>to your Linkifi profile.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="price26-page">
+            <div class="price27-page">
+                <div class="price28-page">
+                    <i class="fa fa-plus toggle-icon" id="Alikhan"></i>
+                    <i class="fa fa-minus toggle-icon" id="Alikhan1" style="display: none;"></i>
+                    <h2>Podcast Link App
+                    </h2>
+                    <img src="/static/images/10.PNG">
+                    <img src="/static/images/10.PNG">
+                    <img src="/static/images/9.PNG">
+                    <img src="/static/images/9.PNG">
+                </div>
+            </div>
+            <div class="price29-page" id="Alikhan3" style="display: none;">
+                <p>Get more podcast listeners and subscribers <br> with Linkifi’s Podcast Link. Add <br> a link to a podcast on a supported platform <br> (Spotify, Stitcher, Apple or Google Podcasts) and <br> Linkifi will find and show your visitors everywhere
+                    <br> it’s available to stream as well as <br> recent episodes.
+
+
+            </div>
+        </div>
+
+        <div class="price26-page">
+            <div class="price27-page">
+                <div class="price28-page">
+                    <i class="fa fa-plus toggle-icon" id="Alikhan"></i>
+                    <i class="fa fa-minus toggle-icon" id="Alikhan1" style="display: none;"></i>
+                    <h2>X (formerly Twitter) embed
+                    </h2>
+                    <img src="/static/images/10.PNG">
+                    <img src="/static/images/10.PNG">
+                    <img src="/static/images/9.PNG">
+                    <img src="/static/images/9.PNG">
+                </div>
+            </div>
+            <div class="price29-page" id="Alikhan3" style="display: none;">
+                <p>Connect more fans with your music by<br> giving them one place to see <br>everywhere it’s available. Add Spotify, <br>SoundCloud, and Audiomack players to <br>let fans listen right on your Linkifi.
+            </div>
+        </div>
+        <div class="price26-page">
+            <div class="price27-page">
+                <div class="price28-page">
+                    <i class="fa fa-plus toggle-icon" id="Alikhan"></i>
+                    <i class="fa fa-minus toggle-icon" id="Alikhan1" style="display: none;"></i>
+                    <h2>QR Code
+                    </h2>
+                    <img src="/static/images/10.PNG">
+                    <img src="/static/images/10.PNG">
+                    <img src="/static/images/9.PNG">
+                    <img src="/static/images/9.PNG">
+                </div>
+            </div>
+            <div class="price29-page" id="Alikhan3" style="display: none;">
+                <p>Collect email addresses and phone <br> numbers directly from your <br> Linkifi to build and <br> own your visitor list.</p>
+            </div>
+        </div>
+        <div class="price26-page">
+            <div class="price27-page">
+                <div class="price28-page">
+                    <i class="fa fa-plus toggle-icon" id="Alikhan"></i>
+                    <i class="fa fa-minus toggle-icon" id="Alikhan1" style="display: none;"></i>
+                    <h2>TikTok Profile Link App
+
+
+
+                    </h2>
+                    <img src="/static/images/10.PNG">
+                    <img src="/static/images/10.PNG">
+                    <img src="/static/images/9.PNG">
+                    <img src="/static/images/9.PNG">
+                </div>
+            </div>
+            <div class="price29-page" id="Alikhan3" style="display: none;">
+                <p>Collect email addresses and phone <br> numbers directly from your <br> Linkifi to build and <br> own your visitor list.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="analytics">
+        <div class="price26-page">
+            <div class="price27-page">
+                <div class="price28-page">
+                    <i class="fa fa-plus toggle-icon" id="Alikhan"></i>
+                    <i class="fa fa-minus toggle-icon" id="Alikhan1" style="display: none;"></i>
+                    <h2>Individual Link Analytics
+                    </h2>
+                    <img src="/static/images/10.PNG">
+                    <img src="/static/images/10.PNG">
+                    <img src="/static/images/9.PNG">
+                    <img src="/static/images/9.PNG">
+                </div>
+            </div>
+            <div class="price29-page" id="Alikhan3" style="display: none;">
+                <p>Collect email addresses and phone <br> numbers directly from your <br> Linkifi to build and <br> own your visitor list.</p>
+            </div>
+        </div>
+        <div class="price26-page">
+            <div class="price27-page">
+                <div class="price28-page">
+                    <i class="fa fa-plus toggle-icon" id="Alikhan"></i>
+                    <i class="fa fa-minus toggle-icon" id="Alikhan1" style="display: none;"></i>
+                    <h2>Mailing & Phone Number List
+                    </h2>
+                    <img src="/static/images/10.PNG">
+                    <img src="/static/images/10.PNG">
+                    <img src="/static/images/9.PNG">
+                    <img src="/static/images/9.PNG">
+                </div>
+            </div>
+            <div class="price29-page" id="Alikhan3" style="display: none;">
+                <p>Collect email addresses and phone <br> numbers directly from your <br> Linkifi to build and <br> own your visitor list.</p>
+            </div>
+        </div>
+
+
+        <div class="price26-page">
+            <div class="price27-page">
+                <div class="price28-page">
+                    <i class="fa fa-plus toggle-icon" id="Alikhan"></i>
+                    <i class="fa fa-minus toggle-icon" id="Alikhan1" style="display: none;"></i>
+                    <h2>Streaming Service Analytics
+
+
+
+                    </h2>
+                    <img src="/static/images/10.PNG">
+                    <img src="/static/images/10.PNG">
+                    <img src="/static/images/9.PNG">
+                    <img src="/static/images/9.PNG">
+                </div>
+            </div>
+            <div class="price29-page" id="Alikhan3" style="display: none;">
+                <p>Collect email addresses and phone <br> numbers directly from your <br> Linkifi to build and <br> own your visitor list.</p>
+            </div>
+        </div>
+
+
+        <div class="price26-page">
+            <div class="price27-page">
+                <div class="price28-page">
+                    <i class="fa fa-plus toggle-icon" id="Alikhan"></i>
+                    <i class="fa fa-minus toggle-icon" id="Alikhan1" style="display: none;"></i>
+                    <h2>Referrer-Based Analytics Top 10
+                    </h2>
+                    <img src="/static/images/10.PNG">
+                    <img src="/static/images/10.PNG">
+                    <img src="/static/images/9.PNG">
+                    <img src="/static/images/9.PNG">
+                </div>
+            </div>
+            <div class="price29-page" id="Alikhan3" style="display: none;">
+                <p>Collect email addresses and phone <br> numbers directly from your <br> Linkifi to build and <br> own your visitor list.</p>
+            </div>
+        </div>
+
+
+        <div class="price26-page">
+            <div class="price27-page">
+                <div class="price28-page">
+                    <i class="fa fa-plus toggle-icon" id="Alikhan"></i>
+                    <i class="fa fa-minus toggle-icon" id="Alikhan1" style="display: none;"></i>
+                    <h2>Location-Based Analytics
+
+
+                    </h2>
+                    <img src="/static/images/10.PNG">
+                    <img src="/static/images/10.PNG">
+                    <img src="/static/images/9.PNG">
+                    <img src="/static/images/9.PNG">
+                </div>
+            </div>
+            <div class="price29-page" id="Alikhan3" style="display: none;">
+                <p>Collect email addresses and phone <br> numbers directly from your <br> Linkifi to build and <br> own your visitor list.</p>
+            </div>
+        </div>
+
+
+        <div class="price26-page">
+            <div class="price27-page">
+                <div class="price28-page">
+                    <i class="fa fa-plus toggle-icon" id="Alikhan"></i>
+                    <i class="fa fa-minus toggle-icon" id="Alikhan1" style="display: none;"></i>
+                    <h2>Device-Based Analytics
+                    </h2>
+                    <img src="/static/images/10.PNG">
+                    <img src="/static/images/10.PNG">
+                    <img src="/static/images/9.PNG">
+                    <img src="/static/images/9.PNG">
+                </div>
+            </div>
+            <div class="price29-page" id="Alikhan3" style="display: none;">
+                <p>Collect email addresses and phone <br> numbers directly from your <br> Linkifi to build and <br> own your visitor list.</p>
+            </div>
+        </div>
+
+
+        <div class="price26-page">
+            <div class="price27-page">
+                <div class="price28-page">
+                    <i class="fa fa-plus toggle-icon" id="Alikhan"></i>
+                    <i class="fa fa-minus toggle-icon" id="Alikhan1" style="display: none;"></i>
+                    <h2>Social Icon Analytics
+                    </h2>
+                    <img src="/static/images/10.PNG">
+                    <img src="/static/images/10.PNG">
+                    <img src="/static/images/9.PNG">
+                    <img src="/static/images/9.PNG">
+                </div>
+            </div>
+            <div class="price29-page" id="Alikhan3" style="display: none;">
+                <p>Collect email addresses and phone <br> numbers directly from your <br> Linkifi to build and <br> own your visitor list.</p>
+            </div>
+        </div>
+
+
+        <div class="price26-page">
+            <div class="price27-page">
+                <div class="price28-page">
+                    <i class="fa fa-plus toggle-icon" id="Alikhan"></i>
+                    <i class="fa fa-minus toggle-icon" id="Alikhan1" style="display: none;"></i>
+                    <h2>Conversion Tracking
+                    </h2>
+                    <img src="/static/images/10.PNG">
+                    <img src="/static/images/10.PNG">
+                    <img src="/static/images/9.PNG">
+                    <img src="/static/images/9.PNG">
+                </div>
+            </div>
+            <div class="price29-page" id="Alikhan3" style="display: none;">
+                <p>Collect email addresses and phone <br> numbers directly from your <br> Linkifi to build and <br> own your visitor list.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="marketing">
+        <div class="price26-page">
+            <div class="price27-page">
+                <div class="price28-page">
+                    <i class="fa fa-plus toggle-icon" id="Alikhan"></i>
+                    <i class="fa fa-minus toggle-icon" id="Alikhan1" style="display: none;"></i>
+                    <h2>Global UTM Parameters
+                    </h2>
+                    <img src="/static/images/10.PNG">
+                    <img src="/static/images/10.PNG">
+                    <img src="/static/images/9.PNG">
+                    <img src="/static/images/9.PNG">
+                </div>
+            </div>
+            <div class="price29-page" id="Alikhan3" style="display: none;">
+                <p>Collect email addresses and phone <br> numbers directly from your <br> Linkifi to build and <br> own your visitor list.</p>
+            </div>
+        </div>
+        <div class="price26-page">
+            <div class="price27-page">
+                <div class="price28-page">
+                    <i class="fa fa-plus toggle-icon" id="Alikhan"></i>
+                    <i class="fa fa-minus toggle-icon" id="Alikhan1" style="display: none;"></i>
+                    <h2>Facebook Conversion API
+
+
+
+                    </h2>
+                    <img src="/static/images/10.PNG">
+                    <img src="/static/images/10.PNG">
+                    <img src="/static/images/9.PNG">
+                    <img src="/static/images/9.PNG">
+                </div>
+            </div>
+            <div class="price29-page" id="Alikhan3" style="display: none;">
+                <p>Collect email addresses and phone <br> numbers directly from your <br> Linkifi to build and <br> own your visitor list.</p>
+            </div>
+        </div>
+
+
+        <div class="price26-page">
+            <div class="price27-page">
+                <div class="price28-page">
+                    <i class="fa fa-plus toggle-icon" id="Alikhan"></i>
+                    <i class="fa fa-minus toggle-icon" id="Alikhan1" style="display: none;"></i>
+                    <h2>Facebook Conversion API
+
+
+
+                    </h2>
+                    <img src="/static/images/10.PNG">
+                    <img src="/static/images/10.PNG">
+                    <img src="/static/images/9.PNG">
+                    <img src="/static/images/9.PNG">
+                </div>
+            </div>
+            <div class="price29-page" id="Alikhan3" style="display: none;">
+                <p>Collect email addresses and phone <br> numbers directly from your <br> Linkifi to build and <br> own your visitor list.</p>
+            </div>
+        </div>
+
+        <div class="price26-page">
+            <div class="price27-page">
+                <div class="price28-page">
+                    <i class="fa fa-plus toggle-icon" id="Alikhan"></i>
+                    <i class="fa fa-minus toggle-icon" id="Alikhan1" style="display: none;"></i>
+                    <h2>Google Analytics
+
+
+
+
+
+
+                    </h2>
+                    <img src="/static/images/10.PNG">
+                    <img src="/static/images/10.PNG">
+                    <img src="/static/images/9.PNG">
+                    <img src="/static/images/9.PNG">
+                </div>
+            </div>
+            <div class="price29-page" id="Alikhan3" style="display: none;">
+                <p>Collect email addresses and phone <br> numbers directly from your <br> Linkifi to build and <br> own your visitor list.</p>
+            </div>
+        </div>
+
+        <div class="price26-page">
+            <div class="price27-page">
+                <div class="price28-page">
+                    <i class="fa fa-plus toggle-icon" id="Alikhan"></i>
+                    <i class="fa fa-minus toggle-icon" id="Alikhan1" style="display: none;"></i>
+                    <h2>SEO Settings
+
+
+
+                    </h2>
+                    <img src="/static/images/10.PNG">
+                    <img src="/static/images/10.PNG">
+                    <img src="/static/images/9.PNG">
+                    <img src="/static/images/9.PNG">
+                </div>
+            </div>
+            <div class="price29-page" id="Alikhan3" style="display: none;">
+                <p>Collect email addresses and phone <br> numbers directly from your <br> Linkifi to build and <br> own your visitor list.</p>
+            </div>
+        </div>
+
+        <div class="price26-page">
+            <div class="price27-page">
+                <div class="price28-page">
+                    <i class="fa fa-plus toggle-icon" id="Alikhan"></i>
+                    <i class="fa fa-minus toggle-icon" id="Alikhan1" style="display: none;"></i>
+                    <h2>Zapier Integration
+                    </h2>
+                    <img src="/static/images/10.PNG">
+                    <img src="/static/images/10.PNG">
+                    <img src="/static/images/9.PNG">
+                    <img src="/static/images/9.PNG">
+                </div>
+            </div>
+            <div class="price29-page" id="Alikhan3" style="display: none;">
+                <p>Collect email addresses and phone <br> numbers directly from your <br> Linkifi to build and <br> own your visitor list.</p>
+            </div>
+        </div>
+
+        <div class="price26-page">
+            <div class="price27-page">
+                <div class="price28-page">
+                    <i class="fa fa-plus toggle-icon" id="Alikhan"></i>
+                    <i class="fa fa-minus toggle-icon" id="Alikhan1" style="display: none;"></i>
+                    <h2>Google Sheets
+
+
+
+                    </h2>
+                    <img src="/static/images/10.PNG">
+                    <img src="/static/images/10.PNG">
+                    <img src="/static/images/9.PNG">
+                    <img src="/static/images/9.PNG">
+                </div>
+            </div>
+            <div class="price29-page" id="Alikhan3" style="display: none;">
+                <p>Collect email addresses and phone <br> numbers directly from your <br> Linkifi to build and <br> own your visitor list.</p>
+            </div>
+        </div>
+
+        <div class="price26-page">
+            <div class="price27-page">
+                <div class="price28-page">
+                    <i class="fa fa-plus toggle-icon" id="Alikhan"></i>
+                    <i class="fa fa-minus toggle-icon" id="Alikhan1" style="display: none;"></i>
+                    <h2>MailChimp Connection
+                    </h2>
+                    <img src="/static/images/10.PNG">
+                    <img src="/static/images/10.PNG">
+                    <img src="/static/images/9.PNG">
+                    <img src="/static/images/9.PNG">
+                </div>
+            </div>
+            <div class="price29-page" id="Alikhan3" style="display: none;">
+                <p>Collect email addresses and phone <br> numbers directly from your <br> Linkifi to build and <br> own your visitor list.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="management">
+        <div class="price26-page">
+            <div class="price27-page">
+                <div class="price28-page">
+                    <i class="fa fa-plus toggle-icon" id="Alikhan"></i>
+                    <i class="fa fa-minus toggle-icon" id="Alikhan1" style="display: none;"></i>
+                    <h2>Customer Success Manager
+
+
+
+                    </h2>
+                    <img src="/static/images/10.PNG">
+                    <img src="/static/images/10.PNG">
+                    <img src="/static/images/9.PNG">
+                    <img src="/static/images/9.PNG">
+                </div>
+            </div>
+            <div class="price29-page" id="Alikhan3" style="display: none;">
+                <p>Collect email addresses and phone <br> numbers directly from your <br> Linkifi to build and <br> own your visitor list.</p>
+            </div>
+        </div>
+        <div class="price26-page">
+            <div class="price27-page">
+                <div class="price28-page">
+                    <i class="fa fa-plus toggle-icon" id="Alikhan"></i>
+                    <i class="fa fa-minus toggle-icon" id="Alikhan1" style="display: none;"></i>
+                    <h2>Onboarding Call
+
+
+
+                    </h2>
+                    <img src="/static/images/10.PNG">
+                    <img src="/static/images/10.PNG">
+                    <img src="/static/images/9.PNG">
+                    <img src="/static/images/9.PNG">
+                </div>
+            </div>
+            <div class="price29-page" id="Alikhan3" style="display: none;">
+                <p>Collect email addresses and phone <br> numbers directly from your <br> Linkifi to build and <br> own your visitor list.</p>
+            </div>
+        </div>
+
+        <div class="price26-page">
+            <div class="price27-page">
+                <div class="price28-page">
+                    <i class="fa fa-plus toggle-icon" id="Alikhan"></i>
+                    <i class="fa fa-minus toggle-icon" id="Alikhan1" style="display: none;"></i>
+                    <h2>Onboarding Call
+
+
+
+                    </h2>
+                    <img src="/static/images/10.PNG">
+                    <img src="/static/images/10.PNG">
+                    <img src="/static/images/9.PNG">
+                    <img src="/static/images/9.PNG">
+                </div>
+            </div>
+            <div class="price29-page" id="Alikhan3" style="display: none;">
+                <p>Collect email addresses and phone <br> numbers directly from your <br> Linkifi to build and <br> own your visitor list.</p>
+            </div>
+        </div>
+        <div class="price26-page">
+            <div class="price27-page">
+                <div class="price28-page">
+                    <i class="fa fa-plus toggle-icon" id="Alikhan"></i>
+                    <i class="fa fa-minus toggle-icon" id="Alikhan1" style="display: none;"></i>
+                    <h2>Custom T&Cs
+
+
+
+
+
+
+                    </h2>
+                    <img src="/static/images/10.PNG">
+                    <img src="/static/images/10.PNG">
+                    <img src="/static/images/9.PNG">
+                    <img src="/static/images/9.PNG">
+                </div>
+            </div>
+            <div class="price29-page" id="Alikhan3" style="display: none;">
+                <p>Collect email addresses and phone <br> numbers directly from your <br> Linkifi to build and <br> own your visitor list.</p>
+            </div>
+        </div>
+        <div class="price26-page">
+            <div class="price27-page">
+                <div class="price28-page">
+                    <i class="fa fa-plus toggle-icon" id="Alikhan"></i>
+                    <i class="fa fa-minus toggle-icon" id="Alikhan1" style="display: none;"></i>
+                    <h2>Onboarding Call
+
+
+
+                    </h2>
+                    <img src="/static/images/10.PNG">
+                    <img src="/static/images/10.PNG">
+                    <img src="/static/images/9.PNG">
+                    <img src="/static/images/9.PNG">
+                </div>
+            </div>
+            <div class="price29-page" id="Alikhan3" style="display: none;">
+                <p>Collect email addresses and phone <br> numbers directly from your <br> Linkifi to build and <br> own your visitor list.</p>
+            </div>
+        </div>
+        <div class="price26-page">
+            <div class="price27-page">
+                <div class="price28-page">
+                    <i class="fa fa-plus toggle-icon" id="Alikhan"></i>
+                    <i class="fa fa-minus toggle-icon" id="Alikhan1" style="display: none;"></i>
+                    <h2>Add Admins
+
+
+
+
+
+
+                    </h2>
+                    <img src="/static/images/10.PNG">
+                    <img src="/static/images/10.PNG">
+                    <img src="/static/images/9.PNG">
+                    <img src="/static/images/9.PNG">
+                </div>
+            </div>
+            <div class="price29-page" id="Alikhan3" style="display: none;">
+                <p>Collect email addresses and phone <br> numbers directly from your <br> Linkifi to build and <br> own your visitor list.</p>
+            </div>
+        </div>
+        <div class="price26-page">
+            <div class="price27-page">
+                <div class="price28-page">
+                    <i class="fa fa-plus toggle-icon" id="Alikhan"></i>
+                    <i class="fa fa-minus toggle-icon" id="Alikhan1" style="display: none;"></i>
+                    <h2>Multi-factor Authentication
+
+
+
+
+
+                    </h2>
+                    <img src="/static/images/10.PNG">
+                    <img src="/static/images/10.PNG">
+                    <img src="/static/images/9.PNG">
+                    <img src="/static/images/9.PNG">
+                </div>
+            </div>
+            <div class="price29-page" id="Alikhan3" style="display: none;">
+                <p>Collect email addresses and phone <br> numbers directly from your <br> Linkifi to build and <br> own your visitor list.</p>
+            </div>
+        </div>
+        <div class="price26-page">
+            <div class="price27-page">
+                <div class="price28-page">
+                    <i class="fa fa-plus toggle-icon" id="Alikhan"></i>
+                    <i class="fa fa-minus toggle-icon" id="Alikhan1" style="display: none;"></i>
+                    <h2>Support
+
+
+
+                    </h2>
+                    <img src="/static/images/10.PNG">
+                    <img src="/static/images/10.PNG">
+                    <img src="/static/images/9.PNG">
+                    <img src="/static/images/9.PNG">
+                </div>
+            </div>
+            <div class="price29-page" id="Alikhan3" style="display: none;">
+                <p>Collect email addresses and phone <br> numbers directly from your <br> Linkifi to build and <br> own your visitor list.</p>
+            </div>
+        </div>
+        <div class="price26-page">
+            <div class="price27-page">
+                <div class="price28-page">
+                    <i class="fa fa-plus toggle-icon" id="Alikhan"></i>
+                    <i class="fa fa-minus toggle-icon" id="Alikhan1" style="display: none;"></i>
+                    <h2>Linkifi Mobile App
+
+
+                    </h2>
+                    <img src="/static/images/10.PNG">
+                    <img src="/static/images/10.PNG">
+                    <img src="/static/images/9.PNG">
+                    <img src="/static/images/9.PNG">
+                </div>
+            </div>
+            <div class="price29-page" id="Alikhan3" style="display: none;">
+                <p>Collect email addresses and phone <br> numbers directly from your <br> Linkifi to build and <br> own your visitor list.</p>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div id="price30-page">
+        <div class="price31-page">
+            <h1>Learn more about centralised login, <br>single- enterprise plans</h1>
+        </div>
+    </div>
+
+
+    <div id="price32-page">
+        <h1>Everything you need, and then some.</h1>
+        <a href=""><button>Join the Pros</button></a>
+
+    </div>
+
+    <div id="price33-page">
+        <div class="price34-page">
+            <div class="price35-page">
+                <img src="/static/images/15.avif">
+                <h1>Enhanced <br> Customization</h1>
+                <h5>From video backgrounds to removing <br> the Linkifi logo: get even more <br> power to make your page pop.</h5>
+                <div class="price36-page">
+                    <a href="{% url 'login'%}"><button>Premium</button></a>
+                    <a href="{% url 'login'%}"><button>Pro</button></a>
+                    <a href="{% url 'login'%}"><button>Starter</button></a>
+
+                </div>
+            </div>
+        </div>
+        <div class="price37-page">
+            <div class="price38-page">
+                <img src="/static/images/16.avif">
+                <h1>Extended <br> Analytics</h1>
+                <h5>See what’s performing and download <br> extensive analytics to shape your <br> Linkifi for success.</h5>
+                <div class="price36-page">
+                    <a href="{% url 'login'%}"><button>Premium</button></a>
+                    <a href="{% url 'login'%}"><button>Pro</button></a>
+                    <a href="{% url 'login'%}"><button>Starter</button></a>
+
+                </div>
+            </div>
+        </div>
+        <div class="price39-page">
+            <div class="price40-page">
+                <img src="/static/images/17.avif">
+                <h1>Email & SMS <br> Integrations</h1>
+                <h5>Build an audience you reach <br> anywhere, any time by collecting email <br> and SMS details on your Linkifi.</h5>
+                <div class="price36-page">
+                    <a href="{% url 'login'%}"><button>Premium</button></a>
+                    <a href="{% url 'login'%}"><button>Pro</button></a>
+                    <a href="{% url 'login'%}"><button>Starter</button></a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    <div id="home33-page">
+        <div class="home34-page">
+            <div class="home35-page">
+                <img src="/static/images/11.avif">
+            </div>
+            <h1>“Linkifi simplifies the process for creators to share multiple parts of themselves in one inclusive link.”</h1>
+            <h5>Riley Lemon</h5>
+            <h5>YouTube, Content creator</h5>
+        </div>
+        <div class="home34-page">
+            <div class="home35-page">
+                <img src="/static/images/12.avif">
+            </div>
+            <h1>“Linkifi simplifies the process for creators to share multiple parts of themselves in one inclusive link.”</h1>
+            <h5>Riley Lemon</h5>
+            <h5>YouTube, Content creator</h5>
+        </div>
+        <div class="home34-page">
+            <div class="home35-page">
+                <img src="/static/images/13.avif">
+            </div>
+            <h1>“Linkifi simplifies the process for creators to share multiple parts of themselves in one inclusive link.”</h1>
+            <h5>Riley Lemon</h5>
+            <h5>YouTube, Content creator</h5>
+        </div>
+
+    </div>
+
+    <div id="tec36-page" class="section-p3">
+        <h1>Got questions?</h1>
+
+        <div class="tec37-page">
+            <div class="tec41-page">
+                <div class="tec39-page">
+                    <h5>Why do I need a link in bio tool?</h5>
+                    <i class="fa fa-plus toggle-icon" id="Alikhan"></i>
+                    <i class="fa fa-minus toggle-icon" id="Alikhan1" style="display: none;"></i>
+                </div>
+                <div class="tec40-page" id="Alikhan3" style="display: none;">
+                    <h5>Right now, every time you’ve got something new to share, you have to go to every single one of your channels to change the link in each of your bios. It’s time-consuming and complicated – making it so much harder to keep everything
+                        up to date.</h5>
+                    <h5>A link in bio tool means you never have to compromise, or remove one link from your bio so you can add another. You can keep everything you want to share online in one link. When you’ve got a change, you only ever have to make it once.</h5>
+                </div>
+            </div>
+
+            <div class="tec41-page">
+                <div class="tec39-page">
+                    <h5>Is Linkifi the original link in bio tool?</h5>
+                    <i class="fa fa-plus toggle-icon" id="Alikhan"></i>
+                    <i class="fa fa-minus toggle-icon" id="Alikhan1" style="display: none;"></i>
+                </div>
+                <div class="tec40-page" id="Alikhan3" style="display: none;">
+                    <h5>The short answer? Yes!</h5>
+                    <h5>Back in 2016, we created Linkifi as an easy way to link out to all socials and unify digital ecosystems, pioneering the link-in-bio category. Linkifi remains the leading, biggest and most popular link-in-bio solution – but that’s just
+                        the beginning. You can use your Linkifi URL or QR code anywhere your audience is, including on your business cards, in your email signature, on paper-based posters and brochures, and even on your resumé. If you don’t have a website,
+                        that’s fine. If you have a Linkifi, you don’t need one!</h5>
+                </div>
+            </div>
+
+            <div class="tec41-page">
+                <div class="tec39-page">
+                    <h5>Can you get paid and sell things from a Linkifi?</h5>
+                    <i class="fa fa-plus toggle-icon" id="Alikhan"></i>
+                    <i class="fa fa-minus toggle-icon" id="Alikhan1" style="display: none;"></i>
+                </div>
+                <div class="tec40-page toggle-icon" id="Alikhan3" style="display: none;">
+                    <h5>Yes, you can! We offer plenty of ways to sell products and monetize your audience. You can collect tips, request payments for services, collect revenue from affiliate links, and sell your products right in your Linkifi.</h5>
+                    <h5>A lot of Linkifi creators see incredible results with online sales on Linkifi, because it removes the extra steps involved in a purchase. With Paypal or Square right in your Linkifi, your customers won’t even need to leave your social
+                        media to go to another site and pay!</h5>
+                    <h5>“We love how Linkifi has helped us manage our business by having all social media and ways to pay in one location. The QR code has made it easy for customers to access it all!” – Tiffany</h5>
+                </div>
+
+            </div>
+
+            <div class="tec41-page">
+                <div class="tec39-page">
+                    <h5>Is Linkifi safe to use on all of my social media profiles?</h5>
+                    <i class="fa fa-plus toggle-icon" id="Alikhan"></i>
+                    <i class="fa fa-minus toggle-icon" id="Alikhan1" style="display: none;"></i>
+                </div>
+                <div class="tec40-page" id="Alikhan3" style="display: none;">
+                    <h5>Linkifi is trusted by all social platforms, and is even used on many of Facebook, Instagram and TikTok’s own social media accounts! Because Linkifi is the original and most popular link-in-bio tool, the linktr.ee URL is a trusted,
+                        identifiable and familiar link that audiences feel comfy and safe clicking on.</h5>
+                </div>
+            </div>
+
+            <div class="tec41-page">
+                <div class="tec39-page">
+                    <h5>What makes Linkifi better than the other link in bio options?</h5>
+                    <i class="fa fa-plus toggle-icon" id="Alikhan"></i>
+                    <i class="fa fa-minus toggle-icon" id="Alikhan1" style="display: none;"></i>
+                </div>
+                <div class="tec40-page" id="Alikhan3" style="display: none;">
+                    <h5>We have our own opinions here, of course, but the stories of the people who use Linkifi matter more. Let’s hear what they have to say:</h5>
+                    <h5>We have our own opinions here, of course, but the stories of the people who use Linkifi matter more. Let’s hear what they have to say:</h5>
+                    <h5>”It’s so much easier to set up and have all of your links in one place in a well designed format.” – Catie T</h5>
+                    <h5>”Websites are cool (I have one) but Linkifi just make it so much easier.” – Tan Nguyen</h5>
+                    <h5>“I love their analytics. Other link-in-bio companies don’t provide extensive data on what’s going on.” – Riley Lemon</h5>
+                    <h5>Linkifi invented the bio link tool in 2016, and it continues to be the world’s most popular bio link to this day – with 50M+ people using it as their trusted place to share, sell and grow online. Join them on Linkifi today and see
+                        for yourself!</h5>
+                </div>
+            </div>
+
+            <div class="tec41-page">
+                <div class="tec39-page">
+                    <h5>Do I need a website to use Linkifi?</h5>
+                    <i class="fa fa-plus toggle-icon" id="Alikhan"></i>
+                    <i class="fa fa-minus toggle-icon" id="Alikhan1" style="display: none;"></i>
+                </div>
+                <div class="tec40-page" id="Alikhan3" style="display: none;">
+                    <h5>No, you don’t! Linkifi can act as your very own mini-website to share, sell and grow without any of the time and effort it takes to build and maintain a regular website. You can create a design that fully reflects your personality
+                        and brand in seconds, with no knowledge, skills or experience needed. If you already have a website, that’s great: you can add it to your Linkifi.
+                    </h5>
+                </div>
+            </div>
+
+            <div class="tec41-page">
+                <div class="tec39-page">
+                    <h5>Where can I download the app?</h5>
+                    <i class="fa fa-plus toggle-icon" id="Alikhan"></i>
+                    <i class="fa fa-minus toggle-icon" id="Alikhan1" style="display: none;"></i>
+                </div>
+                <div class="tec40-page" id="Alikhan3" style="display: none;">
+                    <h5>Find it in the App Store, and in the Google Play store!
+                    </h5>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+
+
+    <div id="home37-page">
+        <h1>Jumpstart your corner of the <br> internet today</h1>
+        <div class="home38-page">
+            <input type="text" placeholder="Linkifi.ai/Yourname">
+            <a href="{% url 'login' %}"><button>claim your Linkifi</button></a>
+        </div>
+    </div>
+
+    <div id="home39-page">
+        <div class="home42-page">
+            <div class="home40-page">
+                <img src="/static/images/11.png">
+                <p>Stay in the loop and Sign Up for the <br> Linkifi newsletter.</p>
+                <div class="search41">
+                    <form>
+                        <input type="email" name="email" id="email" placeholder="Enter your Email">
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+            <div class="home40-page">
+                <h1>Company</h1>
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="{%url 'Feature' %}">Features</a></li>
+                    <li><a href="{%url 'pricing' %}">Pricing</a></li>
+                    <li><a href="{%url 'contact' %}">Contact Us</a></li>
+                    <li><a href="{% url 'About' %}">About Us</a></li>
+                </ul>
+            </div>
+            <div class="home40-page">
+                <h1>Documentation
+                </h1>
+                <ul>
+                    <li><a href="{%url 'helpcenter' %}">Help Center</a></li>
+                    <li><a href="{%url 'contact' %}">Contact</a></li>
+                    <li><a href="{%url 'login' %}">Linkifi Pro</a></li>
+                    <li><a href="{%url 'Feature' %}">Features</a></li>
+                    <li><a href="{%url 'faqs' %}">FAQs</a></li>
+                    <li><a href="{%url 'privacy' %}">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="home40-page">
+                <h1>Social
+                </h1>
+                <ul>
+                    <li><a href="https://www.facebook.com/">Facebook</a></li>
+                    <li><a href="https://www.instagram.com/">Instagram</a></li>
+                    <li><a href="https://www.youtube.com/">YouTube</a></li>
+                    <li><a href="https://x.com/?lang=en">Twitter</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="home43-page">
+
+        <div class="home46-page">
+
+            <div class="home44-page">
+                <a href="{% url 'login' %}"><button class="home47-page">Log in</button></a>
+                <a href="{% url 'login' %}"><button class="home48-page">Get started for free</button></a>
+            </div>
+            <div class="home45-page">
+                <i class="fa fa-facebook"></i>
+                <i class="fa fa-twitter"></i>
+                <i class="fa fa-youtube-play"></i>
+                <i class="	fa fa-google"></i>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="home49-page">
+        <div class="home50-page">
+            <h1>Linkifi</h1>
+        </div>
+    </div>
+
+    <div id="home51-page">
+        <div class="home52-page">
+            <img src="/static/images/1111.webp">
+            <img src="/static/images/2222.webp">
+        </div>
+        <p>We acknowledge the Traditional Custodians of the land on which our office stands, The Wurundjeri people of the Kulin Nation, and pay our respects <br> to Elders past, present and emerging. Linkifi Pty Ltd (ABN 68 608 721 562), 1-9 Sackville st,
+            Collingwood VIC 3066</p>
+    </div>
+
+
+
+
+
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js">
+    </script>
+
+    <script>
+        // Select all elements with the toggle-icon class
+        const toggleIcons = document.querySelectorAll('.toggle-icon');
+
+        toggleIcons.forEach(icon => {
+            icon.addEventListener('click', () => {
+                // Get the parent element of the icon
+                const parent = icon.parentElement;
+
+                // Find the associated elements within the parent element
+                const content = parent.nextElementSibling;
+                const minusIcon = parent.querySelector('.fa-minus');
+                const plusIcon = parent.querySelector('.fa-plus');
+
+                // Toggle the visibility of the content and icons
+                if (content.style.display === "none" || content.style.display === "") {
+                    content.style.display = "block";
+                    minusIcon.style.display = "inline";
+                    plusIcon.style.display = "none";
+                } else {
+                    content.style.display = "none";
+                    minusIcon.style.display = "none";
+                    plusIcon.style.display = "inline";
+                }
+            });
+        });
+    </script>
+
+
+    <script>
+        // Select the buttons
+        const monthlButton = document.querySelector('.price2-page');
+        const annuallButton = document.querySelector('.price3-page');
+
+        // Add event listener for the annually button click
+        annuallButton.addEventListener('click', function() {
+            // Apply the CSS styles to the monthly button when annually is clicked
+            annuallButton.style.background = "rgb(30, 35, 48)";
+            annuallButton.style.color = "white";
+            annuallButton.style.border = "1px solid rgb(30, 35, 48)";
+
+
+            monthlButton.style.background = "white";
+            monthlButton.style.color = "rgb(30, 35, 48)";
+            monthlButton.style.border = "none";
+
+
+        });
+
+        // Optionally, you can reset the styles when the monthly button is clicked
+        monthlButton.addEventListener('click', function() {
+            annuallButton.style.background = "white";
+            annuallButton.style.color = "rgb(30, 35, 48)";
+            annuallButton.style.border = "none";
+
+
+            monthlButton.style.background = "rgb(30, 35, 48)";
+            monthlButton.style.color = "white";
+            monthlButton.style.border = "1px solid rgb(30, 35, 48)";
+        });
+    </script>
+
+
+
+
+    <script>
+        // Select all the <p> elements with class 'home10'
+        const items = document.querySelectorAll("#home17-page .home10");
+        let index = 0;
+
+        // Function to hide all <p> elements and show only the current one
+        function showItem() {
+            items.forEach((item, i) => {
+                // Hide all items
+                item.style.display = "none";
+            });
+            // Show the current item
+            items[index].style.display = "block";
+
+            // Move to the next item, reset index if at the end
+            index = (index + 1) % items.length;
+        }
+
+        // Initialize the first item to be shown
+        showItem();
+
+        // Cycle through the items every 1 second (1000 milliseconds)
+        setInterval(showItem, 1000);
+    </script>
+
+    <script>
+        // Select all elements with the toggle-icon class
+        const toggleIconss = document.querySelectorAll('.toggle-icon');
+
+        toggleIconss.forEach(icon => {
+            icon.addEventListener('click', () => {
+                // Get the parent element of the icon
+                const parent = icon.parentElement;
+
+                // Find the associated content to toggle (the next sibling of the grandparent element)
+                const content = parent.parentElement.nextElementSibling;
+
+                // Find the associated plus and minus icons within the parent element
+                const minusIcon = parent.querySelector('.fa-minus');
+                const plusIcon = parent.querySelector('.fa-plus');
+
+                // Toggle the visibility of the content and icons
+                if (content.style.display === "none" || content.style.display === "") {
+                    content.style.display = "block"; // Show the content
+                    minusIcon.style.display = "inline"; // Show minus icon
+                    plusIcon.style.display = "none"; // Hide plus icon
+                } else {
+                    content.style.display = "none"; // Hide the content
+                    minusIcon.style.display = "none"; // Hide minus icon
+                    plusIcon.style.display = "inline"; // Show plus icon
+                }
+            });
+        });
+    </script>
+
+    <script>
+        // Select the buttons
+        const monthlyButton = document.querySelector('.price2-page');
+        const annuallyButton = document.querySelector('.price3-page');
+
+        // Select the price elements
+        const price5Element = document.querySelector('.waleed h1'); // $5 price element
+        const price9Element = document.querySelector('.price15-page h3'); // $9 price element
+        const price24Element = document.querySelector('.anni h1'); // $24 price element
+
+        const price55Element = document.querySelector('.waleede'); // $5 price element
+        const price99Element = document.querySelector('.anniiii'); // $9 price element
+        const price244Element = document.querySelector('.anniii'); // $24 price element
+
+        // Function to handle the monthly plan
+        monthlyButton.addEventListener('click', function() {
+            // Change button styles
+            monthlyButton.classList.add('active');
+            annuallyButton.classList.remove('active');
+
+            // Reset prices for monthly billing
+            price5Element.textContent = "$5";
+            price9Element.textContent = "$9 USD per month after, billed monthly";
+            price24Element.textContent = "$24";
+
+
+            price55Element.textContent = "$5";
+            price99Element.textContent = "$9";
+            price244Element.textContent = "$24";
+        });
+
+        // Function to handle the annually plan
+        annuallyButton.addEventListener('click', function() {
+            // Change button styles
+            annuallyButton.classList.add('active');
+            monthlyButton.classList.remove('active');
+
+            // Update prices for annual billing
+            price5Element.textContent = "$4";
+            price9Element.textContent = "$7.5 USD per month after, billed annually";
+            price24Element.textContent = "$19.5";
+
+            price55Element.textContent = "$4";
+            price99Element.textContent = "$7.5";
+            price244Element.textContent = "$19.5";
+        });
+    </script>
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,1281 @@
+<html lang="en">
+
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linktree</title>
+    <link rel="stylesheet" href="{% static 'css/css43.css' %}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alkatra&family=Delicious+Handrawn&display=swap" rel="stylesheet">
+
+
+</head>
+<style>
+    body {
+        width: 100%;
+        background-image: linear-gradient(to right, #eff1ff, #ffcffc);
+    }
+    
+    #plusIconLabel {
+        display: inline-block;
+        padding: 10px 20px;
+        border: 2px dashed #007bff;
+        border-radius: 50px;
+        background-color: white;
+        color: #007bff;
+        cursor: pointer;
+        font-size: 24px;
+        text-align: center;
+        margin-left: 250px;
+    }
+    
+    #file-name {
+        margin-top: 10px;
+        font-size: 14px;
+        color: #555;
+    }
+    
+    input[type="file"] {
+        margin-top: 10px;
+    }
+    /* Initially hide the content */
+    
+    .hidden {
+        display: none;
+    }
+    /* Style for the admin33-page content */
+    
+    .admin33-page {
+        padding: 20px;
+        background-color: #f9f9f9;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin-top: 20px;
+        transition: all 0.3s ease;
+    }
+    /* Styling for the buttons */
+    
+    .admin33-page button {
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        cursor: pointer;
+        font-size: 16px;
+        margin-top: 10px;
+        transition: background-color 0.3s ease;
+    }
+    
+    .admin33-page button:hover {
+        background-color: #45a049;
+    }
+    /* Styling for the headings and paragraphs */
+    
+    .admin33-page h1 {
+        font-size: 24px;
+        color: #333;
+    }
+    
+    .admin33-page h2 {
+        font-size: 20px;
+        color: #555;
+        margin-top: 15px;
+    }
+    
+    .admin33-page h3 {
+        font-size: 18px;
+        color: #777;
+    }
+    
+    .admin33-page h4 {
+        font-size: 16px;
+        color: #888;
+    }
+    
+    .admin32-page i {
+        font-size: 30px;
+        cursor: pointer;
+        color: #333;
+        transition: color 0.3s ease;
+    }
+    
+    .admin32-page i:hover {
+        color: #4CAF50;
+    }
+    
+    #shopurl {
+        padding: 10px;
+        width: 300px;
+        border: 1px solid #ccc;
+    }
+    
+    #shopurl.invalid {
+        border-color: red;
+    }
+    
+    .error-message {
+        color: red;
+        display: none;
+        position: absolute;
+        left: 8%;
+        bottom: -0px;
+    }
+    
+    #file-name {
+        margin-top: 10px;
+        font-size: 14px;
+        color: #555;
+    }
+    
+    input[type="file"] {
+        margin-top: 10px;
+    }
+</style>
+
+
+<body>
+
+
+    <div id="admi-page">
+        <div class="admi1-page">
+            <img src="/static/images/11.png">
+            <a href="{% url 'billing_pro' %}"><button>Try Pro Linkify</button></a>
+
+        </div>
+    </div>
+    <div id="admi2-page">
+        <ul class="admi2-page">
+            <li>
+                <a href="{% url 'adminpage' %}" class="active">
+                    <i class="fa fa-navicon"></i> Links
+                </a>
+            </li>
+            <li>
+                <a href="{% url 'shop' %}">
+                    <i class="fa fa-shopping-basket"></i> Shop
+                </a>
+            </li>
+            <li>
+                <a href="{% url 'appearance' %}">
+                    <i class="fa fa-object-ungroup"></i> Appearance
+                </a>
+            </li>
+            <li>
+                <a href="{% url 'analytics' %}">
+                    <i class="fa fa-signal"></i> Analytics
+                </a>
+            </li>
+            <li>
+                <a href="{% url 'setting' %}">
+                    <i class="fa fa-cog"></i> Setting
+                </a>
+            </li>
+
+        </ul>
+    </div>
+
+
+
+
+    <div id="admin-page">
+        <div class="admin1-page">
+            <a href="/" class="admin2">
+                <img src="/static/images/11.png"></img>
+            </a>
+            <hr>
+            <h2>Main Manu</h2>
+            <ul>
+                <li>
+                    <a href="{% url 'adminpage' %}">
+                        <i class="fa fa-navicon"></i> Links
+                    </a>
+                </li>
+                <li>
+                    <a href="{% url 'shop' %}">
+                        <i class="fa fa-shopping-basket"></i> Shop
+                    </a>
+                </li>
+                <li>
+                    <a href="{% url 'shop_plus' %}">
+                        <i class="fa fa-shopping-cart"></i> Shop Plus
+                    </a>
+                </li>
+                <li>
+                    <a href="{% url 'appearance' %}">
+                        <i class="fa fa-object-ungroup"></i> Appearance
+                    </a>
+                </li>
+                <li>
+                    <a href="{% url 'analytics' %}" class="active">
+                        <i class="fa fa-signal"></i> Analytics
+                    </a>
+                </li>
+                <li>
+                    <a href="{% url 'setting' %}">
+                        <i class="fa fa-cog"></i> Setting
+                    </a>
+                </li>
+
+                <a href="{% url 'billing_pro' %}"><button>Try Pro Linkify</button></a>
+            </ul>
+            <hr>
+        </div>
+
+        <div class="admin2-page">
+            <div class="admin3-page">
+                <div class="admin4-page">
+                    <h1>Analytics</h1>
+                </div>
+                <div class="anal-page">
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                           <i class="fa fa-calendar-o"></i> Sep 13th to Sep 19th
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#socailicons"><i class="fa fa-calendar-o"></i> Custon Range</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+            <div id="anal1-page">
+                <div class="anal2-page">
+                    <h1>Lifetime</h1>
+                    <div class="anal3-page">
+                        <div class="anal4-page">
+                            <i class="	fa fa-eye"></i>
+                            <h3 id="viewCount">0
+                                <spam>Views</spam>
+                            </h3>
+                        </div>
+                        <div class="anal4-page">
+                            <i class="fa fa-external-link"></i>
+                            <h3 id="clickLink">0
+                                <spam>Click</spam>
+                            </h3>
+                        </div>
+                        <div class="anal4-page">
+                            <i class="fa fa-percent"></i>
+                            <h3>0%
+                                <spam>Click Rate</spam>
+                            </h3>
+                        </div>
+                        <div class="anal4-page">
+                            <i class="	fa fa-user-plus"></i>
+                            <h3>0
+                                <spam>Subscribers</spam>
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="anal6-page">
+                    <div class="anal7-page">
+                        <div class="anal8-page">
+                            <h1>Activity</h1>
+                        </div>
+                        <div class="anal9-page">
+                            <a href="{% url 'billing_pro' %}"><button>Filter</button></a>
+                        </div>
+
+                    </div>
+                    <div class="anal10-page">
+                        <div class="anal11-page" id="viewsClicks" onclick="toggleViewsAndClicks()">
+                            <h2>Views and clicks
+                            </h2>
+                        </div>
+                        <div class="anal12-page" id="clickRate" onclick="toggleClickRate()">
+                            <h2>Click rate</h2>
+                        </div>
+                    </div>
+                    <div class="anal13-page">
+                        <div class="anal14-page">
+                            <h2>Views:
+                                <spam id="viewCountone">0</spam>
+                            </h2>
+                            <h2>Clicks:
+                                <spam>0</spam>
+                            </h2>
+                        </div>
+                        <div class="anal15-page">
+                            <button>Daily</button>
+                        </div>
+                    </div>
+
+                    <div class="anal16-page" id="anal16">
+                        <img src="/static/images/Platform images/9.PNG">
+                    </div>
+                    <div class="anal17-page" id="anal17" style="display: none;">
+                        <img src="/static/images/Platform images/11.PNG">
+                        <h5>Benchmark: Based on the median click rate for Linktrees with a similar number of views to
+                            <spam>arhamkhann437</spam>
+                        </h5>
+                    </div>
+
+                    <div class="alan18-page">
+                        <div class="alan19-page">
+                            <h1>Unlock powerful insights</h1>
+                            <p>Find out how your Linktree is performing with a Pro 30-day free trial. Cancel anytime.</p>
+                            <div class="alan20-page">
+                                <i class="fa fa-check">
+                                </i>
+                                <p>See your top performing links and products</p>
+                            </div>
+                            <div class="alan20-page">
+                                <i class="fa fa-check">
+                                </i>
+                                <p>Learn about your audience</p>
+                            </div>
+                            <div class="alan20-page">
+                                <i class="fa fa-check">
+                                </i>
+                                <p>Get the full picture with a year’s worth of data</p>
+                            </div>
+                            <a href=""><button>Try pro for free</button></a>
+                            <h6>$5/month after</h6>
+                        </div>
+                        <div class="alan21-page">
+                            <img src="/static/images/Platform images/11.webp">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="alan24-page">
+                    <h1>Check Your Location</h1>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14303208.032174341!2d49.49584889844499!3d28.92822392166257!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38db52d2f8fd751f%3A0x46b7a1f7e614925c!2sPakistan!5e0!3m2!1sen!2s!4v1726762880877!5m2!1sen!2s"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+
+                <div class="alan25-page">
+                    <h1>content</h1>
+                    <div class="alan26-page">
+                        <h2>Links</h2>
+                        <div class="alan27-page">
+                            <div class="alan28-page">
+                                <i class="fa fa-external-link">
+                                </i>
+                                <h3>Link Name</h3>
+                            </div>
+                            <div class="alan29-page">
+                                <h5>90 Clicks this Link</h5>
+                            </div>
+                        </div>
+                        <div class="alan27-page">
+                            <div class="alan28-page">
+                                <i class="fa fa-external-link">
+                                </i>
+                                <h3>Link Name</h3>
+                            </div>
+                            <div class="alan29-page">
+                                <h5>121 Clicks this Link</h5>
+                            </div>
+                        </div>
+                        <div class="alan27-page">
+                            <div class="alan28-page">
+                                <i class="fa fa-external-link">
+                                </i>
+                                <h3>Link Name</h3>
+                            </div>
+                            <div class="alan29-page">
+                                <h5>21 Clicks this Link</h5>
+                            </div>
+                        </div>
+
+                        <div class="alan30-page">
+                            <h4>Example Data</h4>
+                        </div>
+                        <div class="alan31-page">
+                            <div class="alan32-page">
+                                <h2>See your top performing links</h2>
+                                <p>Unlock powerful insights with a Pro trial. Cancel anytime.</p>
+                                <a href=""><button>Try pro for free</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="alan25-page">
+                    <h1>content</h1>
+                    <div class="alan26-page">
+                        <h2>Products
+                        </h2>
+                        <div class="alan27-page">
+                            <div class="alan28-page">
+                                <i class="fa fa-external-link">
+                                </i>
+                                <h3>Curlling Iron</h3>
+                            </div>
+                            <div class="alan29-page">
+                                <h5>500 Clicks this Link</h5>
+                            </div>
+                        </div>
+                        <div class="alan27-page">
+                            <div class="alan28-page">
+                                <i class="fa fa-external-link">
+                                </i>
+                                <h3>Larooq Water</h3>
+                            </div>
+                            <div class="alan29-page">
+                                <h5>201 Clicks this Link</h5>
+                            </div>
+                        </div>
+                        <div class="alan27-page">
+                            <div class="alan28-page">
+                                <i class="fa fa-external-link">
+                                </i>
+                                <h3>J. Dress Clothe</h3>
+                            </div>
+                            <div class="alan29-page">
+                                <h5>1021 Clicks this Link</h5>
+                            </div>
+                        </div>
+
+                        <div class="alan30-page">
+                            <h4>Example Data</h4>
+                        </div>
+                        <div class="alan31-page">
+                            <div class="alan32-page">
+                                <h2>See your top performing links</h2>
+                                <p>Unlock powerful insights with a Pro trial. Cancel anytime.</p>
+                                <a href=""><button>Try pro for free</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="alan25-page">
+                    <h1>content</h1>
+                    <div class="alan26-page">
+                        <h2>Social Icons
+                        </h2>
+                        <div class="alan27-page">
+                            <div class="alan28-page">
+                                <i class="	fa fa-instagram">
+                                </i>
+                                <h3>Instagram</h3>
+                            </div>
+                            <div class="alan29-page">
+                                <h5>500 Clicks this Link</h5>
+                            </div>
+                        </div>
+                        <div class="alan27-page">
+                            <div class="alan28-page">
+                                <i class="	fa fa-youtube-play">
+                                </i>
+                                <h3>Youtube</h3>
+                            </div>
+                            <div class="alan29-page">
+                                <h5>201 Clicks this Link</h5>
+                            </div>
+                        </div>
+                        <div class="alan27-page">
+                            <div class="alan28-page">
+                                <i class="	fa fa-linkedin">
+                                </i>
+                                <h3>Linkedin</h3>
+                            </div>
+                            <div class="alan29-page">
+                                <h5>1021 Clicks this Link</h5>
+                            </div>
+                        </div>
+
+                        <div class="alan30-page">
+                            <h4>Example Data</h4>
+                        </div>
+                        <div class="alan31-page">
+                            <div class="alan32-page">
+                                <h2>See your top performing links</h2>
+                                <p>Unlock powerful insights with a Pro trial. Cancel anytime.</p>
+                                <a href=""><button>Try pro for free</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="alan25-page">
+                    <h1>content</h1>
+                    <div class="alan26-page">
+                        <h2>Audience
+                        </h2>
+                        <div class="alan27-page">
+                            <div class="alan28-page">
+                                <i class="	fa fa-instagram">
+                                </i>
+                                <h3>1.Instagram</h3>
+                            </div>
+                            <div class="alan29-page">
+                                <h5>500 Views this Link</h5>
+                            </div>
+                        </div>
+                        <div class="alan27-page">
+                            <div class="alan28-page">
+                                <i class="	fa fa-youtube-play">
+                                </i>
+                                <h3>2.Youtube</h3>
+                            </div>
+                            <div class="alan29-page">
+                                <h5>201 Views this Link</h5>
+                            </div>
+                        </div>
+                        <div class="alan27-page">
+                            <div class="alan28-page">
+                                <i class="	fa fa-linkedin">
+                                </i>
+                                <h3>Linkedin</h3>
+                            </div>
+                            <div class="alan29-page">
+                                <h5>1021 Views this Link</h5>
+                            </div>
+                        </div>
+
+                        <div class="alan30-page">
+                            <h4>Example Data</h4>
+                        </div>
+                        <div class="alan31-page">
+                            <div class="alan32-page">
+                                <h2>See your top performing links</h2>
+                                <p>Unlock powerful insights with a Pro trial. Cancel anytime.</p>
+                                <a href=""><button>Try pro for free</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js "></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js "></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js "></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js " integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo " crossorigin="anonymous "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js " integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut " crossorigin="anonymous "></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js " integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k " crossorigin="anonymous "></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js " integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE " crossorigin="anonymous ">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js " integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ " crossorigin="anonymous "></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js ">
+    </script>
+
+    <script>
+        // Select all elements with the toggle-icon class
+        const toggleIcons = document.querySelectorAll('.toggle-icon');
+
+        toggleIcons.forEach(icon => {
+            icon.addEventListener('click', () => {
+                // Get the parent element of the icon
+                const parent = icon.parentElement;
+
+                // Find the associated elements within the parent element
+                const content = parent.nextElementSibling;
+                const minusIcon = parent.querySelector('.fa-minus');
+                const plusIcon = parent.querySelector('.fa-plus');
+
+                // Toggle the visibility of the content and icons
+                if (content.style.display === "none" || content.style.display === " ") {
+                    content.style.display = "block";
+                    minusIcon.style.display = "inline";
+                    plusIcon.style.display = "none";
+                } else {
+                    content.style.display = "none";
+                    minusIcon.style.display = "none";
+                    plusIcon.style.display = "inline";
+                }
+            });
+        });
+    </script>
+
+
+
+
+    <script>
+        // Select all the <p> elements with class 'home10'
+        const items = document.querySelectorAll("#home17-page .home10");
+        let index = 0;
+
+        // Function to hide all <p> elements and show only the current one
+        function showItem() {
+            items.forEach((item, i) => {
+                // Hide all items
+                item.style.display = "none";
+            });
+            // Show the current item
+            items[index].style.display = "block";
+
+            // Move to the next item, reset index if at the end
+            index = (index + 1) % items.length;
+        }
+
+        // Initialize the first item to be shown
+        showItem();
+
+        // Cycle through the items every 1 second (1000 milliseconds)
+        setInterval(showItem, 1000);
+    </script>
+
+    <script>
+        var elem222 = document.getElementById("eyecontact");
+        var password = document.getElementById("password");
+        elem222.onclick = function() {
+            if (password.type == "password") {
+                password.type = "text";
+                elem222.classList.remove("fa-eye");
+                elem222.classList.add("fa-eye-slash");
+            } else {
+                password.type = "password";
+                elem222.classList.remove("fa-eye-slash");
+                elem222.classList.add("fa-eye");
+            }
+        }
+    </script>
+
+    <script>
+        const inputField = document.getElementById('loginusername');
+        const form = document.getElementById('loginForm');
+        const errorMessage = document.getElementById('error-message');
+        const continueButton = document.getElementById('continue-button');
+        const crossIcon = document.getElementById('cross-icon');
+        const prefix = 'LinkTr.ee/';
+
+        // Ensure the prefix is always at the start and the user types after it
+        inputField.addEventListener('input', function(e) {
+            if (!inputField.value.startsWith(prefix)) {
+                inputField.value = prefix; // Prevent deletion of the prefix
+            }
+
+            const usernamePart = inputField.value.slice(prefix.length);
+            const validUsername = /^[a-zA-Z0-9_.]*$/;
+
+            // Check if the username part contains invalid characters
+            if (!validUsername.test(usernamePart)) {
+                inputField.style.border = '1px solid red';
+                errorMessage.style.display = 'block'; // Show error message
+                continueButton.disabled = true; // Disable button
+                continueButton.style.backgroundColor = '#f0f0f0'; // Light background
+                continueButton.style.color = '#ccc'; // Light text color
+                crossIcon.style.display = 'inline'; // Show the cross icon
+            } else {
+                inputField.style.border = '1px solid green'; // Valid input
+                errorMessage.style.display = 'none'; // Hide error message
+                continueButton.disabled = false; // Enable button
+                continueButton.style.backgroundColor = ''; // Reset to default
+                continueButton.style.color = ''; // Reset to default
+                crossIcon.style.display = 'none'; // Hide the cross icon
+            }
+        });
+
+        // Prevent form submission if the username is invalid
+        form.addEventListener('submit', function(e) {
+            const usernamePart = inputField.value.slice(prefix.length);
+            const validUsername = /^[a-zA-Z0-9_.]*$/;
+
+            if (!validUsername.test(usernamePart)) {
+                e.preventDefault(); // Stop form submission
+                errorMessage.style.display = 'block'; // Show error message
+            }
+        });
+    </script>
+
+
+
+
+    <script>
+        // Retrieve the selected image URL from localStorage
+        const selectedImageUrl = localStorage.getItem('selectedImage');
+        const selectedImageName = localStorage.getItem('selectedImageName');
+
+        // Update the image and placeholder if available
+        if (selectedImageUrl && selectedImageName) {
+            document.getElementById('dynamic-image').src = selectedImageUrl;
+        }
+    </script>
+
+    <script>
+        // Select all images with the class 'clickable-img'
+        const images = document.querySelectorAll('.clickable-img');
+
+        // Variable to keep track of the currently selected image
+        let selectedImage = null;
+
+        // Loop through each image and add a click event listener
+        images.forEach(function(image) {
+            image.addEventListener('click', function() {
+                // If there's a previously selected image, remove its black border
+                if (selectedImage) {
+                    selectedImage.style.border = 'none';
+                }
+
+                // Add a black border to the currently clicked image
+                this.style.border = '3px solid black';
+                this.style.padding = "2px"
+
+                // Update the selected image to the currently clicked one
+                selectedImage = this;
+            });
+        });
+    </script>
+
+    <script>
+        document.getElementById("plusIconLabel").addEventListener("click", function() {
+            var fileInput = document.getElementById("profilePicture");
+
+            // Toggle visibility of the file input on click
+            if (fileInput.style.display === "none") {
+                fileInput.style.display = "block";
+            } else {
+                fileInput.style.display = "none";
+            }
+        });
+
+        // Function to display the selected file name
+        function showFileName(input) {
+            const fileName = input.files[0] ? input.files[0].name : 'No file chosen';
+            document.getElementById('file-name').textContent = fileName;
+        }
+    </script>
+
+
+
+
+    <!-- <script>
+        // Handle predefined image selection
+        function selectImage(imageName) {
+            document.getElementById('selected_image').value = imageName;
+
+            // Highlight the selected image
+            var images = document.getElementsByClassName('clickable-img');
+            for (var i = 0; i < images.length; i++) {
+                images[i].style.border = 'none'; // Reset border
+            }
+            document.getElementById('img' + imageName.split('.')[0]).style.border = '2px solid black';
+        }
+
+        // Handle file input click
+        document.getElementById("plusIconLabel ").addEventListener("click ", function() {
+            document.getElementById("profilePicture ").click();
+        });
+
+        // Show file name after selecting a file (optional)
+        function showFileName(input) {
+            if (input.files && input.files[0]) {
+                alert("Selected file: " + input.files[0].name);
+            }
+        }
+    </script> -->
+
+    <script>
+        // Toggle the visibility of the content on icon click
+        document.querySelector('.admin32-page').addEventListener('click', function() {
+            const optionsDiv = document.querySelector('.admin33-page');
+            optionsDiv.classList.toggle('hidden');
+        });
+    </script>
+
+
+    <script>
+        // Function to show the URL input section
+        function showUrlInput() {
+            document.querySelector('.admin16-page').style.display = 'block';
+        }
+
+        // Function to hide the URL input section
+        function hideUrlInput() {
+            document.querySelector('.admin16-page').style.display = 'none';
+        }
+    </script>
+
+    <script>
+        // Function to copy text to clipboard
+        function copyToClipboard() {
+            // Get the text from the hidden <spam>
+            var copyText = document.getElementById("copyText").innerText;
+
+            // Create a temporary input element to hold the text
+            var tempInput = document.createElement("input");
+            tempInput.value = copyText;
+            document.body.appendChild(tempInput);
+
+            // Select the text in the temporary input
+            tempInput.select();
+            tempInput.setSelectionRange(0, 99999); // For mobile devices
+
+            // Copy the text to the clipboard
+            document.execCommand("copy");
+
+            // Remove the temporary input
+            document.body.removeChild(tempInput);
+
+            // Change the button text to "Copied! "
+            document.getElementById("copyBtn").innerText = "Copied!";
+        }
+    </script>
+
+    <script>
+        function updateTime() {
+            // Create a new Date object
+            var now = new Date();
+
+            // Get the hours and minutes
+            var hours = now.getHours();
+            var minutes = now.getMinutes();
+
+            // Add leading zero to minutes if needed
+            minutes = minutes < 10 ? '0' + minutes : minutes;
+
+            // Format the time (you can customize this to 12-hour format if needed)
+            var currentTime = hours + ": " + minutes;
+
+            // Display the time in the <h2> tag
+            document.getElementById("currentTime").innerText = currentTime;
+        }
+
+        // Update the time every second
+        setInterval(updateTime, 1000);
+
+        // Initial call to display time immediately on page load
+        updateTime();
+    </script>
+
+
+    <script>
+        function updateLinkPage(imageUrl, imageName) {
+            // Store image information in localStorage to retrieve on the next page
+            localStorage.setItem('selectedImage', imageUrl);
+            localStorage.setItem('selectedImageName', imageName);
+        }
+    </script>
+
+    <script>
+        // Function to add a black border when an image is clicked
+        function addBorder(imageElement) {
+            // Remove border from all images first
+            var allImages = document.querySelectorAll('.admin20-page img');
+            allImages.forEach(function(img) {
+                img.style.border = "none";
+            });
+
+            // Add black border to the clicked image
+            imageElement.style.border = "2px solid black";
+        }
+    </script>
+
+    <script>
+        function showOptions() {
+            var optionsDiv = document.getElementById("admin101-page");
+            if (optionsDiv.classList.contains('show')) {
+                optionsDiv.classList.remove('show');
+                setTimeout(() => {
+                    optionsDiv.style.display = "none"; // Hide after transition
+                }, 500); // Match the CSS transition time
+            } else {
+                optionsDiv.style.display = "block";
+                setTimeout(() => {
+                    optionsDiv.classList.add('show');
+                }, 10); // Small delay to allow transition to work
+            }
+        }
+    </script>
+
+    <script>
+        function showOptionsone() {
+            var optionsDivone = document.getElementById("waleed");
+            if (optionsDivone.classList.contains('show')) {
+                optionsDivone.classList.remove('show');
+                setTimeout(() => {
+                    optionsDivone.style.display = "none"; // Hide after transition
+                }, 500); // Match the CSS transition time
+            } else {
+                optionsDivone.style.display = "block";
+                setTimeout(() => {
+                    optionsDivone.classList.add('show');
+                }, 10); // Small delay to allow transition to work
+            }
+        }
+    </script>
+    <script>
+        function showOptionstwo() {
+            var optionsDivtwo = document.getElementById("waleedone");
+            if (optionsDivtwo.classList.contains('show')) {
+                optionsDivtwo.classList.remove('show');
+                setTimeout(() => {
+                    optionsDivtwo.style.display = "none"; // Hide after transition
+                }, 500); // Match the CSS transition time
+            } else {
+                optionsDivtwo.style.display = "block";
+                setTimeout(() => {
+                    optionsDivtwo.classList.add('show');
+                }, 10); // Small delay to allow transition to work
+            }
+        }
+    </script>
+
+
+    <script>
+        function showOptionsfour() {
+            var showOptionsfour = document.getElementById("waleedtwo");
+            if (showOptionsfour.classList.contains('show')) {
+                showOptionsfour.classList.remove('show');
+                setTimeout(() => {
+                    showOptionsfour.style.display = "none"; // Hide after transition
+                }, 500); // Match the CSS transition time
+            } else {
+                showOptionsfour.style.display = "block";
+                setTimeout(() => {
+                    showOptionsfour.classList.add('show');
+                }, 10); // Small delay to allow transition to work
+            }
+        }
+    </script>
+    <script>
+        function showOptionsthree() {
+            var optionsDivthree = document.getElementById("waleedthree");
+            if (optionsDivthree.classList.contains('show')) {
+                optionsDivthree.classList.remove('show');
+                setTimeout(() => {
+                    optionsDivthree.style.display = "none"; // Hide after transition
+                }, 500); // Match the CSS transition time
+            } else {
+                optionsDivthree.style.display = "block";
+                setTimeout(() => {
+                    optionsDivthree.classList.add('show');
+                }, 10); // Small delay to allow transition to work
+            }
+        }
+    </script>
+    <script>
+        function showOptionsfive() {
+            var optionsDivfive = document.getElementById("waleedfour");
+            if (optionsDivfive.classList.contains('show')) {
+                optionsDivfive.classList.remove('show');
+                setTimeout(() => {
+                    optionsDivfive.style.display = "none"; // Hide after transition
+                }, 500); // Match the CSS transition time
+            } else {
+                optionsDivfive.style.display = "block";
+                setTimeout(() => {
+                    optionsDivfive.classList.add('show');
+                }, 10); // Small delay to allow transition to work
+            }
+        }
+    </script>
+
+    <script>
+        function showForm() {
+            var formDiv = document.querySelector(".shop4-page");
+            // Toggle the display between block and none
+            if (formDiv.style.display === "none") {
+                formDiv.style.display = "block";
+            } else {
+                formDiv.style.display = "none";
+            }
+        }
+    </script>
+
+    <script>
+        const shopUrlInput = document.getElementById('shopurl');
+        const addButton = document.getElementById('addButton');
+
+        // Event listener for input changes
+        shopUrlInput.addEventListener('input', function() {
+            // Check if the input field is not empty
+            if (shopUrlInput.value.trim() !== "") {
+                addButton.style.display = "inline-block"; // Show the button
+            } else {
+                addButton.style.display = "none"; // Hide the button
+            }
+        });
+    </script>
+
+    <script>
+        const shopUrloneInput = document.getElementById('shopurl');
+        const addButtonone = document.getElementById('addButton');
+        const errorMessageone = document.getElementById('error');
+
+        // Function to validate URL format
+        function validateUrl(url) {
+            // Ensure the URL starts with "https://"
+            const pattern = /^https:\/\/.+/;
+            return pattern.test(url);
+        }
+
+        // Event listener for input changes
+        shopUrloneInput.addEventListener('input', function() {
+            const url = shopUrloneInput.value.trim();
+
+            // If the URL is valid
+            if (validateUrl(url)) {
+                shopUrloneInput.classList.remove('invalid');
+                errorMessageone.style.display = "none"; // Hide the error message
+                addButtonone.style.display = "inline-block"; // Show the button
+            } else {
+                shopUrloneInput.classList.add('invalid'); // Add red border
+                errorMessageone.style.display = "block"; // Show the error message
+                addButtonone.style.display = "none"; // Hide the button
+            }
+        });
+    </script>
+
+    <script>
+        const addoneButton = document.getElementById('addButton');
+        const productForm = document.getElementById('productForm');
+
+        // Show the form when the "Add" button is clicked
+        addoneButton.addEventListener('click', function() {
+            productForm.style.display = 'block'; // Show the form
+        });
+
+        // Function to display the selected file name (optional feature for file input)
+        function showFileName(input) {
+            if (input.files && input.files[0]) {
+                alert("Selected file: " + input.files[0].name);
+            }
+        }
+    </script>
+
+    <script>
+        function toggleClickRate() {
+            // Get the relevant elements by their IDs
+            var anal17 = document.getElementById("anal17");
+            var anal16 = document.getElementById("anal16");
+            var clickRate = document.getElementById("clickRate");
+
+            // Toggle the display of anal17 and anal16
+            if (anal17.style.display === "none") {
+                // Show anal17 and hide anal16
+                anal17.style.display = "block";
+                anal16.style.display = "none";
+
+                // Change the appearance of the Click Rate text
+                clickRate.querySelector("h2").style.fontSize = "24px"; // Increase font size
+                clickRate.querySelector("h2").style.fontWeight = "bold"; // Increase font weight
+                clickRate.querySelector("h2").style.textDecoration = "underline"; // Underline the text
+            } else {
+                // Revert changes: hide anal17, show anal16
+                anal17.style.display = "none";
+                anal16.style.display = "block";
+
+                // Revert Click Rate text appearance
+                clickRate.querySelector("h2").style.fontSize = "none"; // Reset font size
+                clickRate.querySelector("h2").style.fontWeight = "none"; // Reset font weight
+                clickRate.querySelector("h2").style.textDecoration = "none"; // Remove underline
+            }
+        }
+    </script>
+
+    <script>
+        function toggleViewsAndClicks() {
+            // Get the elements by their IDs
+            var anal16 = document.getElementById("anal16");
+            var anal17 = document.getElementById("anal17");
+
+            // Toggle between showing anal16 and anal17
+            if (anal16.style.display === "none") {
+                // Show anal16 and hide anal17
+                anal16.style.display = "block";
+                anal17.style.display = "none";
+            } else {
+                // Show anal17 and hide anal16
+                anal16.style.display = "none";
+                anal17.style.display = "block";
+            }
+        }
+    </script>
+
+    <!-- <script>
+        // Function to update the view count
+        function updateViewCount() {
+            // Retrieve the current view count from localStorage (or initialize to 0 if not set)
+            let viewCount = localStorage.getItem("viewCount");
+
+            // If the viewCount is not set (null), initialize it to 0
+            if (viewCount === null) {
+                viewCount = 0;
+            }
+
+            // Increment the view count by 1
+            viewCount = parseInt(viewCount) + 1;
+
+            // Update the view count in localStorage
+            localStorage.setItem("viewCount", viewCount);
+
+            // Update the view count in the HTML element
+            document.getElementById("viewCount").textContent = viewCount + " Views ";
+        }
+
+        // Call the function when the page loads
+        window.onload = function() {
+            updateViewCount();
+        };
+    </script>
+
+    <script>
+        // Function to update the view count
+        function updateViewCountone() {
+            // Retrieve the current view count from localStorage (or initialize to 0 if not set)
+            let viewCountone = localStorage.getItem("viewCountone");
+
+            // If the viewCount is not set (null), initialize it to 0
+            if (viewCountone === null) {
+                viewCountone = 0;
+            }
+
+            // Increment the view count by 1
+            viewCountone = parseInt(viewCountone) + 1;
+
+            // Update the view count in localStorage
+            localStorage.setItem("viewCountone", viewCountone);
+
+            // Update the view count in the HTML element
+            document.getElementById("viewCountone").textContent = viewCountone;
+        }
+
+        // Call the function when the page loads
+        window.onload = function() {
+            updateViewCountone();
+        };
+    </script> -->
+
+
+    <script>
+        // Function to update the view count for the first element
+        function updateViewCount() {
+            // Retrieve the current view count from localStorage (or initialize to 0 if not set)
+            let viewCount = localStorage.getItem("viewCount");
+
+            // If the viewCount is not set (null), initialize it to 0
+            if (viewCount === null) {
+                viewCount = 0;
+            } else {
+                // Convert the string to an integer
+                viewCount = parseInt(viewCount);
+            }
+
+            // Increment the view count by 1
+            viewCount += 1;
+
+            // Update the view count in localStorage
+            localStorage.setItem("viewCount", viewCount);
+
+            // Update the view count in the HTML element
+            document.getElementById("viewCount").textContent = viewCount + " Views";
+        }
+
+        // Function to update the view count for the second element
+        function updateViewCountone() {
+            // Retrieve the current view count from localStorage (or initialize to 0 if not set)
+            let viewCountone = localStorage.getItem("viewCountone");
+
+            // If the viewCountone is not set (null), initialize it to 0
+            if (viewCountone === null) {
+                viewCountone = 0;
+            } else {
+                // Convert the string to an integer
+                viewCountone = parseInt(viewCountone);
+            }
+
+            // Increment the view count by 1
+            viewCountone += 1;
+
+            // Update the view count in localStorage
+            localStorage.setItem("viewCountone", viewCountone);
+
+            // Update the view count in the HTML element
+            document.getElementById("viewCountone").textContent = viewCountone;
+        }
+
+        // Use window.onload to call both functions when the page loads
+        window.onload = function() {
+            updateViewCount();
+            updateViewCountone();
+        };
+    </script>
+
+
+    <!-- <script>
+        // Function to update the click count
+        function updateClickCount() {
+            // Retrieve the current click count from localStorage (or initialize to 0 if not set)
+            let clickCount = localStorage.getItem("clickCount");
+
+            // If the clickCount is not set (null), initialize it to 0
+            if (clickCount === null) {
+                clickCount = 0;
+            } else {
+                // Convert the string to an integer
+                clickCount = parseInt(clickCount);
+            }
+
+            // Increment the click count by 1
+            clickCount += 1;
+
+            // Update the click count in localStorage
+            localStorage.setItem("clickCount", clickCount);
+
+            // Update the click count in the HTML element
+            document.getElementById("clickCount").textContent = clickCount + " Clicks";
+        }
+
+        // Use window.onload to set the initial click count when the page loads
+        window.onload = function() {
+            let clickCount = localStorage.getItem("clickCount");
+
+            // If the clickCount is not set (null), initialize it to 0
+            if (clickCount === null) {
+                clickCount = 0;
+            }
+
+            // Update the click count in the HTML element
+            document.getElementById("clickCount").textContent = clickCount + " Clicks";
+        };
+
+        // Handle the click on the link
+        document.getElementById("clickLink").addEventListener("click", function(event) {
+            // Prevent the default action of the link (going to another page immediately)
+            event.preventDefault();
+
+            // Update the click count
+            updateClickCount();
+
+            // Wait a moment to ensure the click is updated, then navigate to the new page
+            setTimeout(function() {
+                window.location.href = "https://example.com"; // Replace with the target URL
+            }, 100);
+        });
+    </script> -->
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

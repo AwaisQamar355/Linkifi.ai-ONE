@@ -1,0 +1,1643 @@
+<html lang="en">
+
+</html>
+
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linktree</title>
+    <link rel="stylesheet" href="{% static 'css/css43.css' %}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alkatra&family=Delicious+Handrawn&display=swap" rel="stylesheet">
+
+
+</head>
+<style>
+    body {
+        width: 100%;
+        background-image: linear-gradient(to right, #eff1ff, #ffcffc);
+    }
+    
+    .masaua {
+        width: 25px;
+        height: 25px;
+        border-radius: 50pc;
+    }
+    
+    #plusIconLabel {
+        display: inline-block;
+        padding: 10px 20px;
+        border: 2px dashed #007bff;
+        border-radius: 50px;
+        background-color: white;
+        color: #007bff;
+        cursor: pointer;
+        font-size: 24px;
+        text-align: center;
+        margin-left: 250px;
+    }
+    
+    #file-name {
+        margin-top: 10px;
+        font-size: 14px;
+        color: #555;
+    }
+    
+    input[type="file"] {
+        margin-top: 10px;
+    }
+    /* Initially hide the content */
+    
+    .hidden {
+        display: none;
+    }
+    /* Style for the admin33-page content */
+    
+    .admin33-page {
+        padding: 20px;
+        background-color: #f9f9f9;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin-top: 20px;
+        transition: all 0.3s ease;
+    }
+    /* Styling for the buttons */
+    
+    .admin33-page button {
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        cursor: pointer;
+        font-size: 16px;
+        margin-top: 10px;
+        transition: background-color 0.3s ease;
+    }
+    
+    .admin33-page button:hover {
+        background-color: #45a049;
+    }
+    /* Styling for the headings and paragraphs */
+    
+    .admin33-page h1 {
+        font-size: 24px;
+        color: #333;
+    }
+    
+    .admin33-page h2 {
+        font-size: 20px;
+        color: #555;
+        margin-top: 15px;
+    }
+    
+    .admin33-page h3 {
+        font-size: 18px;
+        color: #777;
+    }
+    
+    .admin33-page h4 {
+        font-size: 16px;
+        color: #888;
+    }
+    
+    .admin32-page i {
+        font-size: 30px;
+        cursor: pointer;
+        color: #333;
+        transition: color 0.3s ease;
+    }
+    
+    .admin32-page i:hover {
+        color: #4CAF50;
+    }
+    
+    #shopurl {
+        padding: 10px;
+        width: 300px;
+        border: 1px solid #ccc;
+    }
+    
+    #shopurl.invalid {
+        border-color: red;
+    }
+    
+    .error-message {
+        color: red;
+        display: none;
+        position: absolute;
+        left: 8%;
+        bottom: -0px;
+    }
+    
+    #file-name {
+        margin-top: 10px;
+        font-size: 14px;
+        color: #555;
+    }
+    
+    input[type="file"] {
+        margin-top: 10px;
+    }
+</style>
+
+
+<body>
+
+
+    <div id="admi-page">
+        <div class="admi1-page">
+            <img src="/static/images/11.png">
+            <a href="{% url 'billing_pro' %}"><button>Try Pro Linkify</button></a>
+
+        </div>
+    </div>
+    <div id="admi2-page">
+        <ul class="admi2-page">
+            <li>
+                <a href="{% url 'adminpage' %}" class="active">
+                    <i class="fa fa-navicon"></i> Links
+                </a>
+            </li>
+            <li>
+                <a href="{% url 'shop' %}">
+                    <i class="fa fa-shopping-basket"></i> Shop
+                </a>
+            </li>
+            <li>
+                <a href="{% url 'appearance' %}">
+                    <i class="fa fa-object-ungroup"></i> Appearance
+                </a>
+            </li>
+            <li>
+                <a href="{% url 'analytics' %}">
+                    <i class="fa fa-signal"></i> Analytics
+                </a>
+            </li>
+            <li>
+                <a href="{% url 'setting' %}">
+                    <i class="fa fa-cog"></i> Setting
+                </a>
+            </li>
+
+        </ul>
+    </div>
+
+
+
+
+    <div id="admin-page">
+        <div class="admin1-page">
+            <a href="/" class="admin2">
+                <img src="/static/images/11.png"></img>
+            </a>
+            <hr>
+            <h2>Main Manu</h2>
+            <ul>
+                <li>
+                    <a href="{% url 'adminpage' %}">
+                        <i class="fa fa-navicon"></i> Links
+                    </a>
+                </li>
+                <li>
+                    <a href="{% url 'shop' %}">
+                        <i class="fa fa-shopping-basket"></i> Shop
+                    </a>
+                </li>
+                <li>
+                    <a href="{% url 'shop_plus' %}">
+                        <i class="fa fa-shopping-cart"></i> Shop Plus
+                    </a>
+                </li>
+                <li>
+                    <a href="{% url 'appearance' %}">
+                        <i class="fa fa-object-ungroup"></i> Appearance
+                    </a>
+                </li>
+                <li>
+                    <a href="{% url 'analytics' %}">
+                        <i class="fa fa-signal"></i> Analytics
+                    </a>
+                </li>
+                <li>
+                    <a href="{% url 'setting' %}" class="active">
+                        <i class="fa fa-cog"></i> Setting
+                    </a>
+                </li>
+
+                <a href="{% url 'billing_pro' %}"><button>Try Pro Linkify</button></a>
+            </ul>
+            <hr>
+        </div>
+
+        <div class="admin2-page">
+            <div class="admin3-page">
+                <div class="admin4-page">
+                    <h1>Setting</h1>
+                </div>
+                <div class="admin5-page">
+                    <input type="text" placeholder="Search...">
+                    <i class="fa fa-search"></i>
+                </div>
+            </div>
+
+            <div class="admin13-page">
+                <div class="setting-page">
+                    <div class="setting1-page">
+                        <div class="setting2-page">
+                            <h3>Jump to:</h3>
+                        </div>
+                        <div class="setting3-page">
+                            <div class="dropdown">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                   <i class="	fa fa-share-alt"></i> Social icons
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#socailicons"><i class="	fa fa-share-alt"></i> icons</a></li>
+                                    <li><a class="dropdown-item" href="#sportbanner"><i class="	fa fa-flag"></i> Support banner</a></li>
+                                    <li><a class="dropdown-item" href="#mailinglist"><i class="fa fa-envelope"></i> Mailing list integrations</a></li>
+                                    <li><a class="dropdown-item" href="#socaillisting"><i class="fa fa-share-alt"></i> Social integrations</a></li>
+                                    <li><a class="dropdown-item" href="#shop"><i class="	fa fa-shopping-cart"></i> Shop</a></li>
+                                    <li><a class="dropdown-item" href="#sensitive"><i class="	fa fa-eye-slash"></i> Sensitive material</a></li>
+                                    <li><a class="dropdown-item" href="#seo"><i class="	fa fa-search"></i> SEO</a></li>
+                                    <li><a class="dropdown-item" href="#analyticsic"><i class="	fa fa-signal"></i> Analytics integrations</a></li>
+                                    <li><a class="dropdown-item" href="#subscribe"><i class="fa fa-user-plus"></i> Subscribe</a></li>
+                                    <li><a class="dropdown-item" href="#affiliate"><i class="	fa fa-star-o"></i> Affiliate programs</a></li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="setting5-page" id="socailicons">
+                        <h1>Social icons</h1>
+                        <div class="setting6-page">
+                            <h2>Be iconic</h2>
+                            <p>Add icons linking to your social profiles, email and more</p>
+                            <button onclick="showUrlInputicon()">Add Icon</button>
+
+                            <div class="iconss-page" id="home1001" style="display: none;">
+                                <div class="iconss1-page" onclick="changeIcon('fa-instagram', 'Instagram')">
+                                    <i class="fa fa-instagram"></i>
+                                    <h4>Instagram</h4>
+                                </div>
+                                <div class="iconss1-page" onclick="changeIcon('fa-youtube-play', 'Youtube')">
+                                    <i class="fa fa-youtube-play"></i>
+                                    <h4>Youtube</h4>
+                                </div>
+                                <div class="iconss1-page" onclick="changeIcon('fa-telegram', 'Telegram')">
+                                    <i class="fa fa-telegram"></i>
+                                    <h4>Telegram</h4>
+                                </div>
+                                <div class="iconss1-page" onclick="changeIcon('fa-pinterest', 'Pinterest')">
+                                    <i class="fa fa-pinterest"></i>
+                                    <h4>Pinterest</h4>
+                                </div>
+                                <div class="iconss1-page" onclick="changeIcon('fa-facebook-f', 'Facebook')">
+                                    <i class="fa fa-facebook-f"></i>
+                                    <h4>Facebook</h4>
+                                </div>
+                                <div class="iconss1-page" onclick="changeIcon('fa-twitter', 'Twitter')">
+                                    <i class="fa fa-twitter"></i>
+                                    <h4>Twitter</h4>
+                                </div>
+                                <div class="iconss1-page" onclick="changeIcon('fa-linkedin', 'Linkedin')">
+                                    <i class="fa fa-linkedin"></i>
+                                    <h4>Linkedin</h4>
+                                </div>
+                                <div class="iconss1-page" onclick="changeIcon('fa-snapchat-square', 'Snapchat')">
+                                    <i class="fa fa-snapchat-square"></i>
+                                    <h4>Snapchat</h4>
+                                </div>
+                                <div class="iconss1-page" onclick="changeIcon('fa-amazon', 'Amazon')">
+                                    <i class="fa fa-amazon"></i>
+                                    <h4>Amazon</h4>
+                                </div>
+                                <div class="iconss1-page" onclick="changeIcon('fa-apple', 'Apple')">
+                                    <i class="fa fa-apple"></i>
+                                    <h4>Apple</h4>
+                                </div>
+                                <div class="iconss1-page" onclick="changeIcon('fa-etsy', 'Etsy')">
+                                    <i class="fa fa-etsy"></i>
+                                    <h4>Etsy</h4>
+                                </div>
+                                <div class="iconss1-page" onclick="changeIcon('fa-github', 'Github')">
+                                    <i class="fa fa-github"></i>
+                                    <h4>Github</h4>
+                                </div>
+                                <div class="iconss1-page" onclick="changeIcon('fa-spotify', 'Spotify')">
+                                    <i class="fa fa-spotify"></i>
+                                    <h4>Spotify</h4>
+                                </div>
+                                <div class="iconss1-page" onclick="changeIcon('fa-whatsapp', 'Whatsapp')">
+                                    <i class="fa fa-whatsapp"></i>
+                                    <h4>Whatsapp</h4>
+                                </div>
+                                <div class="iconss1-page" onclick="changeIcon('fa-yahoo', 'Yahoo')">
+                                    <i class="fa fa-yahoo"></i>
+                                    <h4>Yahoo</h4>
+                                </div>
+                                <div class="iconss1-page" onclick="changeIcon('fa-soundcloud', 'Soundcloud')">
+                                    <i class="fa fa-soundcloud"></i>
+                                    <h4>Soundcloud</h4>
+                                </div>
+                            </div>
+
+                            <div class="iconsss3-page" id="urlForm" style="display: none;">
+                                <form action="{% url 'setting' %}" method="post">
+                                    {% csrf_token %}
+                                    <h2>Enter URL</h2>
+                                    <input type="text" id="settingurl" name="settingurl" placeholder="Enter you URL" oninput="validateURL()">
+                                    <h5>For Example: https://&enter url</h5>
+                                    <button type="submit" id="submitButton">Add URL</button>
+                                </form>
+                            </div>
+
+                            <div class="setting7-page">
+                                <div class="setting8-page">
+                                    <i id="settingIcon" class="fa fa-youtube-play"></i>
+                                    <h2 id="settingTitle">Youtube</h2>
+                                </div>
+                                <div class="setting9-page">
+                                    <i class="fa fa-remove"></i>
+                                </div>
+                            </div>
+                            <p>Drag and drop the icons above to reorder them.</p>
+                            <div class="setting10-page">
+                                <h2>Position</h2>
+                                <p>Display icons at the:</p>
+                                <h2>Top</h2>
+                                <a href=""><button>See a Analytics</button></a>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="suppor-page" id="sportbanner">
+                        <h1>Support banner</h1>
+                        <div class="suppor1-page">
+                            <h2>Show your support</h2>
+                            <p>Show your support for important causes with a profile <br> banner. Only one banner can be active at a time.</p>
+                        </div>
+                    </div>
+
+                    <div class="mailing-page" id="mailinglist">
+                        <h1>Mailing list integrations</h1>
+                        <div class="mailing1-page">
+                            <div class="mailing2-page">
+                                <h2>Email sign-up
+                                </h2>
+                                <a href=""><i class="fa fa-lock"></i></a>
+                            </div>
+                            <p>Add an email sign-up field to your Linktree so visitors can join your mailing list.</p>
+                        </div>
+                        <div class="mailing1-page">
+                            <div class="mailing2-page">
+                                <h2>SMS sign-up
+
+                                </h2>
+                                <a href=""><i class="fa fa-lock"></i></a>
+                            </div>
+                            <p>Collect SMS subscribers with a sign-up field on your Linktree..</p>
+                        </div>
+                    </div>
+
+                    <div class="mailing-page" id="socaillisting">
+                        <h1>Social integrations</h1>
+                        <div class="mailing1-page">
+                            <p>You don't currently have any social integrations set up.</p>
+                            <p>Connect your
+                                <spam>TikTok</spam> or
+                                <spam>Instagram</spam> to display your social content directly on your Linktree.</p>
+                        </div>
+                    </div>
+
+                    <div class="mailing-page" id="shop">
+                        <h1>Shop</h1>
+                        <div class="mailing1-page">
+                            <div class="mailing2-page">
+                                <h2>Display Shop
+
+                                </h2>
+                            </div>
+                            <p>Have your Shop tab visible on your Linktree.</p>
+                        </div>
+                        <div class="mailing1-page">
+                            <div class="mailing2-page">
+                                <h2>Set Shop as main tab
+                                </h2>
+                            </div>
+                            <p>When visitors arrive on your Linktree, they’ll see your Shop first.</p>
+                        </div>
+                        <div class="mailing1-page">
+                            <div class="mailing2-page">
+                                <h2>Preview Shop on Links page
+                                </h2>
+                            </div>
+                            <p>When visitors arrive on your Linktree, your first link previews your Shop.</p>
+                        </div>
+                    </div>
+
+
+                    <div class="mailing-page" id="sensitive">
+                        <h1>Sensitive material</h1>
+                        <div class="mailing1-page">
+                            <div class="mailing2-page">
+                                <h2>Display Shop
+                                </h2>
+                            </div>
+                            <p>Display a sensitive content warning before visitors can view your profile.</p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="seo-page" id="seo">
+                        <h1>SEO</h1>
+                        <div class="seo1-page">
+                            <div class="seo2-page">
+                                <h2>Custom metadata
+                                </h2>
+                            </div>
+                            <p>Changes to metadata may take some time to appear on other platforms.</p>
+                            <div class="seo3-page">
+                                <form action="{% url 'setting' %}" method="post">
+                                    {% csrf_token%}
+                                    <input type="text" name="seotitle" id="seotitle" placeholder="Meta title">
+                                    <h5>Example: {% if loginusernamevalue %}
+
+                                        <spam>{{loginusernamevalue.loginusernameoneg}}</spam>
+                                        {% endif %}
+                                    </h5>
+                                    <input type="text" name="seodescription" id="seodescription" placeholder="Meta Description">
+                                    <h5>Example:
+                                        <spam>Linktree. Make your link do more.</spam>
+                                    </h5>
+                                    <button type="submit">Send Data</button>
+                                </form>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="mailing-page">
+                        <h1>Set up conversion tracking</h1>
+                        <div class="mailing1-page">
+                            <div class="mailing2-page">
+                                <h2>Set up conversion tracking
+
+
+                                </h2>
+                            </div>
+                            <p>Use conversion tracking to see what visitors do after clicking your links. Learn more about conversion tracking</p>
+                            <p>View conversions below each link on your Links page.</p>
+                            <a href="{% url 'billing_pro' %}"><button><i class="fa fa-flash"></i>Try Pro for Free</button></a>
+                        </div>
+
+                    </div>
+
+                    <div class="analy-page" id="analyticsic">
+                        <h1>Analytics integrations</h1>
+                        <div class="analy1-page">
+                            <div class="analy2-page">
+                                <form action="{% url 'setting' %}" method="post">
+                                    {% csrf_token %}
+                                    <h2>Facebook</h2>
+                                    <input type="text" id="pexiid" name="pexiid" placeholder="Pixel ID">
+                                    <p>Example: 123456789</p>
+                                    <input type="text" id="api" name="api" placeholder="Facebook Conversions API Access Token">
+                                    <p>Token from Facebook Events Manager</p>
+                                    <h2>Google
+                                    </h2>
+                                    <input type="text" id="googleid" name="googleid" placeholder="Google Measurement ID">
+                                    <p>Example: UA-000000-2</p>
+
+                                    <h2>UTM Parameters
+                                    </h2>
+
+                                    <p>Make Google Analytics show Linktree traffic as 'social' traffic. The campaign parameter is set dynamically from the title of each link.</p>
+                                    <button type="submit">Send Data</button>
+
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mailing-page" id="subscribe">
+                        <h1>Subscribe</h1>
+                        <div class="mailing1-page">
+                            <div class="mailing2-page">
+                                <h2>Let visitors subscribe
+                                </h2>
+                            </div>
+                            <p>Add a button so visitors can subscribe to your Linktree.</p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="mailing-page" id="affiliate">
+                        <h1>Affiliate programs</h1>
+                        <div class="mailing1-page">
+                            <div class="mailing2-page">
+                                <h2>Affiliate programs
+                                </h2>
+                            </div>
+                            <p>Earn commission by referring visitors to products and services from your links. Not a member of an affiliate program? Learn how to get started</p>
+                            <a href="{% url 'billing_pro' %}"><button><i class="fa fa-flash"></i>Try Pro for Free</button></a>
+                            <p>Linktree's affiliate credentials are applied by default to some products. We encourage you to replace them with your own credentials. How it works</p>
+                        </div>
+
+                    </div>
+
+                    <div class="mailing-page">
+                        <h1>Archive</h1>
+                        <div class="mailing1-page">
+                            <div class="mailing2-page">
+                                <h2>Archive all inactive links
+
+                                </h2>
+                            </div>
+                            <p>Move all your inactive links to the archive and keep their analytics data.</p>
+                            <button id="archiveButton" onclick="changeColor()">Archive all inactive links</button>
+                        </div>
+
+
+                    </div>
+
+
+
+                    <div class="admin45-page" id="textDiv">
+                        <h1>Preview</h1>
+                        <div class="admin46-page">
+                            <div class="admin49-page">
+                                <div class="admin50-page">
+                                    <h2 id="currentTime">1:44</h2>
+                                </div>
+                                <div class="admin51-page">
+                                    <i class="fa fa-signal"></i>
+                                    <i class="fa fa-wifi"></i>
+                                    <i class="fa fa-battery-4"></i>
+                                </div>
+                            </div>
+                            {% if profile %} {% if profile.profilePicture %}
+
+                            <img src="{{ profile.profilePicture.url }}" class="admin70"> {% else %}
+                            <p>No profile picture available</p>
+                            {% endif %}
+                            <h3>{{profile.name}}</h3>
+                            <h5>{{profile.bio}}</h5>
+                            {% endif %}
+                            <i class="fa fa-youtube-play" id="admin71"></i>
+                            <a href="{{ i.settingurl }}" id="dynamic-icon" style="color: black; font-size: 20px; font-weight: 800;"><i class="fa "></i></a> {% for i in adminpageees%}
+
+                            <div class="admin47-page">
+                                <a href="{{i.urladmin}}"><button>{{i.nameadmin}}</button></a>
+                            </div>
+                            {% endfor %} {% for i in adminpageone%}
+                            <div class="admin47-page">
+                                <a href="{{i.shopeurlone}}"><button><img src="{{i.profileimage.url}}" class="masaua">{{i.title}}</button></a>
+                            </div>
+                            {% endfor %} {% if pageurlsdata%}
+                            <div class="admin47-page">
+                                <a href="{{pageurlsdata.field}}"><button><img src="/static/images/Platform images/youtube.svg">Click Website</button></a>
+                            </div>
+                            {% endif %} {% if pageurlsdata%}
+                            <div class="admin47-page">
+                                <a href="{{pageurlsdata.url}}"><button>Website</button></a>
+                            </div>
+                            {% endif %} {% if pageurlsdata%}
+                            <div class="admin47-page">
+                                <a href="{{pageurlsdata.urlone}}"><button>Website</button></a>
+                            </div>
+                            {% endif %} {% if pageurlsdata%}
+                            <div class="admin47-page">
+                                <a href="{{pageurlsdata.urltwo}}"><button>Website</button></a>
+                            </div>
+                            {% endif %}
+
+                            <div class="success48-page">
+                                <img src="/static/images/11.png">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js "></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js "></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js "></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js " integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo " crossorigin="anonymous "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js " integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut " crossorigin="anonymous "></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js " integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k " crossorigin="anonymous "></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js " integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE " crossorigin="anonymous ">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js " integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ " crossorigin="anonymous "></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js ">
+    </script>
+
+    <script>
+        // Select all elements with the toggle-icon class
+        const toggleIcons = document.querySelectorAll('.toggle-icon');
+
+        toggleIcons.forEach(icon => {
+            icon.addEventListener('click', () => {
+                // Get the parent element of the icon
+                const parent = icon.parentElement;
+
+                // Find the associated elements within the parent element
+                const content = parent.nextElementSibling;
+                const minusIcon = parent.querySelector('.fa-minus');
+                const plusIcon = parent.querySelector('.fa-plus');
+
+                // Toggle the visibility of the content and icons
+                if (content.style.display === "none" || content.style.display === " ") {
+                    content.style.display = "block";
+                    minusIcon.style.display = "inline";
+                    plusIcon.style.display = "none";
+                } else {
+                    content.style.display = "none";
+                    minusIcon.style.display = "none";
+                    plusIcon.style.display = "inline";
+                }
+            });
+        });
+    </script>
+
+
+
+
+    <script>
+        // Select all the <p> elements with class 'home10'
+        const items = document.querySelectorAll("#home17-page .home10");
+        let index = 0;
+
+        // Function to hide all <p> elements and show only the current one
+        function showItem() {
+            items.forEach((item, i) => {
+                // Hide all items
+                item.style.display = "none";
+            });
+            // Show the current item
+            items[index].style.display = "block";
+
+            // Move to the next item, reset index if at the end
+            index = (index + 1) % items.length;
+        }
+
+        // Initialize the first item to be shown
+        showItem();
+
+        // Cycle through the items every 1 second (1000 milliseconds)
+        setInterval(showItem, 1000);
+    </script>
+
+    <script>
+        var elem222 = document.getElementById("eyecontact");
+        var password = document.getElementById("password");
+        elem222.onclick = function() {
+            if (password.type == "password") {
+                password.type = "text";
+                elem222.classList.remove("fa-eye");
+                elem222.classList.add("fa-eye-slash");
+            } else {
+                password.type = "password";
+                elem222.classList.remove("fa-eye-slash");
+                elem222.classList.add("fa-eye");
+            }
+        }
+    </script>
+
+    <script>
+        const inputField = document.getElementById('loginusername');
+        const form = document.getElementById('loginForm');
+        const errorMessage = document.getElementById('error-message');
+        const continueButton = document.getElementById('continue-button');
+        const crossIcon = document.getElementById('cross-icon');
+        const prefix = 'LinkTr.ee/';
+
+        // Ensure the prefix is always at the start and the user types after it
+        inputField.addEventListener('input', function(e) {
+            if (!inputField.value.startsWith(prefix)) {
+                inputField.value = prefix; // Prevent deletion of the prefix
+            }
+
+            const usernamePart = inputField.value.slice(prefix.length);
+            const validUsername = /^[a-zA-Z0-9_.]*$/;
+
+            // Check if the username part contains invalid characters
+            if (!validUsername.test(usernamePart)) {
+                inputField.style.border = '1px solid red';
+                errorMessage.style.display = 'block'; // Show error message
+                continueButton.disabled = true; // Disable button
+                continueButton.style.backgroundColor = '#f0f0f0'; // Light background
+                continueButton.style.color = '#ccc'; // Light text color
+                crossIcon.style.display = 'inline'; // Show the cross icon
+            } else {
+                inputField.style.border = '1px solid green'; // Valid input
+                errorMessage.style.display = 'none'; // Hide error message
+                continueButton.disabled = false; // Enable button
+                continueButton.style.backgroundColor = ''; // Reset to default
+                continueButton.style.color = ''; // Reset to default
+                crossIcon.style.display = 'none'; // Hide the cross icon
+            }
+        });
+
+        // Prevent form submission if the username is invalid
+        form.addEventListener('submit', function(e) {
+            const usernamePart = inputField.value.slice(prefix.length);
+            const validUsername = /^[a-zA-Z0-9_.]*$/;
+
+            if (!validUsername.test(usernamePart)) {
+                e.preventDefault(); // Stop form submission
+                errorMessage.style.display = 'block'; // Show error message
+            }
+        });
+    </script>
+
+
+
+
+    <script>
+        // Retrieve the selected image URL from localStorage
+        const selectedImageUrl = localStorage.getItem('selectedImage');
+        const selectedImageName = localStorage.getItem('selectedImageName');
+
+        // Update the image and placeholder if available
+        if (selectedImageUrl && selectedImageName) {
+            document.getElementById('dynamic-image').src = selectedImageUrl;
+        }
+    </script>
+
+    <script>
+        // Select all images with the class 'clickable-img'
+        const images = document.querySelectorAll('.clickable-img');
+
+        // Variable to keep track of the currently selected image
+        let selectedImage = null;
+
+        // Loop through each image and add a click event listener
+        images.forEach(function(image) {
+            image.addEventListener('click', function() {
+                // If there's a previously selected image, remove its black border
+                if (selectedImage) {
+                    selectedImage.style.border = 'none';
+                }
+
+                // Add a black border to the currently clicked image
+                this.style.border = '3px solid black';
+                this.style.padding = "2px"
+
+                // Update the selected image to the currently clicked one
+                selectedImage = this;
+            });
+        });
+    </script>
+
+    <script>
+        document.getElementById("plusIconLabel").addEventListener("click", function() {
+            var fileInput = document.getElementById("profilePicture");
+
+            // Toggle visibility of the file input on click
+            if (fileInput.style.display === "none") {
+                fileInput.style.display = "block";
+            } else {
+                fileInput.style.display = "none";
+            }
+        });
+
+        // Function to display the selected file name
+        function showFileName(input) {
+            const fileName = input.files[0] ? input.files[0].name : 'No file chosen';
+            document.getElementById('file-name').textContent = fileName;
+        }
+    </script>
+
+
+
+
+    <!-- <script>
+        // Handle predefined image selection
+        function selectImage(imageName) {
+            document.getElementById('selected_image').value = imageName;
+
+            // Highlight the selected image
+            var images = document.getElementsByClassName('clickable-img');
+            for (var i = 0; i < images.length; i++) {
+                images[i].style.border = 'none'; // Reset border
+            }
+            document.getElementById('img' + imageName.split('.')[0]).style.border = '2px solid black';
+        }
+
+        // Handle file input click
+        document.getElementById("plusIconLabel ").addEventListener("click ", function() {
+            document.getElementById("profilePicture ").click();
+        });
+
+        // Show file name after selecting a file (optional)
+        function showFileName(input) {
+            if (input.files && input.files[0]) {
+                alert("Selected file: " + input.files[0].name);
+            }
+        }
+    </script> -->
+
+    <script>
+        // Toggle the visibility of the content on icon click
+        document.querySelector('.admin32-page').addEventListener('click', function() {
+            const optionsDiv = document.querySelector('.admin33-page');
+            optionsDiv.classList.toggle('hidden');
+        });
+    </script>
+
+
+    <script>
+        // Function to show the URL input section
+        function showUrlInput() {
+            document.querySelector('.admin16-page').style.display = 'block';
+        }
+
+        // Function to hide the URL input section
+        function hideUrlInput() {
+            document.querySelector('.admin16-page').style.display = 'none';
+        }
+    </script>
+
+    <script>
+        // Function to copy text to clipboard
+        function copyToClipboard() {
+            // Get the text from the hidden <spam>
+            var copyText = document.getElementById("copyText").innerText;
+
+            // Create a temporary input element to hold the text
+            var tempInput = document.createElement("input");
+            tempInput.value = copyText;
+            document.body.appendChild(tempInput);
+
+            // Select the text in the temporary input
+            tempInput.select();
+            tempInput.setSelectionRange(0, 99999); // For mobile devices
+
+            // Copy the text to the clipboard
+            document.execCommand("copy");
+
+            // Remove the temporary input
+            document.body.removeChild(tempInput);
+
+            // Change the button text to "Copied! "
+            document.getElementById("copyBtn").innerText = "Copied!";
+        }
+    </script>
+
+    <script>
+        function updateTime() {
+            // Create a new Date object
+            var now = new Date();
+
+            // Get the hours and minutes
+            var hours = now.getHours();
+            var minutes = now.getMinutes();
+
+            // Add leading zero to minutes if needed
+            minutes = minutes < 10 ? '0' + minutes : minutes;
+
+            // Format the time (you can customize this to 12-hour format if needed)
+            var currentTime = hours + ": " + minutes;
+
+            // Display the time in the <h2> tag
+            document.getElementById("currentTime").innerText = currentTime;
+        }
+
+        // Update the time every second
+        setInterval(updateTime, 1000);
+
+        // Initial call to display time immediately on page load
+        updateTime();
+    </script>
+
+
+    <script>
+        function updateLinkPage(imageUrl, imageName) {
+            // Store image information in localStorage to retrieve on the next page
+            localStorage.setItem('selectedImage', imageUrl);
+            localStorage.setItem('selectedImageName', imageName);
+        }
+    </script>
+
+    <script>
+        // Function to add a black border when an image is clicked
+        function addBorder(imageElement) {
+            // Remove border from all images first
+            var allImages = document.querySelectorAll('.admin20-page img');
+            allImages.forEach(function(img) {
+                img.style.border = "none";
+            });
+
+            // Add black border to the clicked image
+            imageElement.style.border = "2px solid black";
+        }
+    </script>
+
+    <script>
+        function showOptions() {
+            var optionsDiv = document.getElementById("admin101-page");
+            if (optionsDiv.classList.contains('show')) {
+                optionsDiv.classList.remove('show');
+                setTimeout(() => {
+                    optionsDiv.style.display = "none"; // Hide after transition
+                }, 500); // Match the CSS transition time
+            } else {
+                optionsDiv.style.display = "block";
+                setTimeout(() => {
+                    optionsDiv.classList.add('show');
+                }, 10); // Small delay to allow transition to work
+            }
+        }
+    </script>
+
+    <script>
+        function showOptionsone() {
+            var optionsDivone = document.getElementById("waleed");
+            if (optionsDivone.classList.contains('show')) {
+                optionsDivone.classList.remove('show');
+                setTimeout(() => {
+                    optionsDivone.style.display = "none"; // Hide after transition
+                }, 500); // Match the CSS transition time
+            } else {
+                optionsDivone.style.display = "block";
+                setTimeout(() => {
+                    optionsDivone.classList.add('show');
+                }, 10); // Small delay to allow transition to work
+            }
+        }
+    </script>
+    <script>
+        function showOptionstwo() {
+            var optionsDivtwo = document.getElementById("waleedone");
+            if (optionsDivtwo.classList.contains('show')) {
+                optionsDivtwo.classList.remove('show');
+                setTimeout(() => {
+                    optionsDivtwo.style.display = "none"; // Hide after transition
+                }, 500); // Match the CSS transition time
+            } else {
+                optionsDivtwo.style.display = "block";
+                setTimeout(() => {
+                    optionsDivtwo.classList.add('show');
+                }, 10); // Small delay to allow transition to work
+            }
+        }
+    </script>
+
+
+    <script>
+        function showOptionsfour() {
+            var showOptionsfour = document.getElementById("waleedtwo");
+            if (showOptionsfour.classList.contains('show')) {
+                showOptionsfour.classList.remove('show');
+                setTimeout(() => {
+                    showOptionsfour.style.display = "none"; // Hide after transition
+                }, 500); // Match the CSS transition time
+            } else {
+                showOptionsfour.style.display = "block";
+                setTimeout(() => {
+                    showOptionsfour.classList.add('show');
+                }, 10); // Small delay to allow transition to work
+            }
+        }
+    </script>
+    <script>
+        function showOptionsthree() {
+            var optionsDivthree = document.getElementById("waleedthree");
+            if (optionsDivthree.classList.contains('show')) {
+                optionsDivthree.classList.remove('show');
+                setTimeout(() => {
+                    optionsDivthree.style.display = "none"; // Hide after transition
+                }, 500); // Match the CSS transition time
+            } else {
+                optionsDivthree.style.display = "block";
+                setTimeout(() => {
+                    optionsDivthree.classList.add('show');
+                }, 10); // Small delay to allow transition to work
+            }
+        }
+    </script>
+    <script>
+        function showOptionsfive() {
+            var optionsDivfive = document.getElementById("waleedfour");
+            if (optionsDivfive.classList.contains('show')) {
+                optionsDivfive.classList.remove('show');
+                setTimeout(() => {
+                    optionsDivfive.style.display = "none"; // Hide after transition
+                }, 500); // Match the CSS transition time
+            } else {
+                optionsDivfive.style.display = "block";
+                setTimeout(() => {
+                    optionsDivfive.classList.add('show');
+                }, 10); // Small delay to allow transition to work
+            }
+        }
+    </script>
+
+    <script>
+        function showForm() {
+            var formDiv = document.querySelector(".shop4-page");
+            // Toggle the display between block and none
+            if (formDiv.style.display === "none") {
+                formDiv.style.display = "block";
+            } else {
+                formDiv.style.display = "none";
+            }
+        }
+    </script>
+
+    <script>
+        const shopUrlInput = document.getElementById('shopurl');
+        const addButton = document.getElementById('addButton');
+
+        // Event listener for input changes
+        shopUrlInput.addEventListener('input', function() {
+            // Check if the input field is not empty
+            if (shopUrlInput.value.trim() !== "") {
+                addButton.style.display = "inline-block"; // Show the button
+            } else {
+                addButton.style.display = "none"; // Hide the button
+            }
+        });
+    </script>
+
+    <script>
+        const shopUrloneInput = document.getElementById('shopurl');
+        const addButtonone = document.getElementById('addButton');
+        const errorMessageone = document.getElementById('error');
+
+        // Function to validate URL format
+        function validateUrl(url) {
+            // Ensure the URL starts with "https://"
+            const pattern = /^https:\/\/.+/;
+            return pattern.test(url);
+        }
+
+        // Event listener for input changes
+        shopUrloneInput.addEventListener('input', function() {
+            const url = shopUrloneInput.value.trim();
+
+            // If the URL is valid
+            if (validateUrl(url)) {
+                shopUrloneInput.classList.remove('invalid');
+                errorMessageone.style.display = "none"; // Hide the error message
+                addButtonone.style.display = "inline-block"; // Show the button
+            } else {
+                shopUrloneInput.classList.add('invalid'); // Add red border
+                errorMessageone.style.display = "block"; // Show the error message
+                addButtonone.style.display = "none"; // Hide the button
+            }
+        });
+    </script>
+
+    <script>
+        const addoneButton = document.getElementById('addButton');
+        const productForm = document.getElementById('productForm');
+
+        // Show the form when the "Add" button is clicked
+        addoneButton.addEventListener('click', function() {
+            productForm.style.display = 'block'; // Show the form
+        });
+
+        // Function to display the selected file name (optional feature for file input)
+        function showFileName(input) {
+            if (input.files && input.files[0]) {
+                alert("Selected file: " + input.files[0].name);
+            }
+        }
+    </script>
+
+    <script>
+        function changeBackground() {
+            // Change the background of admin45-page to the image that was clicked
+            const ableimage = document.getElementById("clickableImage");
+            const admin46Page = document.getElementById("admin46Page");
+            admin46Page.style.backgroundColor = "lightcoral";
+            ableimage.style.width = "149px";
+            ableimage.style.height = "229px";
+            ableimage.style.border = "2px solid gray"
+                // Change all the text inside admin46-page to white
+            admin46Page.style.color = "white";
+
+            // Optional: Set background size and other styles
+            admin46Page.style.backgroundSize = "cover"; // Ensure the background covers the entire area
+            admin46Page.style.backgroundPosition = "center"; // Center the image
+        }
+
+        function changeoneBackground() {
+            // Change the background of admin45-page to the image that was clicked
+            const ableimage = document.getElementById("clickableImageone");
+            const admin46Page = document.getElementById("admin46Page");
+            admin46Page.style.backgroundColor = "rgb(245, 241, 205)";
+            ableimage.style.width = "149px";
+            ableimage.style.height = "229px";
+            ableimage.style.border = "2px solid gray"
+                // Change all the text inside admin46-page to white
+            admin46Page.style.color = "white";
+
+            // Optional: Set background size and other styles
+            admin46Page.style.backgroundSize = "cover"; // Ensure the background covers the entire area
+            admin46Page.style.backgroundPosition = "center"; // Center the image
+        }
+
+
+        function changeBackgroundtwo() {
+            // Change the background of admin45-page to the image that was clicked
+            const ableimage = document.getElementById("clickableImagetwo");
+            const admin46Page = document.getElementById("admin46Page");
+            admin46Page.style.backgroundColor = "#DFC98A";
+            ableimage.style.width = "149px";
+            ableimage.style.height = "229px";
+            ableimage.style.border = "2px solid gray"
+                // Change all the text inside admin46-page to white
+            admin46Page.style.color = "white";
+
+            // Optional: Set background size and other styles
+            admin46Page.style.backgroundSize = "cover"; // Ensure the background covers the entire area
+            admin46Page.style.backgroundPosition = "center"; // Center the image
+        }
+
+        function changeBackgroundthree() {
+            // Change the background of admin45-page to the image that was clicked
+            const ableimage = document.getElementById("clickableImagethree");
+            const admin46Page = document.getElementById("admin46Page");
+            admin46Page.style.backgroundColor = "#C9BB8E";
+            ableimage.style.width = "149px";
+            ableimage.style.height = "229px";
+            ableimage.style.border = "2px solid gray"
+                // Change all the text inside admin46-page to white
+            admin46Page.style.color = "white";
+
+            // Optional: Set background size and other styles
+            admin46Page.style.backgroundSize = "cover"; // Ensure the background covers the entire area
+            admin46Page.style.backgroundPosition = "center"; // Center the image
+        }
+
+        function changeBackgroundfour() {
+            // Change the background of admin45-page to the image that was clicked
+            const ableimage = document.getElementById("clickableImagefour");
+            const admin46Page = document.getElementById("admin46Page");
+            admin46Page.style.backgroundColor = "#D6B85A";
+            ableimage.style.width = "149px";
+            ableimage.style.height = "229px";
+            ableimage.style.border = "2px solid gray"
+                // Change all the text inside admin46-page to white
+            admin46Page.style.color = "white";
+
+            // Optional: Set background size and other styles
+            admin46Page.style.backgroundSize = "cover"; // Ensure the background covers the entire area
+            admin46Page.style.backgroundPosition = "center"; // Center the image
+        }
+
+        function changeBackgroundfive() {
+            // Change the background of admin45-page to the image that was clicked
+            const ableimage = document.getElementById("clickableImagefive");
+            const admin46Page = document.getElementById("admin46Page");
+            admin46Page.style.backgroundColor = "#DCD7A0";
+            ableimage.style.width = "149px";
+            ableimage.style.height = "229px";
+            ableimage.style.border = "2px solid gray"
+                // Change all the text inside admin46-page to white
+            admin46Page.style.color = "white";
+
+            // Optional: Set background size and other styles
+            admin46Page.style.backgroundSize = "cover"; // Ensure the background covers the entire area
+            admin46Page.style.backgroundPosition = "center"; // Center the image
+        }
+
+        function changeBackgroundsix() {
+            // Change the background of admin45-page to the image that was clicked
+            const ableimage = document.getElementById("clickableImagesix");
+            const admin46Page = document.getElementById("admin46Page");
+            admin46Page.style.backgroundColor = "#E3B778";
+            ableimage.style.width = "149px";
+            ableimage.style.height = "229px";
+            ableimage.style.border = "2px solid gray"
+                // Change all the text inside admin46-page to white
+            admin46Page.style.color = "white";
+
+            // Optional: Set background size and other styles
+            admin46Page.style.backgroundSize = "cover"; // Ensure the background covers the entire area
+            admin46Page.style.backgroundPosition = "center"; // Center the image
+        }
+
+        function changeBackgroundseven() {
+            // Change the background of admin45-page to the image that was clicked
+            const ableimage = document.getElementById("clickableImageseven");
+            const admin46Page = document.getElementById("admin46Page");
+            admin46Page.style.backgroundColor = "#E4D00A";
+            ableimage.style.width = "149px";
+            ableimage.style.height = "229px";
+            ableimage.style.border = "2px solid gray"
+                // Change all the text inside admin46-page to white
+            admin46Page.style.color = "white";
+
+            // Optional: Set background size and other styles
+            admin46Page.style.backgroundSize = "cover"; // Ensure the background covers the entire area
+            admin46Page.style.backgroundPosition = "center"; // Center the image
+        }
+
+        function changeBackgroundeight() {
+            // Change the background of admin45-page to the image that was clicked
+            const ableimage = document.getElementById("clickableImageeight");
+            const admin46Page = document.getElementById("admin46Page");
+            admin46Page.style.backgroundColor = "#FFFD37";
+            ableimage.style.width = "149px";
+            ableimage.style.height = "229px";
+            ableimage.style.border = "2px solid gray"
+                // Change all the text inside admin46-page to white
+            admin46Page.style.color = "white";
+
+            // Optional: Set background size and other styles
+            admin46Page.style.backgroundSize = "cover"; // Ensure the background covers the entire area
+            admin46Page.style.backgroundPosition = "center"; // Center the image
+        }
+
+        function changeBackgroundnine() {
+            // Change the background of admin45-page to the image that was clicked
+            const ableimage = document.getElementById("clickableImagenine");
+            const admin46Page = document.getElementById("admin46Page");
+            admin46Page.style.backgroundColor = "#3CB043";
+            ableimage.style.width = "149px";
+            ableimage.style.height = "229px";
+            ableimage.style.border = "2px solid gray"
+                // Change all the text inside admin46-page to white
+            admin46Page.style.color = "white";
+
+            // Optional: Set background size and other styles
+            admin46Page.style.backgroundSize = "cover"; // Ensure the background covers the entire area
+            admin46Page.style.backgroundPosition = "center"; // Center the image
+        }
+
+        function changeBackground10() {
+            // Change the background of admin45-page to the image that was clicked
+            const ableimage = document.getElementById("clickableImage10");
+            const admin46Page = document.getElementById("admin46Page");
+            admin46Page.style.backgroundColor = "#B0FC38";
+            ableimage.style.width = "149px";
+            ableimage.style.height = "229px";
+            ableimage.style.border = "2px solid gray"
+                // Change all the text inside admin46-page to white
+            admin46Page.style.color = "white";
+
+            // Optional: Set background size and other styles
+            admin46Page.style.backgroundSize = "cover"; // Ensure the background covers the entire area
+            admin46Page.style.backgroundPosition = "center"; // Center the image
+        }
+
+        function changeBackground11() {
+            // Change the background of admin45-page to the image that was clicked
+            const ableimage = document.getElementById("clickableImage11");
+            const admin46Page = document.getElementById("admin46Page");
+            admin46Page.style.backgroundColor = "#3A5311";
+            ableimage.style.width = "149px";
+            ableimage.style.height = "229px";
+            ableimage.style.border = "2px solid gray"
+                // Change all the text inside admin46-page to white
+            admin46Page.style.color = "white";
+
+            // Optional: Set background size and other styles
+            admin46Page.style.backgroundSize = "cover"; // Ensure the background covers the entire area
+            admin46Page.style.backgroundPosition = "center"; // Center the image
+        }
+
+        function changeBackground12() {
+            // Change the background of admin45-page to the image that was clicked
+            const ableimage = document.getElementById("clickableImage12");
+            const admin46Page = document.getElementById("admin46Page");
+            admin46Page.style.backgroundColor = "#728C69";
+            ableimage.style.width = "149px";
+            ableimage.style.height = "229px";
+            ableimage.style.border = "2px solid gray"
+                // Change all the text inside admin46-page to white
+            admin46Page.style.color = "white";
+
+            // Optional: Set background size and other styles
+            admin46Page.style.backgroundSize = "cover"; // Ensure the background covers the entire area
+            admin46Page.style.backgroundPosition = "center"; // Center the image
+        }
+
+        function changeBackground13() {
+            // Change the background of admin45-page to the image that was clicked
+            const ableimage = document.getElementById("clickableImage13");
+            const admin46Page = document.getElementById("admin46Page");
+            admin46Page.style.backgroundColor = "#028A0F";
+            ableimage.style.width = "149px";
+            ableimage.style.height = "229px";
+            ableimage.style.border = "2px solid gray"
+                // Change all the text inside admin46-page to white
+            admin46Page.style.color = "white";
+
+            // Optional: Set background size and other styles
+            admin46Page.style.backgroundSize = "cover"; // Ensure the background covers the entire area
+            admin46Page.style.backgroundPosition = "center"; // Center the image
+        }
+    </script>
+    <script>
+        function changeBackground14() {
+            // Change the background of admin45-page to the image that was clicked
+            const ableimage = document.getElementById("clickableImage14");
+            const admin46Page = document.getElementById("admin46Page");
+            admin46Page.style.backgroundColor = "#74B72E";
+            ableimage.style.width = "149px";
+            ableimage.style.height = "229px";
+            ableimage.style.border = "2px solid gray"
+                // Change all the text inside admin46-page to white
+            admin46Page.style.color = "white";
+
+            // Optional: Set background size and other styles
+            admin46Page.style.backgroundSize = "cover"; // Ensure the background covers the entire area
+            admin46Page.style.backgroundPosition = "center"; // Center the image
+        }
+    </script>
+
+    <script>
+        function changeBackground15() {
+            // Change the background of admin45-page to the image that was clicked
+            const ableimage = document.getElementById("clickableImage15");
+            const admin46Page = document.getElementById("admin46Page");
+            admin46Page.style.backgroundColor = "#466D1D";
+            ableimage.style.width = "149px";
+            ableimage.style.height = "229px";
+            ableimage.style.border = "2px solid gray"
+                // Change all the text inside admin46-page to white
+            admin46Page.style.color = "white";
+
+            // Optional: Set background size and other styles
+            admin46Page.style.backgroundSize = "cover"; // Ensure the background covers the entire area
+            admin46Page.style.backgroundPosition = "center"; // Center the image
+        }
+    </script>
+
+    <script>
+        function changeBackground16() {
+            // Change the background of admin45-page to the image that was clicked
+            const ableimage = document.getElementById("clickableImage16");
+            const admin46Page = document.getElementById("admin46Page");
+            admin46Page.style.backgroundColor = "#03AC13";
+            ableimage.style.width = "149px";
+            ableimage.style.height = "229px";
+            ableimage.style.border = "2px solid gray"
+                // Change all the text inside admin46-page to white
+            admin46Page.style.color = "white";
+
+            // Optional: Set background size and other styles
+            admin46Page.style.backgroundSize = "cover"; // Ensure the background covers the entire area
+            admin46Page.style.backgroundPosition = "center"; // Center the image
+        }
+    </script>
+
+    <script>
+        function changeBackground17() {
+            // Change the background of admin45-page to the image that was clicked
+            const ableimage = document.getElementById("clickableImage17");
+            const admin46Page = document.getElementById("admin46Page");
+            admin46Page.style.backgroundColor = "#B2D3C2";
+            ableimage.style.width = "149px";
+            ableimage.style.height = "229px";
+            ableimage.style.border = "2px solid gray"
+                // Change all the text inside admin46-page to white
+            admin46Page.style.color = "white";
+
+            // Optional: Set background size and other styles
+            admin46Page.style.backgroundSize = "cover"; // Ensure the background covers the entire area
+            admin46Page.style.backgroundPosition = "center"; // Center the image
+        }
+    </script>
+
+    <script>
+        function changeBackground18() {
+            // Change the background of admin45-page to the image that was clicked
+            const ableimage = document.getElementById("clickableImage18");
+            const admin46Page = document.getElementById("admin46Page");
+            admin46Page.style.backgroundColor = "#3F704D";
+            ableimage.style.width = "149px";
+            ableimage.style.height = "229px";
+            ableimage.style.border = "2px solid gray"
+                // Change all the text inside admin46-page to white
+            admin46Page.style.color = "white";
+
+            // Optional: Set background size and other styles
+            admin46Page.style.backgroundSize = "cover"; // Ensure the background covers the entire area
+            admin46Page.style.backgroundPosition = "center"; // Center the image
+        }
+    </script>
+
+    <script>
+        function changeBackground19() {
+            // Change the background of admin45-page to the image that was clicked
+            const ableimage = document.getElementById("clickableImage19");
+            const admin46Page = document.getElementById("admin46Page");
+            admin46Page.style.backgroundColor = "#8F9779";
+            ableimage.style.width = "149px";
+            ableimage.style.height = "229px";
+            ableimage.style.border = "2px solid gray"
+                // Change all the text inside admin46-page to white
+            admin46Page.style.color = "white";
+
+            // Optional: Set background size and other styles
+            admin46Page.style.backgroundSize = "cover"; // Ensure the background covers the entire area
+            admin46Page.style.backgroundPosition = "center"; // Center the image
+        }
+    </script>
+
+    <script>
+        function changeBackground20() {
+            // Change the background of admin45-page to the image that was clicked
+            const ableimage = document.getElementById("clickableImage20");
+            const admin46Page = document.getElementById("admin46Page");
+            admin46Page.style.backgroundColor = "#29AB87";
+            ableimage.style.width = "149px";
+            ableimage.style.height = "229px";
+            ableimage.style.border = "2px solid gray"
+                // Change all the text inside admin46-page to white
+            admin46Page.style.color = "white";
+
+            // Optional: Set background size and other styles
+            admin46Page.style.backgroundSize = "cover"; // Ensure the background covers the entire area
+            admin46Page.style.backgroundPosition = "center"; // Center the image
+        }
+    </script>
+
+
+
+    <script>
+        // JavaScript function to change the font of the text
+        function changeFont(fontName) {
+            // Target the div where text needs to be changed
+            var textDiv = document.getElementById('textDiv');
+
+            // Apply the selected font to the div
+            textDiv.style.fontFamily = fontName;
+
+        }
+    </script>
+
+    <script>
+        function changeColor() {
+            // Get the button element
+            const button = document.getElementById('archiveButton');
+
+            // Change the background color to green
+            button.style.backgroundColor = 'green';
+
+            // Wait for 2 seconds (2000 milliseconds) and change the color back to the original
+            setTimeout(() => {
+                button.style.backgroundColor = ''; // Reset to original background color
+            }, 2000); // Change 2000 to any other value for a longer/shorter delay
+        }
+    </script>
+
+
+    <script>
+        // Function to show the URL input section
+        function showUrlInputicon() {
+            document.querySelector('.iconss-page').style.display = 'flex';
+        }
+
+        // Function to hide the URL input section
+        function hideUrlInput() {
+            document.querySelector('.iconss-page').style.display = 'none';
+        }
+    </script>
+
+
+    <!-- <script>
+        // Function to change the icon and name, and hide the home1001 element
+        function changeIcon(iconClass, iconName) {
+            // Change the icon
+            document.getElementById("settingIcon").className = "fa " + iconClass;
+
+            // Change the name in the <h2> element
+            document.getElementById("settingTitle").textContent = iconName;
+
+            // Hide the home1001 element
+            document.getElementById('home1001').style.display = 'none';
+            document.getElementById('urlForm').style.display = 'flex';
+
+            // Store the selected icon and name in localStorage
+            localStorage.setItem('selectedIcon', iconClass);
+            localStorage.setItem('selectedName', iconName);
+
+        }
+
+        // Function to check localStorage and set the icon and name when the page loads
+        window.onload = function() {
+            const storedIcon = localStorage.getItem('selectedIcon');
+            const storedName = localStorage.getItem('selectedName');
+
+            // If there is a stored icon and name, apply them
+            if (storedIcon && storedName && storedIconName) {
+                document.getElementById("settingIcon").className = "fa " + storedIcon;
+                document.getElementById("settingTitle").textContent = storedName;
+            }
+        };
+    </script> -->
+
+    <!-- <script>
+        function validateURL() {
+            const url = document.getElementById('settingurl').value;
+            const addButton = document.getElementById('submitButton');
+
+            // Check if the URL starts with 'https://'
+            if (url.startsWith('https://')) {
+                addButton.style.display = 'inline-block'; // Show the button
+            } else {
+                addButton.style.display = 'none'; // Hide the button
+            }
+        }
+    </script> -->
+
+    <!-- <script>
+        function changeIcon(iconClass, platformName) {
+            // Find the anchor tag
+            const anchorTag = document.getElementById('dynamic-icon');
+
+            // Update the icon inside the anchor tag
+            anchorTag.innerHTML = `<i class="fa ${iconClass}"></i>`;
+
+            // Optionally, you can also update the href to the respective platform's link
+            // anchorTag.href = `https://www.${platformName.toLowerCase()}.com`;
+        }
+    </script> -->
+
+    <script>
+        // Function to change the icon, name, and hide the home1001 element
+        function changeIcon(iconClass, iconName) {
+            // Change the icon in the settingIcon element
+            document.getElementById("settingIcon").className = "fa " + iconClass;
+
+            // Change the name in the <h2> element
+            document.getElementById("settingTitle").textContent = iconName;
+
+            // Change the icon in the <a> tag with id "dynamic-icon"
+            document.getElementById("dynamic-icon").innerHTML = `<i class="fa ${iconClass}"></i>`;
+
+            // Hide the home1001 element
+            document.getElementById('home1001').style.display = 'none';
+            document.getElementById('urlForm').style.display = 'flex';
+
+            // Store the selected icon and name in localStorage
+            localStorage.setItem('selectedIcon', iconClass);
+            localStorage.setItem('selectedName', iconName);
+        }
+
+        // Function to check localStorage and set the icon and name when the page loads
+        window.onload = function() {
+            const storedIcon = localStorage.getItem('selectedIcon');
+            const storedName = localStorage.getItem('selectedName');
+
+            // If there is a stored icon and name, apply them
+            if (storedIcon && storedName) {
+                // Update the settingIcon element
+                document.getElementById("settingIcon").className = "fa " + storedIcon;
+                document.getElementById("settingTitle").textContent = storedName;
+
+                // Also update the dynamic icon in the <a> tag
+                document.getElementById("dynamic-icon").innerHTML = `<i class="fa ${storedIcon}"></i>`;
+            }
+        };
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

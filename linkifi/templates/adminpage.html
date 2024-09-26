@@ -1,0 +1,2308 @@
+<html lang="en">
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linkifi</title>
+    <link rel="stylesheet" href="{% static 'css/css44.css' %}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alkatra&family=Delicious+Handrawn&display=swap" rel="stylesheet">
+
+
+</head>
+<style>
+    body {
+        width: 100%;
+        background-image: linear-gradient(to right, #eff1ff, #ffcffc);
+    }
+    
+    #plusIconLabel {
+        display: inline-block;
+        padding: 10px 20px;
+        border: 2px dashed #007bff;
+        border-radius: 50px;
+        background-color: white;
+        color: #007bff;
+        cursor: pointer;
+        font-size: 24px;
+        text-align: center;
+        margin-left: 250px;
+    }
+    
+    #file-name {
+        margin-top: 10px;
+        font-size: 14px;
+        color: #555;
+    }
+    
+    input[type="file"] {
+        margin-top: 10px;
+    }
+    /* Initially hide the content */
+    
+    .hidden {
+        display: none;
+    }
+    /* Style for the admin33-page content */
+    
+    .admin33-page {
+        padding: 20px;
+        background-color: #f9f9f9;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin-top: 20px;
+        transition: all 0.3s ease;
+    }
+    /* Styling for the buttons */
+    
+    .admin33-page button {
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        cursor: pointer;
+        font-size: 16px;
+        margin-top: 10px;
+        transition: background-color 0.3s ease;
+    }
+    
+    .admin33-page button:hover {
+        background-color: #45a049;
+    }
+    /* Styling for the headings and paragraphs */
+    
+    .admin33-page h1 {
+        font-size: 24px;
+        color: #333;
+    }
+    
+    .admin33-page h2 {
+        font-size: 20px;
+        color: #555;
+        margin-top: 15px;
+    }
+    
+    .admin33-page h3 {
+        font-size: 18px;
+        color: #777;
+    }
+    
+    .admin33-page h4 {
+        font-size: 16px;
+        color: #888;
+    }
+    
+    .admin32-page i {
+        font-size: 30px;
+        cursor: pointer;
+        color: #333;
+        transition: color 0.3s ease;
+    }
+    
+    .admin32-page i:hover {
+        color: #4CAF50;
+    }
+</style>
+
+
+<body>
+
+
+    <div id="admi-page">
+        <div class="admi1-page">
+            <img src="/static/images/11.png">
+            <a href="{% url 'billing_pro' %}"><button>Try Pro Linkify</button></a>
+
+        </div>
+    </div>
+    <div id="admi2-page">
+        <ul class="admi2-page">
+            <li>
+                <a href="{% url 'adminpage' %}" class="active">
+                    <i class="fa fa-navicon"></i> Links
+                </a>
+            </li>
+            <li>
+                <a href="{% url 'shop' %}">
+                    <i class="fa fa-shopping-basket"></i> Shop
+                </a>
+            </li>
+            <li>
+                <a href="{% url 'appearance' %}">
+                    <i class="fa fa-object-ungroup"></i> Appearance
+                </a>
+            </li>
+            <li>
+                <a href="{% url 'analytics' %}">
+                    <i class="fa fa-signal"></i> Analytics
+                </a>
+            </li>
+            <li>
+                <a href="{% url 'setting' %}">
+                    <i class="fa fa-cog"></i> Setting
+                </a>
+            </li>
+
+        </ul>
+    </div>
+    <div id="admin-page">
+        <div class="admin1-page">
+            <a href="/" class="admin2">
+                <img src="/static/images/11.png"></img>
+            </a>
+            <hr>
+            <h2>Main Manu</h2>
+            <ul>
+                <li>
+                    <a href="{% url 'adminpage' %}" class="active">
+                        <i class="fa fa-navicon"></i> Links
+                    </a>
+                </li>
+                <li>
+                    <a href="{% url 'shop' %}">
+                        <i class="fa fa-shopping-basket"></i> Shop
+                    </a>
+                </li>
+                <li>
+                    <a href="{% url 'shop_plus' %}">
+                        <i class="fa fa-shopping-cart"></i> Shop Plus
+                    </a>
+                </li>
+                <li>
+                    <a href="{% url 'appearance' %}">
+                        <i class="fa fa-object-ungroup"></i> Appearance
+                    </a>
+                </li>
+                <li>
+                    <a href="{% url 'analytics' %}">
+                        <i class="fa fa-signal"></i> Analytics
+                    </a>
+                </li>
+                <li>
+                    <a href="{% url 'setting' %}">
+                        <i class="fa fa-cog"></i> Setting
+                    </a>
+                </li>
+
+                <a href="{% url 'billing_pro' %}"><button>Try Pro Linkify</button></a>
+            </ul>
+            <hr>
+        </div>
+
+
+        <div class="iconss-page" id="home1001" style="display: none;">
+            <div class="iconss1-page" onclick="changeIcon('fa-instagram', 'Instagram')">
+                <i class="fa fa-instagram"></i>
+                <h4>Instagram</h4>
+            </div>
+            <div class="iconss1-page" onclick="changeIcon('fa-youtube-play', 'Youtube')">
+                <i class="fa fa-youtube-play"></i>
+                <h4>Youtube</h4>
+            </div>
+            <div class="iconss1-page" onclick="changeIcon('fa-telegram', 'Telegram')">
+                <i class="fa fa-telegram"></i>
+                <h4>Telegram</h4>
+            </div>
+            <div class="iconss1-page" onclick="changeIcon('fa-pinterest', 'Pinterest')">
+                <i class="fa fa-pinterest"></i>
+                <h4>Pinterest</h4>
+            </div>
+            <div class="iconss1-page" onclick="changeIcon('fa-facebook-f', 'Facebook')">
+                <i class="fa fa-facebook-f"></i>
+                <h4>Facebook</h4>
+            </div>
+            <div class="iconss1-page" onclick="changeIcon('fa-twitter', 'Twitter')">
+                <i class="fa fa-twitter"></i>
+                <h4>Twitter</h4>
+            </div>
+            <div class="iconss1-page" onclick="changeIcon('fa-linkedin', 'Linkedin')">
+                <i class="fa fa-linkedin"></i>
+                <h4>Linkedin</h4>
+            </div>
+            <div class="iconss1-page" onclick="changeIcon('fa-snapchat-square', 'Snapchat')">
+                <i class="fa fa-snapchat-square"></i>
+                <h4>Snapchat</h4>
+            </div>
+            <div class="iconss1-page" onclick="changeIcon('fa-amazon', 'Amazon')">
+                <i class="fa fa-amazon"></i>
+                <h4>Amazon</h4>
+            </div>
+            <div class="iconss1-page" onclick="changeIcon('fa-apple', 'Apple')">
+                <i class="fa fa-apple"></i>
+                <h4>Apple</h4>
+            </div>
+            <div class="iconss1-page" onclick="changeIcon('fa-etsy', 'Etsy')">
+                <i class="fa fa-etsy"></i>
+                <h4>Etsy</h4>
+            </div>
+            <div class="iconss1-page" onclick="changeIcon('fa-github', 'Github')">
+                <i class="fa fa-github"></i>
+                <h4>Github</h4>
+            </div>
+            <div class="iconss1-page" onclick="changeIcon('fa-spotify', 'Spotify')">
+                <i class="fa fa-spotify"></i>
+                <h4>Spotify</h4>
+            </div>
+            <div class="iconss1-page" onclick="changeIcon('fa-whatsapp', 'Whatsapp')">
+                <i class="fa fa-whatsapp"></i>
+                <h4>Whatsapp</h4>
+            </div>
+            <div class="iconss1-page" onclick="changeIcon('fa-yahoo', 'Yahoo')">
+                <i class="fa fa-yahoo"></i>
+                <h4>Yahoo</h4>
+            </div>
+            <div class="iconss1-page" onclick="changeIcon('fa-soundcloud', 'Soundcloud')">
+                <i class="fa fa-soundcloud"></i>
+                <h4>Soundcloud</h4>
+            </div>
+        </div>
+
+
+        <div class="admin2-page">
+            <!-- <div class="admin3-page">
+                <div class="admin4-page">
+                    <h1>Home</h1>
+                </div>
+                <div class="admin5-page">
+                    <input type="text" placeholder="Search...">
+                    <i class="fa fa-search"></i>
+                </div>
+            </div> -->
+            <div class="admin6-page">
+                <img src="/static/images/Platform images/2.jpg">
+            </div>
+
+            <div class="admin7-page">
+                <div class="admin8-page">
+                    {% if profile %}
+                    <div class="admin9-page">
+                        {% if profile.profilePicture %}
+                        <img src="{{ profile.profilePicture.url }}">{% else %}
+                        <p>No profile picture available</p>
+                        {% endif %}
+                        <h1>{{profile.name}}</h1>
+                        <h5>{{profile.bio}}</h5>
+                    </div>
+                    {% endif %}
+
+                </div>
+                <div class="admin10-page">
+                    <h2>Lynk.Id Link</h2>
+                    {% if loginusernamevalue %}
+                    <div class="admin11-page">
+                        <h3>🔥 Your Linkifi is live: <br>
+                            <spam id="copyText" onclick="window.location.href=''">{{loginusernamevalue.loginusernameoneg}}</spam>
+                        </h3>
+                        <button id="copyBtn" onclick="copyToClipboard()">Copy Linkifi URL</button>
+                    </div>
+                    {% endif %}
+                </div>
+
+            </div>
+
+            <div class="admin13-page">
+                <div class="admin14-page">
+                    <div class="admin15-page">
+                        <div class="admin25-page">
+                            <button onclick="showUrlInput()"><i class="fa fa-plus"></i>Add New Link</button>
+                        </div>
+                        <div class="admin16-page" id="home" style="display: none;">
+                            <div class="admin17-page">
+                                <h1>Enter URL</h1>
+                                <i class="fa fa-times" onclick="hideUrlInput()"></i>
+                            </div>
+                            <input type="text" name="enterurl" id="enterurl" placeholder="Enter URL" oninput="checkUrl()">
+                            <a href="" id="addButton" style="display:none;"><button>Add</button></a>
+
+                            <div class="admin18-page">
+                                <h3>Inspired by your interests</h3>
+                                <div class="admin19-page" id="admin19-page">
+                                    {% for i in adminpage %}
+                                    <div class="admin20-page" id="image-{{ i.name }}" onclick="createDiv(this)">
+                                        <img src="{{ i.image.url }}" alt="{{ i.name }}" onclick="updateLinkPage('{{ i.image.url }}', '{{ i.name }}');">
+                                        <h4>{{ i.name }}</h4>
+                                    </div>
+                                    {% endfor %}
+
+                                </div>
+                                <h2>New to try</h2>
+                                <div class="admin21-page">
+                                    <div class="admin22-page">
+                                        <img src="/static/images/Platform images/2.PNG">
+                                        <div class="admin23-page">
+                                            <div class="admin26-page">
+                                                <img src="/static/images/Platform images/instagram.svg">
+                                            </div>
+                                            <div class="admin27-page">
+                                                <h3>Instagram</h3>
+                                                <p>Display your posts and reels</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="admin22-page">
+                                        <img src="/static/images/Platform images/3.PNG">
+                                        <div class="admin23-page">
+                                            <div class="admin26-page">
+                                                <img src="/static/images/Platform images/instagram.svg">
+                                            </div>
+                                            <div class="admin27-page">
+                                                <h3>Discount Code</h3>
+                                                <p>Display a discount code</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="new-div-placeholder"></div>
+
+                        <div class="admin28-page">
+                            <div class="admin100-page">
+                                <div class="admin29-page">
+                                    <i class="fa fa-server"></i>
+                                </div>
+                                <div class="admin30-page">
+                                    <h1>Website Url</h1>
+                                    {% if pageurlsdata %}
+                                    <a href="{{ pageurlsdata.field }}">{{ pageurlsdata.field }}</a> {% else %}
+                                    <p>No URL Link available</p>
+                                    {% endif %}
+
+                                    <div class="admin60-page">
+                                        <div class="admin31-page">
+                                            <div class="admin32-page" onclick="toggleOptions('admin101-page')">
+                                                <i class="fa fa-qrcode"></i>
+                                            </div>
+                                        </div>
+
+                                        <div class="admin31-page">
+                                            <div class="admin32-page" onclick="toggleOptions('waleed')">
+                                                <i class=" fa fa-hand-o-right"></i>
+                                            </div>
+
+                                        </div>
+                                        <div class="admin31-page">
+                                            <div class="admin32-page" onclick="toggleOptions('waleedone')">
+                                                <i class=" fa fa-file-photo-o"></i>
+                                            </div>
+
+                                        </div>
+                                        <div class="admin31-page">
+                                            <div class="admin32-page" onclick="toggleOptions('waleedtwo')">
+                                                <i class="fa fa-star-o"></i>
+                                            </div>
+
+                                        </div>
+                                        <div class="admin31-page">
+                                            <div class="admin32-page" onclick="toggleOptions('waleedthree')">
+                                                <i class="fa fa-calendar-o"></i>
+                                            </div>
+
+                                        </div>
+                                        <div class="admin31-page">
+                                            <div class="admin32-page" onclick="toggleOptions('waleedfour')">
+                                                <i class=" fa fa-lock"></i>
+                                            </div>
+
+                                        </div>
+                                        <div class="admin31-page">
+                                            <div class="admin32-page" onclick="toggleOptions('waleedfive')">
+                                                <i class=" fa fa-signal"></i>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="admin40-page">
+                                    <div class="admin41-page" onclick="toggleOptions('waleedten')">
+                                        <i class="fa fa-external-link"></i>
+                                    </div>
+                                    <div class="admin42-page" onclick="deleteDiv(this)">
+                                        <i class="fa fa-trash-o"></i>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div id="admin101-page" style="display: none;">
+                                <div class="admin102-page">
+                                    <h1>Options</h1>
+                                    <h2>Link Settings</h2>
+                                    <h3>Choose to display this video on your Linkifi or link off to YouTube</h3>
+                                    <div class="admin103-page">
+                                        <h3>Link off to YouTube website</h3>
+                                        <div class="admin104-page">
+                                            <h2>Link off to this channel's latest video
+                                            </h2>
+                                            <a href="{% url 'billing_pro' %}"><button>Upgrade<i class="fa fa-lock"></i></button></a>
+                                        </div>
+                                        <div class="admin104-page">
+                                            <h2>Display this channel's latest video on my Linkifi
+                                            </h2>
+                                            <a href="{% url 'billing_enterprise' %}"><button>Upgrade<i class="fa fa-lock"></i></button></a>
+                                        </div>
+                                    </div>
+                                    <div class="admin105-page">
+                                        <h1>Link off options</h1>
+                                        <a href="{% url 'billing_pro' %}"><button>Ask visitors to subscribe</button></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="waleed" style="display: none;">
+                                <div class="admin106-page">
+                                    <h1>Redirect
+                                    </h1>
+                                    <h5>Temporarily send all visitors straight to a link, instead of your Linkifi.
+
+
+                                    </h5>
+                                    <a href=""><button>Upgrade now</button></a>
+                                </div>
+                            </div>
+                            <div id="waleedone" style="display: none;">
+                                <div class="admin106-page">
+                                    <h1>Add Thumbnail
+                                    </h1>
+                                    <h5>Temporarily send all visitors straight to a link, instead of your Linkifi.
+                                    </h5>
+                                    <a href=""><button>Upgrade Now</button></a>
+                                </div>
+                            </div>
+                            <div id="waleedtwo" style="display: none;">
+                                <div class="admin106-page">
+                                    <h1>Prioritize
+                                    </h1>
+                                    <h5>Draw attention to your most important link.
+                                    </h5>
+                                    <a href=""><button>Upgrade Now</button></a>
+                                </div>
+                            </div>
+                            <div id="waleedthree" style="display: none;">
+                                <div class="admin106-page">
+                                    <h1>Notifications
+                                    </h1>
+                                    <h5>Schedule when your links and notifications go live.
+                                    </h5>
+                                    <a href=""><button>Upgrade Now</button></a>
+                                </div>
+                            </div>
+                            <div id="waleedfour" style="display: none;">
+                                <div class="admin106-page">
+                                    <h1>Lock this link</h1>
+                                    <h5>Visitors can only access this link by fulfilling certain criteria.</h5>
+                                    <h2>Link locked with:</h2>
+                                    <div class="admin107-page">
+                                        <h1>Subscribe</h1>
+                                        <p>Visitors must subscribe to your Linkifi to unlock the link.</p>
+                                    </div>
+                                    <div class="admin108-page">
+                                        <h1>Code</h1>
+                                        <a href=""><button>Upgrade<i class="fa fa-lock"></i></button></a>
+                                    </div>
+                                    <div class="admin107-page">
+                                        <h1>Sensitive content</h1>
+                                        <p>Visitors must acknowledge that this link may contain content that is not appropriate for all audiences.</p>
+                                    </div>
+                                    <div class="admin107-page">
+                                        <h1>NFT contract address</h1>
+                                        <p>Contract Address to unlock this link
+                                            <br> Visitors must own a NFT from the contract address to access this link</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="waleedfive" style="display: none;">
+                                <h1>Share Link</h1>
+                                <div class="waleedsix">
+                                    <div class="waleedseven">
+                                        <h1>Share Link</h1>
+                                        <h4>Share and track your content with this short link</h4>
+                                        <div class="waleed10-page">
+                                            {% if loginusernamevalue%}
+                                            <h1 onclick="window.location.hrer=''">{{loginusernamevalue.loginusernameoneg}}</h1>
+                                            {% endif %}
+                                            <button>copy</button>
+                                        </div>
+                                        <p>When a visitor selects the shared link:</p>
+                                        <a href="">
+                                        Send visitors to your Linkifi and highlight YouTube</a>
+                                        <div class="waleed11-page">
+                                            {% if pageurlsdata %}
+
+                                            <h1>
+                                                Skip Linkifi and go directly to <br>
+                                                <spam>{{pageurlsdata.field}}</spam>
+                                            </h1>
+                                            {% endif %}
+
+                                            <a href=""><button>Upgrade<i class="fa fa-lock"></i></button></a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div id="waleedten" style="display: none;">
+                                <h1>Link Analytics</h1>
+                                <div class="lin-page">
+                                    <div class="lin1-page">
+                                        <h1>Link Analytics</h1>
+                                        <div class="lin2-page">
+                                            <a href=""><button>Insights</button></a>
+                                            <a href=""><button>Overview</button></a>
+                                            <a href=""><button>Top Locatior</button></a>
+                                        </div>
+                                        <i class="	fa fa-signal"></i>
+                                        <h3>Looks like you've had no clicks yet</h3>
+                                        <p>To see how your Linkifi is performing, understand more about your audience, access powerful analytics, and more, try Pro for free.</p>
+                                        <a href=""><button>Try Pro for free</button></a>
+                                        <div class="lin3-page">
+                                            <div class="lin4-page">
+                                                <i class="	fa fa-eye"></i>
+                                                <h5>Measure your views</h5>
+                                            </div>
+                                            <div class="lin4-page">
+                                                <i class="fa fa-area-chart"></i>
+                                                <h5>Measure your clicks</h5>
+                                            </div>
+
+                                        </div>
+                                        <h6>🌎 Find out where your Link performs best</h6>
+                                        <h6>📈 Find out your top referrers for this Link</h6>
+                                        <h6>📱 Find out what device most people view this Link on</h6>
+                                        <h6>🗓️ Measure traffic for specific date ranges</h6>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="admin28-page">
+                            <div class="admin100-page">
+                                <div class="admin29-page">
+                                    <i class="fa fa-server"></i>
+                                </div>
+                                <div class="admin30-page">
+                                    <h1>Website</h1>
+                                    {% if pageurlsdata %}
+
+                                    <a href="{{pageurlsdata.url}}">{{pageurlsdata.url}}</a>{% else %}
+                                    <p>No URL Link available</p>
+                                    {% endif %}
+
+                                    <div class="admin60-page">
+                                        <div class="admin31-page">
+                                            <div class="admin32-page" onclick="toggleOptionss('anni')">
+                                                <i class="fa fa-qrcode"></i>
+                                            </div>
+                                        </div>
+
+                                        <div class="admin31-page">
+                                            <div class="admin32-page" onclick="toggleOptionss('annione')">
+                                                <i class=" fa fa-hand-o-right"></i>
+                                            </div>
+
+                                        </div>
+                                        <div class="admin31-page">
+                                            <div class="admin32-page" onclick="toggleOptionss('annitwo')">
+                                                <i class=" fa fa-file-photo-o"></i>
+                                            </div>
+
+                                        </div>
+                                        <div class="admin31-page">
+                                            <div class="admin32-page" onclick="toggleOptionss('annithree')">
+                                                <i class="fa fa-star-o"></i>
+                                            </div>
+
+                                        </div>
+                                        <div class="admin31-page">
+                                            <div class="admin32-page" onclick="toggleOptionss('annifour')">
+                                                <i class="fa fa-calendar-o"></i>
+                                            </div>
+
+                                        </div>
+                                        <div class="admin31-page">
+                                            <div class="admin32-page" onclick="toggleOptionss('annifive')">
+                                                <i class=" fa fa-lock"></i>
+                                            </div>
+
+                                        </div>
+                                        <div class="admin31-page">
+                                            <div class="admin32-page" onclick="toggleOptionss('annisix')">
+                                                <i class=" fa fa-signal"></i>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="admin40-page">
+                                    <div class="admin41-page" onclick="toggleOptionss('anniseven')">
+                                        <i class="fa fa-external-link"></i>
+                                    </div>
+                                    <div class="admin42-page" onclick="deleteDiv(this)">
+                                        <i class="fa fa-trash-o"></i>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div id="anni" class="anni" style="display: none;">
+                                <div class="admin102-page">
+                                    <h1>Options</h1>
+                                    <h2>Link Settings</h2>
+                                    <h3>Choose to display this video on your Linkifi or link off to YouTube</h3>
+                                    <div class="admin103-page">
+                                        <h3>Link off to YouTube website</h3>
+                                        <div class="admin104-page">
+                                            <h2>Link off to this channel's latest video
+                                            </h2>
+                                            <a href="{% url 'billing_pro' %}"><button>Upgrade<i class="fa fa-lock"></i></button></a>
+                                        </div>
+                                        <div class="admin104-page">
+                                            <h2>Display this channel's latest video on my Linkifi
+                                            </h2>
+                                            <a href="{% url 'billing_enterprise' %}"><button>Upgrade<i class="fa fa-lock"></i></button></a>
+                                        </div>
+                                    </div>
+                                    <div class="admin105-page">
+                                        <h1>Link off options</h1>
+                                        <a href="{% url 'billing_pro' %}"><button>Ask visitors to subscribe</button></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="annione" class="annione" style="display: none;">
+                                <div class="admin106-page">
+                                    <h1>Redirect
+                                    </h1>
+                                    <h5>Temporarily send all visitors straight to a link, instead of your Linkifi.
+
+
+                                    </h5>
+                                    <a href=""><button>Upgrade now</button></a>
+                                </div>
+                            </div>
+                            <div id="annitwo" style="display: none;">
+                                <div class="admin106-page">
+                                    <h1>Add Thumbnail
+                                    </h1>
+                                    <h5>Temporarily send all visitors straight to a link, instead of your Linkifi.
+                                    </h5>
+                                    <a href=""><button>Upgrade Now</button></a>
+                                </div>
+                            </div>
+                            <div id="annithree" style="display: none;">
+                                <div class="admin106-page">
+                                    <h1>Prioritize
+                                    </h1>
+                                    <h5>Draw attention to your most important link.
+                                    </h5>
+                                    <a href=""><button>Upgrade Now</button></a>
+                                </div>
+                            </div>
+                            <div id="annifour" style="display: none;">
+                                <div class="admin106-page">
+                                    <h1>Notifications
+                                    </h1>
+                                    <h5>Schedule when your links and notifications go live.
+                                    </h5>
+                                    <a href=""><button>Upgrade Now</button></a>
+                                </div>
+                            </div>
+                            <div id="annifive" style="display: none;">
+                                <div class="admin106-page">
+                                    <h1>Lock this link</h1>
+                                    <h5>Visitors can only access this link by fulfilling certain criteria.</h5>
+                                    <h2>Link locked with:</h2>
+                                    <div class="admin107-page">
+                                        <h1>Subscribe</h1>
+                                        <p>Visitors must subscribe to your Linkifi to unlock the link.</p>
+                                    </div>
+                                    <div class="admin108-page">
+                                        <h1>Code</h1>
+                                        <a href=""><button>Upgrade<i class="fa fa-lock"></i></button></a>
+                                    </div>
+                                    <div class="admin107-page">
+                                        <h1>Sensitive content</h1>
+                                        <p>Visitors must acknowledge that this link may contain content that is not appropriate for all audiences.</p>
+                                    </div>
+                                    <div class="admin107-page">
+                                        <h1>NFT contract address</h1>
+                                        <p>Contract Address to unlock this link
+                                            <br> Visitors must own a NFT from the contract address to access this link</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="annisix" style="display: none;">
+                                <h1>Share Link</h1>
+                                <div class="waleedsix">
+                                    <div class="waleedseven">
+                                        <h1>Share Link</h1>
+                                        <h4>Share and track your content with this short link</h4>
+                                        <div class="waleed10-page">
+                                            {% if loginusernamevalue%}
+                                            <h1 onclick="window.location.hrer=''">{{loginusernamevalue.loginusernameoneg}}</h1>
+                                            {% endif %}
+                                            <button>copy</button>
+                                        </div>
+                                        <p>When a visitor selects the shared link:</p>
+                                        <a href="">
+                                        Send visitors to your Linkifi and highlight YouTube</a>
+                                        <div class="waleed11-page">
+                                            {% if pageurlsdata%}
+
+                                            <h1>
+                                                Skip Linkifi and go directly to <br>
+                                                <spam>{{pageurlsdata.field}}</spam>
+                                            </h1>
+                                            {% endif %}
+
+                                            <a href=""><button>Upgrade<i class="fa fa-lock"></i></button></a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div id="anniseven" style="display: none;">
+                                <h1>Link Analytics</h1>
+                                <div class="lin-page">
+                                    <div class="lin1-page">
+                                        <h1>Link Analytics</h1>
+                                        <div class="lin2-page">
+                                            <a href=""><button>Insights</button></a>
+                                            <a href=""><button>Overview</button></a>
+                                            <a href=""><button>Top Locatior</button></a>
+                                        </div>
+                                        <i class="	fa fa-signal"></i>
+                                        <h3>Looks like you've had no clicks yet</h3>
+                                        <p>To see how your Linkifi is performing, understand more about your audience, access powerful analytics, and more, try Pro for free.</p>
+                                        <a href=""><button>Try Pro for free</button></a>
+                                        <div class="lin3-page">
+                                            <div class="lin4-page">
+                                                <i class="	fa fa-eye"></i>
+                                                <h5>Measure your views</h5>
+                                            </div>
+                                            <div class="lin4-page">
+                                                <i class="fa fa-area-chart"></i>
+                                                <h5>Measure your clicks</h5>
+                                            </div>
+
+                                        </div>
+                                        <h6>🌎 Find out where your Link performs best</h6>
+                                        <h6>📈 Find out your top referrers for this Link</h6>
+                                        <h6>📱 Find out what device most people view this Link on</h6>
+                                        <h6>🗓️ Measure traffic for specific date ranges</h6>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                        <div class="admin28-page">
+                            <div class="admin100-page">
+                                <div class="admin29-page">
+                                    <i class="fa fa-server"></i>
+                                </div>
+                                <div class="admin30-page">
+                                    <h1>Website</h1>
+                                    {% if pageurlsdata %}
+
+                                    <a href="{{pageurlsdata.urlone}}">{{pageurlsdata.urlone}}</a>{% else %}
+                                    <p>No URL Link available</p>
+                                    {% endif %}
+
+                                    <div class="admin60-page">
+                                        <div class="admin31-page">
+                                            <div class="admin32-page" onclick="toggleOptionsss('ali')">
+                                                <i class="fa fa-qrcode"></i>
+                                            </div>
+                                        </div>
+
+                                        <div class="admin31-page">
+                                            <div class="admin32-page" onclick="toggleOptionsss('alione')">
+                                                <i class=" fa fa-hand-o-right"></i>
+                                            </div>
+
+                                        </div>
+                                        <div class="admin31-page">
+                                            <div class="admin32-page" onclick="toggleOptionsss('alitwo')">
+                                                <i class=" fa fa-file-photo-o"></i>
+                                            </div>
+
+                                        </div>
+                                        <div class="admin31-page">
+                                            <div class="admin32-page" onclick="toggleOptionsss('alithree')">
+                                                <i class="fa fa-star-o"></i>
+                                            </div>
+
+                                        </div>
+                                        <div class="admin31-page">
+                                            <div class="admin32-page" onclick="toggleOptionsss('alifour')">
+                                                <i class="fa fa-calendar-o"></i>
+                                            </div>
+
+                                        </div>
+                                        <div class="admin31-page">
+                                            <div class="admin32-page" onclick="toggleOptionsss('alifive')">
+                                                <i class=" fa fa-lock"></i>
+                                            </div>
+
+                                        </div>
+                                        <div class="admin31-page">
+                                            <div class="admin32-page" onclick="toggleOptionsss('alisix')">
+                                                <i class=" fa fa-signal"></i>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="admin40-page">
+                                    <div class="admin41-page" onclick="toggleOptionsss('aliseven')">
+                                        <i class="fa fa-external-link"></i>
+                                    </div>
+                                    <div class="admin42-page" onclick="deleteDiv(this)">
+                                        <i class="fa fa-trash-o"></i>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div id="ali" class="anni" style="display: none;">
+                                <div class="admin102-page">
+                                    <h1>Options</h1>
+                                    <h2>Link Settings</h2>
+                                    <h3>Choose to display this video on your Linkifi or link off to YouTube</h3>
+                                    <div class="admin103-page">
+                                        <h3>Link off to YouTube website</h3>
+                                        <div class="admin104-page">
+                                            <h2>Link off to this channel's latest video
+                                            </h2>
+                                            <a href="{% url 'billing_pro' %}"><button>Upgrade<i class="fa fa-lock"></i></button></a>
+                                        </div>
+                                        <div class="admin104-page">
+                                            <h2>Display this channel's latest video on my Linkifi
+                                            </h2>
+                                            <a href="{% url 'billing_enterprise' %}"><button>Upgrade<i class="fa fa-lock"></i></button></a>
+                                        </div>
+                                    </div>
+                                    <div class="admin105-page">
+                                        <h1>Link off options</h1>
+                                        <a href="{% url 'billing_pro' %}"><button>Ask visitors to subscribe</button></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="alione" class="annione" style="display: none;">
+                                <div class="admin106-page">
+                                    <h1>Redirect
+                                    </h1>
+                                    <h5>Temporarily send all visitors straight to a link, instead of your Linkifi.
+
+
+                                    </h5>
+                                    <a href=""><button>Upgrade now</button></a>
+                                </div>
+                            </div>
+                            <div id="alitwo" style="display: none;">
+                                <div class="admin106-page">
+                                    <h1>Add Thumbnail
+                                    </h1>
+                                    <h5>Temporarily send all visitors straight to a link, instead of your Linkifi.
+                                    </h5>
+                                    <a href=""><button>Upgrade Now</button></a>
+                                </div>
+                            </div>
+                            <div id="alithree" style="display: none;">
+                                <div class="admin106-page">
+                                    <h1>Prioritize
+                                    </h1>
+                                    <h5>Draw attention to your most important link.
+                                    </h5>
+                                    <a href=""><button>Upgrade Now</button></a>
+                                </div>
+                            </div>
+                            <div id="alifour" style="display: none;">
+                                <div class="admin106-page">
+                                    <h1>Notifications
+                                    </h1>
+                                    <h5>Schedule when your links and notifications go live.
+                                    </h5>
+                                    <a href=""><button>Upgrade Now</button></a>
+                                </div>
+                            </div>
+                            <div id="alifive" style="display: none;">
+                                <div class="admin106-page">
+                                    <h1>Lock this link</h1>
+                                    <h5>Visitors can only access this link by fulfilling certain criteria.</h5>
+                                    <h2>Link locked with:</h2>
+                                    <div class="admin107-page">
+                                        <h1>Subscribe</h1>
+                                        <p>Visitors must subscribe to your Linkifi to unlock the link.</p>
+                                    </div>
+                                    <div class="admin108-page">
+                                        <h1>Code</h1>
+                                        <a href=""><button>Upgrade<i class="fa fa-lock"></i></button></a>
+                                    </div>
+                                    <div class="admin107-page">
+                                        <h1>Sensitive content</h1>
+                                        <p>Visitors must acknowledge that this link may contain content that is not appropriate for all audiences.</p>
+                                    </div>
+                                    <div class="admin107-page">
+                                        <h1>NFT contract address</h1>
+                                        <p>Contract Address to unlock this link
+                                            <br> Visitors must own a NFT from the contract address to access this link</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="alisix" style="display: none;">
+                                <h1>Share Link</h1>
+                                <div class="waleedsix">
+                                    <div class="waleedseven">
+                                        <h1>Share Link</h1>
+                                        <h4>Share and track your content with this short link</h4>
+                                        <div class="waleed10-page">
+                                            {% if loginusernamevalue%}
+                                            <h1 onclick="window.location.hrer=''">{{loginusernamevalue.loginusernameoneg}}</h1>
+                                            {% endif %}
+                                            <button>copy</button>
+                                        </div>
+                                        <p>When a visitor selects the shared link:</p>
+                                        <a href="">
+                                        Send visitors to your Linkifi and highlight YouTube</a>
+                                        <div class="waleed11-page">
+                                            {% if pageurlsdata%}
+
+                                            <h1>
+                                                Skip Linkifi and go directly to <br>
+                                                <spam>{{pageurlsdata.field}}</spam>
+                                            </h1>
+                                            {% endif %}
+
+                                            <a href=""><button>Upgrade<i class="fa fa-lock"></i></button></a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div id="aliseven" style="display: none;">
+                                <h1>Link Analytics</h1>
+                                <div class="lin-page">
+                                    <div class="lin1-page">
+                                        <h1>Link Analytics</h1>
+                                        <div class="lin2-page">
+                                            <a href=""><button>Insights</button></a>
+                                            <a href=""><button>Overview</button></a>
+                                            <a href=""><button>Top Locatior</button></a>
+                                        </div>
+                                        <i class="	fa fa-signal"></i>
+                                        <h3>Looks like you've had no clicks yet</h3>
+                                        <p>To see how your Linkifi is performing, understand more about your audience, access powerful analytics, and more, try Pro for free.</p>
+                                        <a href=""><button>Try Pro for free</button></a>
+                                        <div class="lin3-page">
+                                            <div class="lin4-page">
+                                                <i class="	fa fa-eye"></i>
+                                                <h5>Measure your views</h5>
+                                            </div>
+                                            <div class="lin4-page">
+                                                <i class="fa fa-area-chart"></i>
+                                                <h5>Measure your clicks</h5>
+                                            </div>
+
+                                        </div>
+                                        <h6>🌎 Find out where your Link performs best</h6>
+                                        <h6>📈 Find out your top referrers for this Link</h6>
+                                        <h6>📱 Find out what device most people view this Link on</h6>
+                                        <h6>🗓️ Measure traffic for specific date ranges</h6>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="admin28-page">
+                            <div class="admin100-page">
+                                <div class="admin29-page">
+                                    <i class="fa fa-server"></i>
+                                </div>
+                                <div class="admin30-page">
+                                    <h1>Website</h1>
+                                    {% if pageurlsdata %}
+                                    <a href="{{ pageurlsdata.urltwo }}">{{ pageurlsdata.urltwo }}</a> {% else %}
+                                    <p>No URL Link available</p>
+                                    {% endif %}
+
+                                    <div class="admin60-page">
+                                        <div class="admin31-page">
+                                            <div class="admin32-page" onclick="toggleOptionssss('farah')">
+                                                <i class="fa fa-qrcode"></i>
+                                            </div>
+                                        </div>
+
+                                        <div class="admin31-page">
+                                            <div class="admin32-page" onclick="toggleOptionssss('farahone')">
+                                                <i class=" fa fa-hand-o-right"></i>
+                                            </div>
+
+                                        </div>
+                                        <div class="admin31-page">
+                                            <div class="admin32-page" onclick="toggleOptionssss('farahtwo')">
+                                                <i class=" fa fa-file-photo-o"></i>
+                                            </div>
+
+                                        </div>
+                                        <div class="admin31-page">
+                                            <div class="admin32-page" onclick="toggleOptionssss('farahthree')">
+                                                <i class="fa fa-star-o"></i>
+                                            </div>
+
+                                        </div>
+                                        <div class="admin31-page">
+                                            <div class="admin32-page" onclick="toggleOptionssss('farahfour')">
+                                                <i class="fa fa-calendar-o"></i>
+                                            </div>
+
+                                        </div>
+                                        <div class="admin31-page">
+                                            <div class="admin32-page" onclick="toggleOptionssss('farahfive')">
+                                                <i class=" fa fa-lock"></i>
+                                            </div>
+
+                                        </div>
+                                        <div class="admin31-page">
+                                            <div class="admin32-page" onclick="toggleOptionssss('farahsix')">
+                                                <i class=" fa fa-signal"></i>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="admin40-page">
+                                    <div class="admin41-page" onclick="toggleOptionssss('farahseven')">
+                                        <i class="fa fa-external-link"></i>
+                                    </div>
+                                    <div class="admin42-page" onclick="deleteDiv(this)">
+                                        <i class="fa fa-trash-o"></i>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div id="farah" class="anni" style="display: none;">
+                                <div class="admin102-page">
+                                    <h1>Options</h1>
+                                    <h2>Link Settings</h2>
+                                    <h3>Choose to display this video on your Linkifi or link off to YouTube</h3>
+                                    <div class="admin103-page">
+                                        <h3>Link off to YouTube website</h3>
+                                        <div class="admin104-page">
+                                            <h2>Link off to this channel's latest video
+                                            </h2>
+                                            <a href="{% url 'billing_pro' %}"><button>Upgrade<i class="fa fa-lock"></i></button></a>
+                                        </div>
+                                        <div class="admin104-page">
+                                            <h2>Display this channel's latest video on my Linkifi
+                                            </h2>
+                                            <a href="{% url 'billing_enterprise' %}"><button>Upgrade<i class="fa fa-lock"></i></button></a>
+                                        </div>
+                                    </div>
+                                    <div class="admin105-page">
+                                        <h1>Link off options</h1>
+                                        <a href="{% url 'billing_pro' %}"><button>Ask visitors to subscribe</button></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="farahone" class="annione" style="display: none;">
+                                <div class="admin106-page">
+                                    <h1>Redirect
+                                    </h1>
+                                    <h5>Temporarily send all visitors straight to a link, instead of your Linkifi.
+
+
+                                    </h5>
+                                    <a href=""><button>Upgrade now</button></a>
+                                </div>
+                            </div>
+                            <div id="farahtwo" style="display: none;">
+                                <div class="admin106-page">
+                                    <h1>Add Thumbnail
+                                    </h1>
+                                    <h5>Temporarily send all visitors straight to a link, instead of your Linkifi.
+                                    </h5>
+                                    <a href=""><button>Upgrade Now</button></a>
+                                </div>
+                            </div>
+                            <div id="farahthree" style="display: none;">
+                                <div class="admin106-page">
+                                    <h1>Prioritize
+                                    </h1>
+                                    <h5>Draw attention to your most important link.
+                                    </h5>
+                                    <a href=""><button>Upgrade Now</button></a>
+                                </div>
+                            </div>
+                            <div id="farahfour" style="display: none;">
+                                <div class="admin106-page">
+                                    <h1>Notifications
+                                    </h1>
+                                    <h5>Schedule when your links and notifications go live.
+                                    </h5>
+                                    <a href=""><button>Upgrade Now</button></a>
+                                </div>
+                            </div>
+                            <div id="farahfive" style="display: none;">
+                                <div class="admin106-page">
+                                    <h1>Lock this link</h1>
+                                    <h5>Visitors can only access this link by fulfilling certain criteria.</h5>
+                                    <h2>Link locked with:</h2>
+                                    <div class="admin107-page">
+                                        <h1>Subscribe</h1>
+                                        <p>Visitors must subscribe to your Linkifi to unlock the link.</p>
+                                    </div>
+                                    <div class="admin108-page">
+                                        <h1>Code</h1>
+                                        <a href=""><button>Upgrade<i class="fa fa-lock"></i></button></a>
+                                    </div>
+                                    <div class="admin107-page">
+                                        <h1>Sensitive content</h1>
+                                        <p>Visitors must acknowledge that this link may contain content that is not appropriate for all audiences.</p>
+                                    </div>
+                                    <div class="admin107-page">
+                                        <h1>NFT contract address</h1>
+                                        <p>Contract Address to unlock this link
+                                            <br> Visitors must own a NFT from the contract address to access this link</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="farahsix" style="display: none;">
+                                <h1>Share Link</h1>
+                                <div class="waleedsix">
+                                    <div class="waleedseven">
+                                        <h1>Share Link</h1>
+                                        <h4>Share and track your content with this short link</h4>
+                                        <div class="waleed10-page">
+                                            {% if loginusernamevalue%}
+                                            <h1 onclick="window.location.hrer=''">{{loginusernamevalue.loginusernameoneg}}</h1>
+                                            {% endif %}
+                                            <button>copy</button>
+                                        </div>
+                                        <p>When a visitor selects the shared link:</p>
+                                        <a href="">
+                                        Send visitors to your Linkifi and highlight YouTube</a>
+                                        <div class="waleed11-page">
+                                            {% if pageurlsdata%}
+
+                                            <h1>
+                                                Skip Linkifi and go directly to <br>
+                                                <spam>{{pageurlsdata.field}}</spam>
+                                            </h1>
+                                            {% endif %}
+
+                                            <a href=""><button>Upgrade<i class="fa fa-lock"></i></button></a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div id="farahseven" style="display: none;">
+                                <h1>Link Analytics</h1>
+                                <div class="lin-page">
+                                    <div class="lin1-page">
+                                        <h1>Link Analytics</h1>
+                                        <div class="lin2-page">
+                                            <a href=""><button>Insights</button></a>
+                                            <a href=""><button>Overview</button></a>
+                                            <a href=""><button>Top Locatior</button></a>
+                                        </div>
+                                        <i class="	fa fa-signal"></i>
+                                        <h3>Looks like you've had no clicks yet</h3>
+                                        <p>To see how your Linkifi is performing, understand more about your audience, access powerful analytics, and more, try Pro for free.</p>
+                                        <a href=""><button>Try Pro for free</button></a>
+                                        <div class="lin3-page">
+                                            <div class="lin4-page">
+                                                <i class="	fa fa-eye"></i>
+                                                <h5>Measure your views</h5>
+                                            </div>
+                                            <div class="lin4-page">
+                                                <i class="fa fa-area-chart"></i>
+                                                <h5>Measure your clicks</h5>
+                                            </div>
+
+                                        </div>
+                                        <h6>🌎 Find out where your Link performs best</h6>
+                                        <h6>📈 Find out your top referrers for this Link</h6>
+                                        <h6>📱 Find out what device most people view this Link on</h6>
+                                        <h6>🗓️ Measure traffic for specific date ranges</h6>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+
+
+
+
+
+
+                    </div>
+                </div>
+                <div class="admin45-page aqeel">
+                    <!-- <h1>Preview</h1> -->
+                    <div class="admin46-page">
+                        <div class="admin49-page">
+                            <div class="admin50-page">
+                                <h2 id="currentTime">1:44</h2>
+                            </div>
+                            <div class="admin51-page">
+                                <i class="fa fa-signal"></i>
+                                <i class="fa fa-wifi"></i>
+                                <i class="fa fa-battery-4"></i>
+                            </div>
+                        </div>
+                        {% if profile %} {% if profile.profilePicture %}
+
+                        <img src="{{ profile.profilePicture.url }}" class="admin70"> {% else %}
+                        <p>No profile picture available</p>
+                        {% endif %}
+                        <h3>{{profile.name}}</h3>
+                        <h5>{{profile.bio}}</h5>
+                        {% endif %}
+
+                        <i class="fa fa-youtube-play" id="admin71"></i> {% for i in settingformurl%}
+                        <a href="{{ i.settingurl }}" id="dynamic-icon" style="color: black; font-size: 20px; font-weight: 800;"><i class=""></i></a>{% endfor %} {% for i in adminpageees%}
+
+                        <div class="admin47-page">
+                            <a href="{{i.urladmin}}"><button>{{i.nameadmin}}</button></a>
+                        </div>
+                        {% endfor %} {% for i in adminpageone%}
+                        <div class="admin47-page">
+                            <a href="{{i.shopeurlone}}"><button><img src="{{i.profileimage.url}}">{{i.title}}</button></a>
+                        </div>
+                        {% endfor %} {% if pageurlsdata%}
+                        <div class="admin47-page">
+                            <a href="{{pageurlsdata.field}}"><button><img src="/static/images/Platform images/youtube.svg">Click Website</button></a>
+                        </div>
+                        {% endif %} {% if pageurlsdata%}
+                        <div class="admin47-page">
+                            <a href="{{pageurlsdata.url}}"><button>Website</button></a>
+                        </div>
+                        {% endif %} {% if pageurlsdata%}
+                        <div class="admin47-page">
+                            <a href="{{pageurlsdata.urlone}}"><button>Website</button></a>
+                        </div>
+                        {% endif %} {% if pageurlsdata%}
+                        <div class="admin47-page">
+                            <a href="{{pageurlsdata.urltwo}}"><button>Website</button></a>
+                        </div>
+                        {% endif %}
+
+                        <div class="success48-page">
+                            <img src="/static/images/11.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js "></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js "></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js "></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js " integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo " crossorigin="anonymous "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js " integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut " crossorigin="anonymous "></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js " integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k " crossorigin="anonymous "></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js " integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE " crossorigin="anonymous ">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js " integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ " crossorigin="anonymous "></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js ">
+    </script>
+
+    <script>
+        // Select all elements with the toggle-icon class
+        const toggleIcons = document.querySelectorAll('.toggle-icon');
+
+        toggleIcons.forEach(icon => {
+            icon.addEventListener('click', () => {
+                // Get the parent element of the icon
+                const parent = icon.parentElement;
+
+                // Find the associated elements within the parent element
+                const content = parent.nextElementSibling;
+                const minusIcon = parent.querySelector('.fa-minus');
+                const plusIcon = parent.querySelector('.fa-plus');
+
+                // Toggle the visibility of the content and icons
+                if (content.style.display === "none" || content.style.display === " ") {
+                    content.style.display = "block";
+                    minusIcon.style.display = "inline";
+                    plusIcon.style.display = "none";
+                } else {
+                    content.style.display = "none";
+                    minusIcon.style.display = "none";
+                    plusIcon.style.display = "inline";
+                }
+            });
+        });
+    </script>
+
+
+
+
+    <script>
+        // Select all the <p> elements with class 'home10'
+        const items = document.querySelectorAll("#home17-page .home10");
+        let index = 0;
+
+        // Function to hide all <p> elements and show only the current one
+        function showItem() {
+            items.forEach((item, i) => {
+                // Hide all items
+                item.style.display = "none";
+            });
+            // Show the current item
+            items[index].style.display = "block";
+
+            // Move to the next item, reset index if at the end
+            index = (index + 1) % items.length;
+        }
+
+        // Initialize the first item to be shown
+        showItem();
+
+        // Cycle through the items every 1 second (1000 milliseconds)
+        setInterval(showItem, 1000);
+    </script>
+
+    <script>
+        var elem222 = document.getElementById("eyecontact");
+        var password = document.getElementById("password");
+        elem222.onclick = function() {
+            if (password.type == "password") {
+                password.type = "text";
+                elem222.classList.remove("fa-eye");
+                elem222.classList.add("fa-eye-slash");
+            } else {
+                password.type = "password";
+                elem222.classList.remove("fa-eye-slash");
+                elem222.classList.add("fa-eye");
+            }
+        }
+    </script>
+
+    <script>
+        const inputField = document.getElementById('loginusername');
+        const form = document.getElementById('loginForm');
+        const errorMessage = document.getElementById('error-message');
+        const continueButton = document.getElementById('continue-button');
+        const crossIcon = document.getElementById('cross-icon');
+        const prefix = 'LinkTr.ee/';
+
+        // Ensure the prefix is always at the start and the user types after it
+        inputField.addEventListener('input', function(e) {
+            if (!inputField.value.startsWith(prefix)) {
+                inputField.value = prefix; // Prevent deletion of the prefix
+            }
+
+            const usernamePart = inputField.value.slice(prefix.length);
+            const validUsername = /^[a-zA-Z0-9_.]*$/;
+
+            // Check if the username part contains invalid characters
+            if (!validUsername.test(usernamePart)) {
+                inputField.style.border = '1px solid red';
+                errorMessage.style.display = 'block'; // Show error message
+                continueButton.disabled = true; // Disable button
+                continueButton.style.backgroundColor = '#f0f0f0'; // Light background
+                continueButton.style.color = '#ccc'; // Light text color
+                crossIcon.style.display = 'inline'; // Show the cross icon
+            } else {
+                inputField.style.border = '1px solid green'; // Valid input
+                errorMessage.style.display = 'none'; // Hide error message
+                continueButton.disabled = false; // Enable button
+                continueButton.style.backgroundColor = ''; // Reset to default
+                continueButton.style.color = ''; // Reset to default
+                crossIcon.style.display = 'none'; // Hide the cross icon
+            }
+        });
+
+        // Prevent form submission if the username is invalid
+        form.addEventListener('submit', function(e) {
+            const usernamePart = inputField.value.slice(prefix.length);
+            const validUsername = /^[a-zA-Z0-9_.]*$/;
+
+            if (!validUsername.test(usernamePart)) {
+                e.preventDefault(); // Stop form submission
+                errorMessage.style.display = 'block'; // Show error message
+            }
+        });
+    </script>
+
+
+
+
+    <script>
+        // Retrieve the selected image URL from localStorage
+        const selectedImageUrl = localStorage.getItem('selectedImage');
+        const selectedImageName = localStorage.getItem('selectedImageName');
+
+        // Update the image and placeholder if available
+        if (selectedImageUrl && selectedImageName) {
+            document.getElementById('dynamic-image').src = selectedImageUrl;
+        }
+    </script>
+
+    <script>
+        // Select all images with the class 'clickable-img'
+        const images = document.querySelectorAll('.clickable-img');
+
+        // Variable to keep track of the currently selected image
+        let selectedImage = null;
+
+        // Loop through each image and add a click event listener
+        images.forEach(function(image) {
+            image.addEventListener('click', function() {
+                // If there's a previously selected image, remove its black border
+                if (selectedImage) {
+                    selectedImage.style.border = 'none';
+                }
+
+                // Add a black border to the currently clicked image
+                this.style.border = '3px solid black';
+                this.style.padding = "2px"
+
+                // Update the selected image to the currently clicked one
+                selectedImage = this;
+            });
+        });
+    </script>
+
+    <script>
+        document.getElementById("plusIconLabel").addEventListener("click", function() {
+            var fileInput = document.getElementById("profilePicture");
+
+            // Toggle visibility of the file input on click
+            if (fileInput.style.display === "none") {
+                fileInput.style.display = "block";
+            } else {
+                fileInput.style.display = "none";
+            }
+        });
+
+        // Function to display the selected file name
+        function showFileName(input) {
+            const fileName = input.files[0] ? input.files[0].name : 'No file chosen';
+            document.getElementById('file-name').textContent = fileName;
+        }
+    </script>
+
+
+
+
+    <!-- <script>
+    // Handle predefined image selection
+    function selectImage(imageName) {
+        document.getElementById('selected_image').value = imageName;
+
+        // Highlight the selected image
+        var images = document.getElementsByClassName('clickable-img');
+        for (var i = 0; i < images.length; i++) {
+            images[i].style.border = 'none'; // Reset border
+        }
+        document.getElementById('img' + imageName.split('.')[0]).style.border = '2px solid black';
+    }
+
+    // Handle file input click
+    document.getElementById("plusIconLabel ").addEventListener("click ", function() {
+        document.getElementById("profilePicture ").click();
+    });
+
+    // Show file name after selecting a file (optional)
+    function showFileName(input) {
+        if (input.files && input.files[0]) {
+            alert("Selected file: " + input.files[0].name);
+        }
+    }
+</script> -->
+
+    <script>
+        // Toggle the visibility of the content on icon click
+        document.querySelector('.admin32-page').addEventListener('click', function() {
+            const optionsDiv = document.querySelector('.admin33-page');
+            optionsDiv.classList.toggle('hidden');
+        });
+    </script>
+
+
+    <script>
+        // Function to show the URL input section
+        function showUrlInput() {
+            document.querySelector('.admin16-page').style.display = 'block';
+        }
+
+        // Function to hide the URL input section
+        function hideUrlInput() {
+            document.querySelector('.admin16-page').style.display = 'none';
+        }
+    </script>
+
+    <script>
+        // Function to copy text to clipboard
+        function copyToClipboard() {
+            // Get the text from the hidden <spam>
+            var copyText = document.getElementById("copyText").innerText;
+
+            // Create a temporary input element to hold the text
+            var tempInput = document.createElement("input");
+            tempInput.value = copyText;
+            document.body.appendChild(tempInput);
+
+            // Select the text in the temporary input
+            tempInput.select();
+            tempInput.setSelectionRange(0, 99999); // For mobile devices
+
+            // Copy the text to the clipboard
+            document.execCommand("copy");
+
+            // Remove the temporary input
+            document.body.removeChild(tempInput);
+
+            // Change the button text to "Copied! "
+            document.getElementById("copyBtn").innerText = "Copied!";
+        }
+    </script>
+
+    <script>
+        function updateTime() {
+            // Create a new Date object
+            var now = new Date();
+
+            // Get the hours and minutes
+            var hours = now.getHours();
+            var minutes = now.getMinutes();
+
+            // Add leading zero to minutes if needed
+            minutes = minutes < 10 ? '0' + minutes : minutes;
+
+            // Format the time (you can customize this to 12-hour format if needed)
+            var currentTime = hours + ": " + minutes;
+
+            // Display the time in the <h2> tag
+            document.getElementById("currentTime").innerText = currentTime;
+        }
+
+        // Update the time every second
+        setInterval(updateTime, 1000);
+
+        // Initial call to display time immediately on page load
+        updateTime();
+    </script>
+
+
+    <script>
+        function updateLinkPage(imageUrl, imageName) {
+            // Store image information in localStorage to retrieve on the next page
+            localStorage.setItem('selectedImage', imageUrl);
+            localStorage.setItem('selectedImageName', imageName);
+        }
+    </script>
+
+    <script>
+        // Function to add a black border when an image is clicked
+        function addBorder(imageElement) {
+            // Remove border from all images first
+            var allImages = document.querySelectorAll('.admin20-page img');
+            allImages.forEach(function(img) {
+                img.style.border = "none";
+            });
+
+            // Add black border to the clicked image
+            imageElement.style.border = "2px solid black";
+        }
+    </script>
+
+    <script>
+        // Function to toggle divs
+        function toggleOptions(elementId) {
+            var allDivIds = ['admin101-page', 'waleed', 'waleedone', 'waleedtwo', 'waleedthree', 'waleedfour', 'waleedfive', 'waleedten'];
+
+            allDivIds.forEach(function(id) {
+                var div = document.getElementById(id);
+                if (id === elementId) {
+                    // If it's the clicked div, toggle show/hide
+                    if (div.classList.contains('show')) {
+                        div.classList.remove('show');
+                        setTimeout(() => {
+                            div.style.display = "none";
+                        }, 500);
+                    } else {
+                        div.style.display = "block";
+                        setTimeout(() => {
+                            div.classList.add('show');
+                        }, 10);
+                    }
+                } else {
+                    // Hide all other divs
+                    if (div.classList.contains('show')) {
+                        div.classList.remove('show');
+                        setTimeout(() => {
+                            div.style.display = "none";
+                        }, 500);
+                    }
+                }
+            });
+        }
+
+        // Hide all divs if clicking outside
+        document.addEventListener('click', function(event) {
+            var allDivIds = ['admin101-page', 'waleed', 'waleedone', 'waleedtwo', 'waleedthree', 'waleedfour', 'waleedfive', 'waleedten'];
+            var isClickInsideAnyDiv = false;
+
+            // Check if the clicked element is inside any of the divs
+            allDivIds.forEach(function(id) {
+                var div = document.getElementById(id);
+                if (div.contains(event.target)) {
+                    isClickInsideAnyDiv = true;
+                }
+            });
+
+            // If the click is outside all divs, hide all divs
+            if (!isClickInsideAnyDiv) {
+                allDivIds.forEach(function(id) {
+                    var div = document.getElementById(id);
+                    if (div.classList.contains('show')) {
+                        div.classList.remove('show');
+                        setTimeout(() => {
+                            div.style.display = "none";
+                        }, 500);
+                    }
+                });
+            }
+        });
+    </script>
+
+    <script>
+        function deleteDiv(element) {
+            var parentDiv = element.closest('.admin100-page');
+            if (parentDiv) {
+                parentDiv.remove();
+            }
+        }
+
+        // Add your existing toggleOptions function here
+    </script>
+
+
+    <script>
+        function createDiv(element) {
+            // Define the new div structure
+            const newDiv = document.createElement('div');
+            newDiv.className = 'admin28-page';
+            newDiv.innerHTML = `
+    <div class="admin100-page">
+                            <div class="admin29-page">
+                                <i class="fa fa-server"></i>
+                            </div>
+                            <div class="admin30-page" id="musa">
+                                <form action="{% url 'adminpage' %}" method="post">
+                                    {% csrf_token %}
+                                   <input type="text"  name="nameadmin" id="nameadmin" placeholder="Enter Website Name">
+                                   <input type="text"  name="urladmin" id="urladmin" placeholder="Enter Website Url" oninput="checkUrlone()">
+                                   <button id="addddButton" type="submit" style="display:none;">Add Url</button>
+                                </form>
+                                <div class="admin60-page">
+                                    <div class="admin31-page">
+                                        <div class="admin32-page" onclick="toggleOptionsssss('amna')">
+                                            <i class="fa fa-qrcode"></i>
+                                        </div>
+                                    </div>
+
+                                    <div class="admin31-page">
+                                        <div class="admin32-page" onclick="toggleOptionsssss('amnaone')">
+                                            <i class=" fa fa-hand-o-right"></i>
+                                        </div>
+
+                                    </div>
+                                    <div class="admin31-page">
+                                        <div class="admin32-page" onclick="toggleOptionsssss('amnatwo')">
+                                            <i class=" fa fa-file-photo-o"></i>
+                                        </div>
+
+                                    </div>
+                                    <div class="admin31-page">
+                                        <div class="admin32-page" onclick="toggleOptionsssss('amnathree')">
+                                            <i class="fa fa-star-o"></i>
+                                        </div>
+
+                                    </div>
+                                    <div class="admin31-page">
+                                        <div class="admin32-page" onclick="toggleOptionsssss('amnafour')">
+                                            <i class="fa fa-calendar-o"></i>
+                                        </div>
+
+                                    </div>
+                                    <div class="admin31-page">
+                                        <div class="admin32-page" onclick="toggleOptionsssss('amnafive')">
+                                            <i class=" fa fa-lock"></i>
+                                        </div>
+
+                                    </div>
+                                    <div class="admin31-page">
+                                        <div class="admin32-page" onclick="toggleOptionsssss('amnasix')">
+                                            <i class=" fa fa-signal"></i>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="admin40-page">
+                                <div class="admin41-page" onclick="toggleOptionsssss('amnaseven')">
+                                    <i class="fa fa-external-link"></i>
+                                </div>
+                                <div class="admin42-page" onclick="deleteDiv(this)">
+                                    <i class="fa fa-trash-o"></i>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div id="amna" class="anni" style="display: none;">
+                            <div class="admin102-page">
+                                <h1>Options</h1>
+                                <h2>Link Settings</h2>
+                                <h3>Choose to display this video on your Linkifi or link off to YouTube</h3>
+                                <div class="admin103-page">
+                                    <h3>Link off to YouTube website</h3>
+                                    <div class="admin104-page">
+                                        <h2>Link off to this channel's latest video
+                                        </h2>
+                                        <a href="{% url 'billing_pro' %}"><button>Upgrade<i class="fa fa-lock"></i></button></a>
+                                    </div>
+                                    <div class="admin104-page">
+                                        <h2>Display this channel's latest video on my Linkifi
+                                        </h2>
+                                        <a href="{% url 'billing_enterprise' %}"><button>Upgrade<i class="fa fa-lock"></i></button></a>
+                                    </div>
+                                </div>
+                                <div class="admin105-page">
+                                    <h1>Link off options</h1>
+                                    <a href="{% url 'billing_pro' %}"><button>Ask visitors to subscribe</button></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="amnaone" class="annione" style="display: none;">
+                            <div class="admin106-page">
+                                <h1>Redirect
+                                </h1>
+                                <h5>Temporarily send all visitors straight to a link, instead of your Linkifi.
+
+
+                                </h5>
+                                <a href=""><button>Upgrade now</button></a>
+                            </div>
+                        </div>
+                        <div id="amnatwo" style="display: none;">
+                            <div class="admin106-page">
+                                <h1>Add Thumbnail
+                                </h1>
+                                <h5>Temporarily send all visitors straight to a link, instead of your Linkifi.
+                                </h5>
+                                <a href=""><button>Upgrade Now</button></a>
+                            </div>
+                        </div>
+                        <div id="amnathree" style="display: none;">
+                            <div class="admin106-page">
+                                <h1>Prioritize
+                                </h1>
+                                <h5>Draw attention to your most important link.
+                                </h5>
+                                <a href=""><button>Upgrade Now</button></a>
+                            </div>
+                        </div>
+                        <div id="amnafour" style="display: none;">
+                            <div class="admin106-page">
+                                <h1>Notifications
+                                </h1>
+                                <h5>Schedule when your links and notifications go live.
+                                </h5>
+                                <a href=""><button>Upgrade Now</button></a>
+                            </div>
+                        </div>
+                        <div id="amnafive" style="display: none;">
+                            <div class="admin106-page">
+                                <h1>Lock this link</h1>
+                                <h5>Visitors can only access this link by fulfilling certain criteria.</h5>
+                                <h2>Link locked with:</h2>
+                                <div class="admin107-page">
+                                    <h1>Subscribe</h1>
+                                    <p>Visitors must subscribe to your Linkifi to unlock the link.</p>
+                                </div>
+                                <div class="admin108-page">
+                                    <h1>Code</h1>
+                                    <a href=""><button>Upgrade<i class="fa fa-lock"></i></button></a>
+                                </div>
+                                <div class="admin107-page">
+                                    <h1>Sensitive content</h1>
+                                    <p>Visitors must acknowledge that this link may contain content that is not appropriate for all audiences.</p>
+                                </div>
+                                <div class="admin107-page">
+                                    <h1>NFT contract address</h1>
+                                    <p>Contract Address to unlock this link
+                                        <br> Visitors must own a NFT from the contract address to access this link</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="amnasix" style="display: none;">
+                            <h1>Share Link</h1>
+                            <div class="waleedsix">
+                                <div class="waleedseven">
+                                    <h1>Share Link</h1>
+                                    <h4>Share and track your content with this short link</h4>
+                                    <div class="waleed10-page">
+                                        {% if loginusernamevalue%}
+                                        <h1 onclick="window.location.hrer=''">{{loginusernamevalue.loginusernameoneg}}</h1>
+                                        {% endif %}
+                                        <button>copy</button>
+                                    </div>
+                                    <p>When a visitor selects the shared link:</p>
+                                    <a href="">
+                                    Send visitors to your Linkifi and highlight YouTube</a>
+                                    <div class="waleed11-page">
+                                        {% if pageurlsdata%}
+
+                                        <h1>
+                                            Skip Linkifi and go directly to <br>
+                                            <spam>{{pageurlsdata.field}}</spam>
+                                        </h1>
+                                        {% endif %}
+
+                                        <a href=""><button>Upgrade<i class="fa fa-lock"></i></button></a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div id="amnaseven" style="display: none;">
+                            <h1>Link Analytics</h1>
+                            <div class="lin-page">
+                                <div class="lin1-page">
+                                    <h1>Link Analytics</h1>
+                                    <div class="lin2-page">
+                                        <a href=""><button>Insights</button></a>
+                                        <a href=""><button>Overview</button></a>
+                                        <a href=""><button>Top Locatior</button></a>
+                                    </div>
+                                    <i class="	fa fa-signal"></i>
+                                    <h3>Looks like you've had no clicks yet</h3>
+                                    <p>To see how your Linkifi is performing, understand more about your audience, access powerful analytics, and more, try Pro for free.</p>
+                                    <a href=""><button>Try Pro for free</button></a>
+                                    <div class="lin3-page">
+                                        <div class="lin4-page">
+                                            <i class="	fa fa-eye"></i>
+                                            <h5>Measure your views</h5>
+                                        </div>
+                                        <div class="lin4-page">
+                                            <i class="fa fa-area-chart"></i>
+                                            <h5>Measure your clicks</h5>
+                                        </div>
+
+                                    </div>
+                                    <h6>🌎 Find out where your Link performs best</h6>
+                                    <h6>📈 Find out your top referrers for this Link</h6>
+                                    <h6>📱 Find out what device most people view this Link on</h6>
+                                    <h6>🗓️ Measure traffic for specific date ranges</h6>
+                                </div>
+                            </div>
+                        </div>
+    <!-- Additional divs as per your provided code -->
+`;
+
+            // Append the new div to the placeholder
+            document.getElementById('new-div-placeholder').appendChild(newDiv);
+            document.getElementById('home').style.display = 'none';
+
+            saveContentToLocalStorage();
+        }
+    </script>
+
+    <script>
+        function saveContentToLocalStorage() {
+            const placeholder = document.getElementById('new-div-placeholder');
+            localStorage.setItem('divsContent', placeholder.innerHTML);
+        }
+    </script>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedContent = localStorage.getItem('divsContent');
+            if (savedContent) {
+                document.getElementById('new-div-placeholder').innerHTML = savedContent;
+            }
+        });
+    </script>
+    <script>
+        function deleteDiv(element) {
+            const divToRemove = element.closest('.admin28-page');
+            if (divToRemove) {
+                divToRemove.remove();
+                saveContentToLocalStorage();
+            }
+        }
+    </script>
+
+
+    <script>
+        // Function to toggle divs
+        function toggleOptionss(elementIdone) {
+            var allDivIds1 = ['anni', 'annione', 'annitwo', 'annithree', 'annifour', 'annifive', 'annisix', 'anniseven'];
+
+            allDivIds1.forEach(function(idone) {
+                var div = document.getElementById(idone); // Corrected id to idone
+                if (idone === elementIdone) { // Corrected id to idone
+                    // If it's the clicked div, toggle show/hide
+                    if (div.classList.contains('show')) {
+                        div.classList.remove('show');
+                        setTimeout(() => {
+                            div.style.display = "none";
+                        }, 500);
+                    } else {
+                        div.style.display = "block";
+                        setTimeout(() => {
+                            div.classList.add('show');
+                        }, 10);
+                    }
+                } else {
+                    // Hide all other divs
+                    if (div.classList.contains('show')) {
+                        div.classList.remove('show');
+                        setTimeout(() => {
+                            div.style.display = "none";
+                        }, 500);
+                    }
+                }
+            });
+        }
+
+        // Hide all divs if clicking outside
+        document.addEventListener('click', function(event) {
+            var allDivIds1 = ['anni', 'annione', 'annitwo', 'annithree', 'annifour', 'annifive', 'annisix', 'anniseven'];
+            var isClickInsideAnyDiv1 = false;
+
+            // Check if the clicked element is inside any of the divs
+            allDivIds1.forEach(function(id) {
+                var div = document.getElementById(id);
+                if (div.contains(event.target)) {
+                    isClickInsideAnyDiv1 = true;
+                }
+            });
+
+            // If the click is outside all divs, hide all divs
+            if (!isClickInsideAnyDiv1) {
+                allDivIds1.forEach(function(id) {
+                    var div = document.getElementById(id);
+                    if (div.classList.contains('show')) {
+                        div.classList.remove('show');
+                        setTimeout(() => {
+                            div.style.display = "none";
+                        }, 500);
+                    }
+                });
+            }
+        });
+    </script>
+
+    <script>
+        // Function to toggle divs
+        function toggleOptionsss(elementIdone) {
+            var allDivIds1 = ['ali', 'alione', 'alitwo', 'alithree', 'alifour', 'alifive', 'alisix', 'aliseven'];
+
+            allDivIds1.forEach(function(idone) {
+                var div = document.getElementById(idone); // Corrected id to idone
+                if (idone === elementIdone) { // Corrected id to idone
+                    // If it's the clicked div, toggle show/hide
+                    if (div.classList.contains('show')) {
+                        div.classList.remove('show');
+                        setTimeout(() => {
+                            div.style.display = "none";
+                        }, 500);
+                    } else {
+                        div.style.display = "block";
+                        setTimeout(() => {
+                            div.classList.add('show');
+                        }, 10);
+                    }
+                } else {
+                    // Hide all other divs
+                    if (div.classList.contains('show')) {
+                        div.classList.remove('show');
+                        setTimeout(() => {
+                            div.style.display = "none";
+                        }, 500);
+                    }
+                }
+            });
+        }
+
+        // Hide all divs if clicking outside
+        document.addEventListener('click', function(event) {
+            var allDivIds1 = ['ali', 'alione', 'alitwo', 'alithree', 'alifour', 'alifive', 'alisix', 'aliseven'];
+            var isClickInsideAnyDiv1 = false;
+
+            // Check if the clicked element is inside any of the divs
+            allDivIds1.forEach(function(id) {
+                var div = document.getElementById(id);
+                if (div.contains(event.target)) {
+                    isClickInsideAnyDiv1 = true;
+                }
+            });
+
+            // If the click is outside all divs, hide all divs
+            if (!isClickInsideAnyDiv1) {
+                allDivIds1.forEach(function(id) {
+                    var div = document.getElementById(id);
+                    if (div.classList.contains('show')) {
+                        div.classList.remove('show');
+                        setTimeout(() => {
+                            div.style.display = "none";
+                        }, 500);
+                    }
+                });
+            }
+        });
+    </script>
+
+    <script>
+        // Function to toggle divs
+        function toggleOptionssss(elementIdone) {
+            var allDivIds1 = ['farah', 'farahone', 'farahtwo', 'farahthree', 'farahfour', 'farahfive', 'farahsix', 'farahseven'];
+
+            allDivIds1.forEach(function(idone) {
+                var div = document.getElementById(idone); // Corrected id to idone
+                if (idone === elementIdone) { // Corrected id to idone
+                    // If it's the clicked div, toggle show/hide
+                    if (div.classList.contains('show')) {
+                        div.classList.remove('show');
+                        setTimeout(() => {
+                            div.style.display = "none";
+                        }, 500);
+                    } else {
+                        div.style.display = "block";
+                        setTimeout(() => {
+                            div.classList.add('show');
+                        }, 10);
+                    }
+                } else {
+                    // Hide all other divs
+                    if (div.classList.contains('show')) {
+                        div.classList.remove('show');
+                        setTimeout(() => {
+                            div.style.display = "none";
+                        }, 500);
+                    }
+                }
+            });
+        }
+
+        // Hide all divs if clicking outside
+        document.addEventListener('click', function(event) {
+            var allDivIds1 = ['farah', 'farahone', 'farahtwo', 'farahthree', 'farahfour', 'farahfive', 'farahsix', 'farahseven'];
+            var isClickInsideAnyDiv1 = false;
+
+            // Check if the clicked element is inside any of the divs
+            allDivIds1.forEach(function(id) {
+                var div = document.getElementById(id);
+                if (div.contains(event.target)) {
+                    isClickInsideAnyDiv1 = true;
+                }
+            });
+
+            // If the click is outside all divs, hide all divs
+            if (!isClickInsideAnyDiv1) {
+                allDivIds1.forEach(function(id) {
+                    var div = document.getElementById(id);
+                    if (div.classList.contains('show')) {
+                        div.classList.remove('show');
+                        setTimeout(() => {
+                            div.style.display = "none";
+                        }, 500);
+                    }
+                });
+            }
+        });
+    </script>
+
+    <script>
+        function checkUrl() {
+            const url = document.getElementById('enterurl').value;
+            const addButton = document.getElementById('addButton');
+
+            // Check if the URL starts with 'https://'
+            if (url.startsWith('https://')) {
+                addButton.style.display = 'inline-block'; // Show the button
+            } else {
+                addButton.style.display = 'none'; // Hide the button
+            }
+        }
+    </script>
+
+
+
+
+    <script>
+        // Function to toggle divs
+        function toggleOptionsssss(elementIdone) {
+            var allDivIds1 = ['amna', 'amnaone', 'amnatwo', 'amnathree', 'amnafour', 'amnafive', 'amnasix', 'amnaseven'];
+
+            allDivIds1.forEach(function(idone) {
+                var div = document.getElementById(idone); // Corrected id to idone
+                if (idone === elementIdone) { // Corrected id to idone
+                    // If it's the clicked div, toggle show/hide
+                    if (div.classList.contains('show')) {
+                        div.classList.remove('show');
+                        setTimeout(() => {
+                            div.style.display = "none";
+                        }, 500);
+                    } else {
+                        div.style.display = "block";
+                        setTimeout(() => {
+                            div.classList.add('show');
+                        }, 10);
+                    }
+                } else {
+                    // Hide all other divs
+                    if (div.classList.contains('show')) {
+                        div.classList.remove('show');
+                        setTimeout(() => {
+                            div.style.display = "none";
+                        }, 500);
+                    }
+                }
+            });
+        }
+
+        // Hide all divs if clicking outside
+        document.addEventListener('click', function(event) {
+            var allDivIds1 = ['amna', 'amnaone', 'amnatwo', 'amnathree', 'amnafour', 'amnafive', 'amnasix', 'amnaseven'];
+            var isClickInsideAnyDiv1 = false;
+
+            // Check if the clicked element is inside any of the divs
+            allDivIds1.forEach(function(id) {
+                var div = document.getElementById(id);
+                if (div.contains(event.target)) {
+                    isClickInsideAnyDiv1 = true;
+                }
+            });
+
+            // If the click is outside all divs, hide all divs
+            if (!isClickInsideAnyDiv1) {
+                allDivIds1.forEach(function(id) {
+                    var div = document.getElementById(id);
+                    if (div.classList.contains('show')) {
+                        div.classList.remove('show');
+                        setTimeout(() => {
+                            div.style.display = "none";
+                        }, 500);
+                    }
+                });
+            }
+        });
+    </script>
+
+    <script>
+        function checkUrlone() {
+            const urlone = document.getElementById('urladmin').value;
+            const addddButton = document.getElementById('addddButton');
+
+            // Check if the URL starts with 'https://'
+            if (urlone.startsWith('https://')) {
+                addddButton.style.display = 'inline-block'; // Show the button
+            } else {
+                addddButton.style.display = 'none'; // Hide the button
+            }
+        }
+    </script>
+
+    <script>
+        document.getElementById("menu-toggle").addEventListener("click", function() {
+            const menu = document.getElementById("nav-menu");
+            const icon = this.querySelector("i");
+
+            if (menu.style.display === "none" || menu.style.display === "") {
+                menu.style.display = "block"; // Show the menu
+                icon.classList.remove("fa-navicon");
+                icon.classList.add("fa-remove"); // Change to remove icon
+            } else {
+                menu.style.display = "none"; // Hide the menu
+                icon.classList.remove("fa-remove");
+                icon.classList.add("fa-navicon"); // Change back to navicon
+            }
+        });
+    </script>
+
+    <script>
+        // Function to change the icon, name, and hide the home1001 element
+        function changeIcon(iconClass, iconName) {
+            // Change the icon in the settingIcon element
+            document.getElementById("settingIcon").className = "fa " + iconClass;
+
+            // Change the name in the <h2> element
+            document.getElementById("settingTitle").textContent = iconName;
+
+            // Change the icon in the <a> tag with id "dynamic-icon"
+            document.getElementById("dynamic-icon").innerHTML = `<i class="fa ${iconClass}"></i>`;
+
+            // Hide the home1001 element
+            document.getElementById('home1001').style.display = 'none';
+            document.getElementById('urlForm').style.display = 'flex';
+
+            // Store the selected icon and name in localStorage
+            localStorage.setItem('selectedIcon', iconClass);
+            localStorage.setItem('selectedName', iconName);
+        }
+
+        // Function to check localStorage and set the icon and name when the page loads
+        window.onload = function() {
+            const storedIcon = localStorage.getItem('selectedIcon');
+            const storedName = localStorage.getItem('selectedName');
+
+            // If there is a stored icon and name, apply them
+            if (storedIcon && storedName) {
+                // Update the settingIcon element
+                document.getElementById("settingIcon").className = "fa " + storedIcon;
+                document.getElementById("settingTitle").textContent = storedName;
+
+                // Also update the dynamic icon in the <a> tag
+                document.getElementById("dynamic-icon").innerHTML = `<i class="fa ${storedIcon}"></i>`;
+            }
+        };
+    </script>
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

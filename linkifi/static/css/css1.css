@@ -1,0 +1,937 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+.home {
+    margin: 60px 50px;
+    border-radius: 50px;
+    background-color: white;
+}
+
+.home .home1-page {
+    padding: 1px 0px;
+}
+
+#home2-page .home3-page {
+    color: black;
+    font-size: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+#home2-page .home4-page {
+    padding-left: 30px;
+}
+
+#home2-page .home4-page li {
+    padding-left: 10px;
+    color: black;
+}
+
+#home2-page .home4-page li a {
+    color: black;
+    font-size: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+    letter-spacing: 1px;
+    position: relative;
+}
+
+#home2-page .home4-page li a:hover {
+    background-color: rgb(221, 220, 218);
+    padding: 10px 10px;
+    border-radius: 10px;
+}
+
+#home2-page .home5-page {
+    margin-left: 100px;
+}
+
+#home2-page .home6-page {
+    margin-left: 30px;
+    color: black;
+    padding: 20px 30px;
+    color: black;
+    background-color: rgb(224, 224, 224);
+    font-size: 20px;
+    font-weight: 500;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#home2-page .home7-page {
+    margin-left: 30px;
+    color: white;
+    padding: 20px 50px;
+    background-color: black;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 50px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#home8-page {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#home8-page .home9-page {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 50px;
+    padding-top: 50px;
+}
+
+#home8-page .home9-page h1 {
+    font-family: "Link Sans", "Arial Black", Arial, sans-serif;
+    font-size: clamp(32px, 8.5vmin, 88px);
+    font-weight: 820;
+    letter-spacing: -0.02em;
+    line-height: 1.05;
+    text-align: left;
+    color: rgb(210, 232, 35);
+}
+
+#home8-page .home9-page p {
+    font-family: "Link Sans", "Arial Black", Arial, sans-serif;
+    font-size: clamp(16px, 1vmin, 20px);
+    font-weight: 400px;
+    letter-spacing: 0.5px;
+    line-height: 1.6;
+    margin-bottom: 16px;
+    color: rgb(210, 232, 35);
+    padding-top: 20px;
+}
+
+#home8-page .home10-page {
+    padding-top: 40px;
+    padding-bottom: 180px;
+}
+
+#home8-page .home10-page input {
+    outline: none;
+    padding: 20px 10px;
+    border-radius: 10px;
+    width: 300px;
+    padding-left: 20px;
+    color: black;
+    font-size: 19px;
+    font-weight: 600;
+    letter-spacing: 0.6px;
+}
+
+#home8-page .home10-page button {
+    color: black;
+    font-size: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 500;
+    border: none;
+    border-radius: 50px;
+    background-color: rgb(233, 192, 233);
+    cursor: pointer;
+    padding: 20px 30px;
+}
+
+#home12-page {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(233, 192, 233)!important;
+    padding: 140px 60px;
+}
+
+#home12-page .home13-page {
+    width: 50%;
+}
+
+#home12-page .home14-page {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 40px;
+}
+
+#home12-page .home14-page h1 {
+    font-family: "Link Sans", "Arial Black", Arial, sans-serif;
+    font-size: clamp(28px, 8vmin, 56px);
+    font-weight: 820;
+    letter-spacing: -0.02em;
+    line-height: 1.05;
+    text-align: left;
+    color: rgb(80, 34, 116);
+}
+
+#home12-page .home14-page p {
+    padding-top: 15px;
+    font-family: "Link Sans", "Arial Black", Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 500px;
+    letter-spacing: -0.02em;
+    line-height: 1.7;
+    margin-bottom: 16px;
+    color: rgb(80, 34, 116);
+}
+
+#home12-page .home14-page button {
+    color: white;
+    font-size: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 500;
+    border: none;
+    border-radius: 50px;
+    background-color: rgb(80, 34, 116);
+    cursor: pointer;
+    padding: 20px 30px;
+    margin-top: 40px;
+    letter-spacing: 0.5px;
+}
+
+#home15-page {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(120, 0, 22)!important;
+    padding: 140px 40px;
+}
+
+#home15-page .home9-page {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 50px;
+    padding-top: 50px;
+}
+
+#home15-page .home9-page h1 {
+    font-family: "Link Sans", "Arial Black", Arial, sans-serif;
+    font-size: clamp(32px, 8.5vmin, 88px);
+    font-weight: 820;
+    letter-spacing: -0.02em;
+    line-height: 1.05;
+    text-align: left;
+    color: rgb(233, 192, 233);
+}
+
+#home15-page .home9-page p {
+    font-family: "Link Sans", "Arial Black", Arial, sans-serif;
+    font-size: clamp(16px, 1vmin, 20px);
+    font-weight: 400px;
+    letter-spacing: 0.5px;
+    line-height: 1.6;
+    margin-bottom: 16px;
+    color: rgb(233, 192, 233);
+    padding-top: 20px;
+}
+
+#home15-page .home10-page {
+    padding-top: 40px;
+}
+
+#home15-page .home10-page input {
+    outline: none;
+    padding: 20px 10px;
+    border-radius: 10px;
+    width: 300px;
+    padding-left: 20px;
+    color: black;
+    font-size: 19px;
+    font-weight: 600;
+    letter-spacing: 0.6px;
+}
+
+#home15-page .home10-page button {
+    color: black;
+    font-size: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 500;
+    border: none;
+    border-radius: 50px;
+    background-color: rgb(233, 192, 233);
+    cursor: pointer;
+    padding: 20px 30px;
+}
+
+#home16-page {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(243, 243, 241)!important;
+    padding: 140px 60px;
+}
+
+#home16-page .home13-page {
+    width: 50%;
+}
+
+#home16-page .home14-page {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 40px;
+}
+
+#home16-page .home14-page h1 {
+    font-family: "Link Sans", "Arial Black", Arial, sans-serif;
+    font-size: clamp(28px, 8vmin, 56px);
+    font-weight: 820;
+    letter-spacing: -0.02em;
+    line-height: 1.05;
+    text-align: left;
+    color: rgb(30, 35, 48);
+}
+
+#home16-page .home14-page p {
+    padding-top: 15px;
+    font-family: "Link Sans", "Arial Black", Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 500px;
+    letter-spacing: -0.02em;
+    line-height: 1.7;
+    margin-bottom: 16px;
+    color: rgb(30, 35, 48);
+}
+
+#home16-page .home14-page button {
+    color: rgb(10, 10, 10);
+    font-size: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 500;
+    border: none;
+    border-radius: 50px;
+    background-color: rgb(233, 192, 233);
+    cursor: pointer;
+    padding: 20px 30px;
+    margin-top: 40px;
+    letter-spacing: 0.5px;
+}
+
+#home17-page {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    padding-top: 50px;
+    background-color: rgb(243, 243, 241)!important;
+}
+
+#home17-page h1 {
+    font-family: "Link Sans", "Arial Black", Arial, sans-serif;
+    font-size: clamp(28px, 8vmin, 56px);
+    font-weight: 820;
+    letter-spacing: -0.02em;
+    line-height: 1.05;
+    text-align: center;
+    color: rgb(30, 35, 48);
+}
+
+#home17-page p {
+    font-family: "Link Sans", "Arial Black", Arial, sans-serif;
+    font-size: clamp(28px, 8vmin, 56px);
+    font-weight: 820;
+    letter-spacing: -0.02em;
+    line-height: 1.05;
+    text-align: center;
+    color: rgb(38, 101, 214);
+    padding-top: 15px;
+}
+
+#home18-page {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(243, 243, 241)!important;
+    width: 100%;
+    padding: 30px 0px;
+}
+
+#home18-page .home19-page {
+    width: 40%;
+}
+
+#home18-page .home19-page img {
+    width: 100%;
+    border-radius: 10px;
+    padding: 0px 5px;
+    cursor: pointer;
+}
+
+.rotate-img {
+    width: 100%;
+    transition: transform 0.5s, filter 0.5s;
+    /* Transition for rotation and color change */
+}
+
+
+/* Rotate and change color on hover */
+
+.rotate-img:hover {
+    transform: rotate(360deg);
+    /* Full rotation */
+    filter: hue-rotate(90deg);
+    /* Change color */
+}
+
+#home20-page {
+    width: 100%;
+    display: flex;
+    background-color: rgb(243, 243, 241)!important;
+    justify-content: space-between;
+    padding: 80px 80px;
+}
+
+#home20-page .home21-page {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+#home20-page .home21-page .home22-page {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(233, 192, 233);
+}
+
+#home20-page .home21-page .home22-page .home23-page {
+    width: 100%;
+    display: flex;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+#home20-page .home21-page .home22-page .home23-page img {
+    padding: 0px 10px;
+}
+
+#home20-page .home21-page .home22-page h1 {
+    font-family: "Link Sans", "Arial Black", Arial, sans-serif;
+    font-size: 20px;
+    font-weight: 560;
+    letter-spacing: -0.01em;
+    line-height: 1.3;
+    text-align: left;
+    color: rgb(80, 34, 116);
+    padding-left: 40px;
+    text-decoration: underline;
+    padding-bottom: 40px;
+}
+
+#home20-page .home21-page .home24-page {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: rgb(210, 232, 35);
+    padding-top: 60px;
+    padding-bottom: 20px;
+}
+
+#home20-page .home21-page .home24-page .home25-page {
+    width: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+#home20-page .home21-page .home24-page .home25-page img {
+    width: 50%;
+}
+
+#home20-page .home21-page .home24-page h1 {
+    font-family: "Link Sans", "Arial Black", Arial, sans-serif;
+    font-size: 20px;
+    font-weight: 560;
+    letter-spacing: -0.01em;
+    line-height: 1.3;
+    text-align: left;
+    color: rgb(80, 34, 116);
+    padding-left: 40px;
+    text-decoration: underline;
+    padding-bottom: 40px;
+    padding-top: 30px;
+}
+
+#home20-page .home26-page {
+    width: 50%;
+    margin-left: 40px;
+    background-color: rgb(120, 0, 22);
+    border-radius: 20px;
+}
+
+#home20-page .home26-page .home27-page {
+    width: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+#home20-page .home26-page .home27-page img {
+    width: 50%;
+    padding-top: 50px;
+}
+
+#home20-page .home26-page h1 {
+    font-family: "Link Sans", "Arial Black", Arial, sans-serif;
+    font-size: 20px;
+    font-weight: 560;
+    letter-spacing: -0.01em;
+    line-height: 1.3;
+    text-align: left;
+    color: rgb(233, 192, 233);
+    padding-left: 40px;
+    text-decoration: underline;
+    padding-bottom: 40px;
+    padding-top: 100px;
+}
+
+#home28-page {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    padding-top: 50px;
+    background-color: rgb(243, 243, 241)!important;
+}
+
+#home28-page h1 {
+    font-family: "Link Sans", "Arial Black", Arial, sans-serif;
+    font-size: clamp(28px, 8vmin, 36px);
+    font-weight: 820;
+    letter-spacing: -0.02em;
+    line-height: 1.05;
+    text-align: center;
+    color: rgb(30, 35, 48);
+}
+
+#home28-page button {
+    color: black;
+    font-size: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 500;
+    border: none;
+    border-radius: 50px;
+    background-color: rgb(233, 192, 233);
+    cursor: pointer;
+    padding: 20px 30px;
+    margin-top: 30px;
+}
+
+#home29-page {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 80px 200px;
+    background-color: rgb(243, 243, 241)!important;
+}
+
+#home29-page .home30-page {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    text-align: center;
+    padding: 60px 30px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+#home29-page .home30-page img {
+    padding-top: 15px;
+}
+
+#home31-page img {
+    width: 60%;
+    margin-left: 60px;
+}
+
+#home29-page .home30-page h4 {
+    padding-top: 40px;
+    color: black;
+    font-weight: 400;
+    font-size: 13px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#home32-page {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(243, 243, 241)!important;
+    text-align: center;
+}
+
+#home32-page .home33-page {
+    width: 100%;
+    padding: 30px 120px;
+}
+
+#home32-page .home33-page img {
+    width: 20%;
+    background-color: white;
+    margin: 0px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+#home33-page {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(243, 243, 241)!important;
+    text-align: center;
+    padding: 50px 60px;
+}
+
+#home33-page .home34-page {
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    padding: 30px 10px;
+    border-radius: 20px;
+}
+
+#home33-page .home34-page .home35-page img {
+    width: 100%;
+}
+
+#home33-page .home34-page h1 {
+    font-family: "Link Sans", "Arial Black", Arial, sans-serif;
+    font-size: clamp(28px, 8vmin, 36px);
+    font-weight: 820;
+    letter-spacing: -0.02em;
+    line-height: 1.05;
+    color: rgb(30, 35, 48);
+    padding-top: 25px;
+}
+
+#home33-page .home34-page h5 {
+    font-family: "Link Sans", Arial, sans-serif;
+    font-size: clamp(16px, 2vmin, 20px);
+    font-weight: 418;
+    letter-spacing: -0.02em;
+    line-height: 1.5;
+    color: rgb(103, 107, 95);
+    padding-top: 15px;
+}
+
+#tec36-page {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(120, 0, 22);
+}
+
+#tec36-page h1 {
+    font-family: "Link Sans", "Arial Black", Arial, sans-serif;
+    font-size: clamp(28px, 8vmin, 56px);
+    font-weight: 820;
+    letter-spacing: -0.02em;
+    line-height: 1.05;
+    text-align: center;
+    color: rgb(233, 192, 233);
+    padding-top: 70px;
+}
+
+#tec36-page .tec37-page {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #470303;
+    padding: 20px 10px;
+    border-radius: 10px;
+    margin-top: 60px;
+    cursor: pointer;
+}
+
+#tec36-page .tec37-page .tec39-page {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0px 50px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+}
+
+#tec36-page .tec37-page .tec39-page h5 {
+    color: rgb(233, 192, 233);
+    font-size: 18px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+#tec36-page .tec37-page .tec39-page i {
+    font-size: 23px;
+    color: rgb(233, 192, 233);
+    font-weight: 700px;
+}
+
+#tec36-page .tec37-page .tec40-page {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    padding: 0px 50px;
+    border-bottom: 2px solid rgb(235, 235, 235);
+    padding-bottom: 30px;
+    padding-top: 10px;
+    margin-bottom: 40px;
+}
+
+.tec41-page {
+    border-bottom: 2px solid rgb(235, 235, 235);
+    margin-top: 50px;
+}
+
+#tec36-page .tec37-page .tec40-page h5 {
+    color: rgb(233, 192, 233);
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 33px;
+    letter-spacing: 1px;
+}
+
+#home37-page {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    background-color: rgb(86, 13, 155);
+    padding: 150px 0px 30px 0px;
+}
+
+#home37-page h1 {
+    font-family: "Link Sans", "Arial Black", Arial, sans-serif;
+    font-size: 50px;
+    font-weight: 820;
+    letter-spacing: -0.02em;
+    line-height: 1.05;
+    text-align: center;
+    color: rgb(233, 192, 233);
+}
+
+#home37-page .home38-page {
+    padding-top: 40px;
+    padding-bottom: 100px;
+}
+
+#home37-page .home38-page input {
+    outline: none;
+    padding: 20px 10px;
+    border-radius: 10px;
+    width: 300px;
+    padding-left: 20px;
+    color: black;
+    font-size: 19px;
+    font-weight: 600;
+    letter-spacing: 0.6px;
+}
+
+#home37-page .home38-page button {
+    color: black;
+    font-size: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 500;
+    border: none;
+    border-radius: 50px;
+    background-color: rgb(210, 232, 35);
+    cursor: pointer;
+    padding: 20px 30px;
+}
+
+#home39-page {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(86, 13, 155);
+}
+
+#home39-page .home42-page {
+    width: 100%;
+    background-color: white;
+    margin: 50px 120px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 15px;
+    padding: 70px 60px 150px 60px;
+}
+
+#home39-page .home42-page .home40-page h1 {
+    font-family: "Link Sans", "Arial Black", Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 560;
+    letter-spacing: -0.01em;
+    line-height: 1.3;
+    color: rgb(30, 35, 48);
+    padding-left: 30px;
+}
+
+#home39-page .home42-page .home40-page ul li {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    justify-content: start;
+    align-items: start;
+}
+
+#home39-page .home42-page .home40-page ul li a {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    justify-content: start;
+    align-items: start;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.5;
+    padding-top: 14px;
+    color: rgb(67, 67, 68);
+    letter-spacing: 0.5px;
+    text-decoration: none;
+}
+
+#home43-page {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: #560d9b;
+}
+
+#home43-page .home46-page {
+    width: 100%;
+    width: 100%;
+    margin: 50px 120px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 15px;
+    padding: 70px 60px;
+    margin-top: -150px;
+}
+
+#home43-page .home46-page {
+    width: 100%;
+    width: 100%;
+    margin: 50px 120px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 15px;
+    padding: 70px 60px;
+    margin-top: -220px;
+}
+
+#home43-page .home46-page .home47-page {
+    color: black;
+    border-radius: 10px;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    border-radius: 50px;
+    background-color: rgb(212, 211, 209);
+}
+
+#home43-page .home46-page .home48-page {
+    color: black;
+    border-radius: 10px;
+    padding: 15px 40px;
+    font-size: 18px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    border-radius: 50px;
+    background-color: rgb(210, 232, 35);
+}
+
+#home43-page .home46-page .home45-page i {
+    color: white;
+    background-color: rgb(29, 28, 28);
+    padding: 15px;
+    border-radius: 50px;
+    margin: 0px 10px;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#home49-page {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #560d9b;
+}
+
+#home49-page .home50-page {
+    width: 100%;
+    margin: 20px 120px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    border-radius: 15px;
+    padding: 20px 60px;
+    background-color: rgb(233, 192, 233);
+}
+
+#home49-page .home50-page h1 {
+    font-weight: 900;
+    font-size: 160px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #560d9b;
+}
+
+#home51-page {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    background-color: #560d9b;
+}
+
+#home51-page .home52-page {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+#home51-page .home52-page img {
+    width: 10%;
+    text-align: center;
+    margin: 40px 10px;
+}
+
+#home51-page p {
+    font-size: 12px;
+    font-weight: 600;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: rgb(233, 192, 233);
+}
+
+#login-page {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#login-page .login1-page {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding: 50px 60px;
+}

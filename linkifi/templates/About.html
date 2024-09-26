@@ -1,0 +1,358 @@
+<html lang="en">
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linkifi</title>
+    <link rel="stylesheet" href="{% static 'css/css42.css' %}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alkatra&family=Delicious+Handrawn&display=swap" rel="stylesheet">
+
+
+</head>
+<style>
+    body {
+        width: 100%;
+        background-image: linear-gradient(to right, #eff1ff, #ffcffc);
+    }
+    
+    .khani90 #popcart {
+        background-color: white;
+        color: black;
+        border: none;
+        font-size: 23px;
+    }
+    
+    #popup {
+        width: 28%;
+        text-align: center;
+        position: relative;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        margin-left: 37%;
+        margin-top: 10px;
+        background-color: white;
+        border-radius: 20px;
+        top: -125%;
+    }
+    
+    #popup img {
+        width: 95px;
+        height: 95px;
+        border-radius: 50%;
+        text-align: center;
+        justify-content: center;
+        margin-left: 155px;
+        margin-top: -50px;
+    }
+    
+    #popup h1 {
+        color: black;
+        font-size: 30px;
+        font-weight: 600;
+        font-family: 'Times New Roman', Times, serif;
+        padding-top: 40px;
+    }
+    
+    #popup h5 {
+        color: black;
+        font-size: 15px;
+        font-weight: 500;
+        font-family: cursive;
+        padding: 30px;
+        padding-top: 20px;
+    }
+    
+    #popup button {
+        margin-top: 10px;
+        width: 100%;
+        padding: 10px 0px;
+        outline: none;
+        border: none;
+        border-radius: 10px;
+        background-color: rgb(0, 255, 0);
+        color: white;
+        font-size: 20px;
+        font-weight: 900;
+        font-family: cursive;
+        cursor: pointer;
+        width: 50%;
+        margin-left: 93px;
+        margin-bottom: 30px;
+    }
+</style>
+
+
+<body>
+
+
+
+    <nav class="navbar navbar-expand-lg home bg-body-white fixed-top">
+        <div class="container-fluid" id="home2-page">
+            <a class="navbar-brand home3-page" href="#"><img src="/static/images/11.png" width="100px" height="90px"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"><i class="fa fa-navicon"></i></span>
+          </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 home4-page">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="{% url 'Feature' %}">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="{% url 'pricing' %}">Pricing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="{% url 'About' %}">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="{% url 'contact' %}">Contact Us</a>
+                    </li>
+
+                </ul>
+                <div class="text-end home5-page">
+                    <a href="{% url 'login' %}"><button type="button" class="btn home6-page">Log in</button></a>
+                    <a href="{% url 'signup' %}"><button type="button" class="btn home7-page">Sign-up</button></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div id="aout-page">
+        <div class="aout1-page">
+            <h1>Our Founders' <br> Story</h1>
+            <p>Linkifi is a tool to help you share everything you are, in one simple link – making your online content more discoverable, easier to manage and more likely to convert. Here’s where it all began.</p>
+        </div>
+        <div class="aout2-page">
+            <img src="/static/images/11.webp">
+        </div>
+    </div>
+
+
+    <div id="aout3-page">
+        <p>In 2023, brothers Alex and Anthony Zaccaria, along with their business partner Nick Humphreys, identified a common challenge while managing social media accounts for clients at their digital agency, Bolster. Constantly updating individual bio
+            links was not only time-consuming but often overlooked. From this frustration, the first version of Linkifi was born, and the rest is history!</p>
+        <p>Today, with over 30 million users globally, we’re empowering brands, artists, publishers, agencies, and influencers to take full control of their online presence. As the internet landscape became more fragmented, Linkifi evolved to offer more
+            streamlined solutions for content sharing.</p>
+        <p>Our passionate team of developers, designers, marketers, and business professionals is dedicated to providing creators with the best tools to showcase their work. Headquartered in Melbourne, Australia, we also have offices in Sydney and Los Angeles.</p>
+        <p>In 2023, we were honored to be recognized in CNBC’s ‘Upstart 100’ list, highlighting the most promising young startups. In March 2024, we were thrilled to be named by Fast Company in their ‘Most Innovative Companies of 2024’ list, where we ranked
+            fourth in the Social Media category. Previous honorees in this category include industry leaders like Glossier and Reddit.</p>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <div id="home37-page">
+        <h1>Jumpstart your corner of the <br> internet today</h1>
+        <div class="home38-page">
+            <input type="text" placeholder="Linkifi.ai/Yourname">
+            <a href="{% url 'login' %}"><button>claim your Linkifi</button></a>
+        </div>
+    </div>
+
+    <div id="home39-page">
+        <div class="home42-page">
+            <div class="home40-page">
+                <img src="/static/images/11.png">
+                <p>Stay in the loop and Sign Up for the <br> Linkifi newsletter.</p>
+                <div class="search41">
+                    <form>
+                        <input type="email" name="email" id="email" placeholder="Enter your Email">
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+            <div class="home40-page">
+                <h1>Company</h1>
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="{%url 'Feature' %}">Features</a></li>
+                    <li><a href="{%url 'pricing' %}">Pricing</a></li>
+                    <li><a href="{%url 'contact' %}">Contact Us</a></li>
+                    <li><a href="{% url 'About' %}">About Us</a></li>
+                </ul>
+            </div>
+            <div class="home40-page">
+                <h1>Documentation
+                </h1>
+                <ul>
+                    <li><a href="{%url 'helpcenter' %}">Help Center</a></li>
+                    <li><a href="{%url 'contact' %}">Contact</a></li>
+                    <li><a href="{%url 'login' %}">Linkifi Pro</a></li>
+                    <li><a href="{%url 'Feature' %}">Features</a></li>
+                    <li><a href="{%url 'faqs' %}">FAQs</a></li>
+                    <li><a href="{%url 'privacy' %}">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="home40-page">
+                <h1>Social
+                </h1>
+                <ul>
+                    <li><a href="https://www.facebook.com/">Facebook</a></li>
+                    <li><a href="https://www.instagram.com/">Instagram</a></li>
+                    <li><a href="https://www.youtube.com/">YouTube</a></li>
+                    <li><a href="https://x.com/?lang=en">Twitter</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="home43-page">
+
+        <div class="home46-page">
+
+            <div class="home44-page">
+                <a href="{% url 'login' %}"><button class="home47-page">Log in</button></a>
+                <a href="{% url 'login' %}"><button class="home48-page">Get started for free</button></a>
+            </div>
+            <div class="home45-page">
+                <i class="fa fa-facebook"></i>
+                <i class="fa fa-twitter"></i>
+                <i class="fa fa-youtube-play"></i>
+                <i class="	fa fa-google"></i>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="home49-page">
+        <div class="home50-page">
+            <h1>Linkifi</h1>
+        </div>
+    </div>
+
+    <div id="home51-page">
+        <div class="home52-page">
+            <img src="/static/images/1111.webp">
+            <img src="/static/images/2222.webp">
+        </div>
+        <p>We acknowledge the Traditional Custodians of the land on which our office stands, The Wurundjeri people of the Kulin Nation, and pay our respects <br> to Elders past, present and emerging. Linkifi Pty Ltd (ABN 68 608 721 562), 1-9 Sackville st,
+            Collingwood VIC 3066</p>
+    </div>
+
+
+
+
+
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js">
+    </script>
+
+    <script>
+        // Select all elements with the toggle-icon class
+        const toggleIcons = document.querySelectorAll('.toggle-icon');
+
+        toggleIcons.forEach(icon => {
+            icon.addEventListener('click', () => {
+                // Get the parent element of the icon
+                const parent = icon.parentElement;
+
+                // Find the associated elements within the parent element
+                const content = parent.nextElementSibling;
+                const minusIcon = parent.querySelector('.fa-minus');
+                const plusIcon = parent.querySelector('.fa-plus');
+
+                // Toggle the visibility of the content and icons
+                if (content.style.display === "none" || content.style.display === "") {
+                    content.style.display = "block";
+                    minusIcon.style.display = "inline";
+                    plusIcon.style.display = "none";
+                } else {
+                    content.style.display = "none";
+                    minusIcon.style.display = "none";
+                    plusIcon.style.display = "inline";
+                }
+            });
+        });
+    </script>
+
+
+
+
+    <script>
+        // Select all the <p> elements with class 'home10'
+        const items = document.querySelectorAll("#home17-page .home10");
+        let index = 0;
+
+        // Function to hide all <p> elements and show only the current one
+        function showItem() {
+            items.forEach((item, i) => {
+                // Hide all items
+                item.style.display = "none";
+            });
+            // Show the current item
+            items[index].style.display = "block";
+
+            // Move to the next item, reset index if at the end
+            index = (index + 1) % items.length;
+        }
+
+        // Initialize the first item to be shown
+        showItem();
+
+        // Cycle through the items every 1 second (1000 milliseconds)
+        setInterval(showItem, 1000);
+    </script>
+
+
+    <script>
+        let popup = document.getElementById("popup");
+
+
+        function openPopup() {
+            popup.classList.add("open-popup");
+            console.log(popup)
+        }
+
+        function closePopup() {
+            popup.classList.remove("open-popup");
+        }
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var okButton = document.getElementById("okButton");
+            var popup = document.getElementById("popup");
+
+            if (okButton && popup) {
+                okButton.addEventListener("click", function() {
+                    popup.style.display = "none"; // Hide the popup
+                });
+            }
+        });
+    </script>
+
+
+
+
+
+
+
+</body>
+
+</html>
